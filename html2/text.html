@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Text</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Text</h1>
+
+      <div class="first_buttons_div">
+        <a href="outline.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h1">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <p>CSS has a lot of properties for formatting text.</p>
+      <br />
+      <div style="margin: auto; border: 1px solid gray; padding: 8px">
+        <h1
+          style="text-align: center; text-transform: uppercase; color: #04aa6d"
+        >
+          text formatting
+        </h1>
+        <p style="text-indent: 50px; text-align: justify; letter-spacing: 3px">
+          This text is styled with some of the text formatting properties. The
+          heading uses the text-align, text-transform, and color properties. The
+          paragraph is indented, aligned, and the space between characters is
+          specified. The underline is removed from this colored
+          <a
+            style="text-decoration: none; color: #008cba"
+            target="_blank"
+            href="editor.html"
+            >"Try it Yourself"</a
+          >
+          link.
+        </p>
+      </div>
+      <br />
+      <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+        >Try it Yourself »</a
+      >
+      <br />
+      <h2>Text Color</h2>
+      <p>
+        The <code class="w3-codespan">color</code> property is used to set the
+        color of the text. The color is specified by:
+      </p>
+      <ul>
+        <li>a color name - like "red"</li>
+        <li>a HEX value - like "#ff0000"</li>
+        <li>an RGB value - like "rgb(255,0,0)"</li>
+      </ul>
+      <p>
+        Look at <a href="">CSS Color Values</a> for a complete list of possible
+        color values.
+      </p>
+      <p>The default text color for a page is defined in the body selector.</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            body <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                blue<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            <br />h1
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                green<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>Text Color and Background Color</h2>
+      <p>
+        In this example, we define both the
+        <code class="w3-codespan">background-color</code> property and the
+        <code class="w3-codespan">color</code> property:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            body <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                lightgrey<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                blue<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            <br />h1
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                black<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                white<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />
+            div <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                blue<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                white<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-panel w3-note">
+        <p class="note">
+          <strong>Important:</strong> High contrast is very important for people
+          with vision problems. So, always ensure that the contrast between the
+          text color and the background color (or background image) is good!
+        </p>
+      </div>
+      <br />
+      <h2>The CSS Text Color Property</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr style="background-color: var(--link-color); color: #fff">
+            <th style="width: 30%">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>
+              <a href="">color</a>
+            </td>
+            <td>Specifies the color of text</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Text Align -->
+      <hr />
+      <br />
+      <h1 id="h1">CSS Text Alignment</h1>
+      <div class="first_buttons_div">
+        <a href="text.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h11">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <h2>Text Alignment and Text Direction</h2>
+      <p>In this chapter you will learn about the following properties:</p>
+      <ul>
+        <li><code class="w3-codespan">text-align</code></li>
+        <li><code class="w3-codespan">text-align-last</code></li>
+        <li><code class="w3-codespan">direction</code></li>
+        <li><code class="w3-codespan">unicode-bidi</code></li>
+        <li><code class="w3-codespan">vertical-align</code></li>
+      </ul>
+      <br />
+      <h2>Text Alignment</h2>
+      <p>
+        The <code class="w3-codespan">text-align</code> property is used to set
+        the horizontal alignment of a text.
+      </p>
+      <p>A text can be left or right aligned, centered, or justified.</p>
+      <p>
+        The following example shows center aligned, and left and right aligned
+        text (left alignment is default if text direction is left-to-right, and
+        right alignment is default if text direction is right-to-left):
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; text-align<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                center<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />h2
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;text-align<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                left<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />h3
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;text-align<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                right<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>
+        When the <code class="w3-codespan">text-align</code> property is set to
+        "justify", each line is stretched so that every line has equal width,
+        and the left and right margins are straight (like in magazines and
+        newspapers):
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            div <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;text-align<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                justify<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>Text Align Last</h2>
+      <p>
+        The <code class="w3-codespan">text-align-last</code> property specifies
+        how to align the last line of a text.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Align the last line of text in three &lt;p&gt; elements:</p>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            p.a
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; text-align-last<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                right<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />p.b
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; text-align-last<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                center<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />p.c
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp;&nbsp;text-align-last<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                justify<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <br />
+      <h2>Text Direction</h2>
+      <p>
+        The <code class="w3-codespan">direction</code> and
+        <code class="w3-codespan"> unicode-bidi</code> properties can be used to
+        change the text direction of an element:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            p <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;direction<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                rtl<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; unicode-bidi<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                bidi-override<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>Vertical Alignment</h2>
+      <p>
+        The <code class="w3-codespan">vertical-align</code> property sets the
+        vertical alignment of an element.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>Set the vertical alignment of an image in a text:&nbsp;</p>
+          <div class="w3-code notranslate cssHigh">
+            <span class="cssselectorcolor" style="color: brown">
+              img.a <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; vertical-align<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  baseline<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />img.b
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; vertical-align<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  text-top<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />img.c
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; vertical-align<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  text-bottom<span
+                    class="cssdelimitercolor"
+                    style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />img.d
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; vertical-align<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  sub<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />
+              img.e <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; vertical-align<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  super<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>The CSS Text Alignment/Direction Properties</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr style="background-color: var(--link-color); color: #fff">
+            <th style="width: 30%">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="">direction</a></td>
+            <td>Specifies the text direction/writing direction</td>
+          </tr>
+          <tr>
+            <td><a href="">text-align</a></td>
+            <td>Specifies the horizontal alignment of text</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">text-align-last</a>
+            </td>
+            <td>Specifies how to align the last line of a text</td>
+          </tr>
+          <tr>
+            <td><a href="">unicode-bidi</a></td>
+            <td>
+              Used together with the
+              <a href="">direction</a> property to set or return whether the
+              text should be overridden to support multiple languages in the
+              same document
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">vertical-align</a>
+            </td>
+            <td>Sets the vertical alignment of an element</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Text Decotation -->
+      <hr />
+      <br />
+      <h1 id="h11">CSS Text Decoration</h1>
+      <div class="first_buttons_div">
+        <a href="#h1">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h111">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <ul>
+        <li><code class="w3-codespan">text-decoration-line</code></li>
+        <li><code class="w3-codespan">text-decoration-color</code></li>
+        <li><code class="w3-codespan">text-decoration-style</code></li>
+        <li><code class="w3-codespan">text-decoration-thickness</code></li>
+        <li><code class="w3-codespan">text-decoration</code></li>
+      </ul>
+      <br />
+      <h2>Add a Decoration Line to Text</h2>
+      <p>
+        The <code class="w3-codespan">text-decoration-line</code> property is
+        used to add a decoration line to text.
+      </p>
+      <p class="note">
+        <strong>Tip:</strong> You can combine more than one value, like overline
+        and underline to display lines both over and under a text.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate cssHigh">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 {<br />
+            &nbsp; text-decoration-line: overline;<br />
+            }<br /><br />
+            h2 {<br />
+            &nbsp; text-decoration-line: line-through;<br />
+            }<br /><br />
+            h3 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            }<br /><br />
+            p {<br />
+            &nbsp; text-decoration-line: overline underline;<br />
+            }
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+
+      <p class="note">
+        <strong>Note:</strong> It is not recommended to underline text that is
+        not a link, as this often confuses the reader.
+      </p>
+      <br />
+      <h2>Specify a Color for the Decoration Line</h2>
+      <p>
+        The <code class="w3-codespan">text-decoration-color</code> property is
+        used to set the color of the decoration line.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 {<br />
+            &nbsp; text-decoration-line: overline;<br />
+            &nbsp; text-decoration-color: red;<br />
+            }<br /><br />
+            h2 {<br />
+            &nbsp; text-decoration-line: line-through;<br />
+            &nbsp; text-decoration-color: blue;<br />
+            }<br /><br />
+            h3 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-color: green;<br />
+            }<br /><br />
+            p {<br />
+            &nbsp; text-decoration-line: overline underline;<br />
+            &nbsp; text-decoration-color: purple;<br />
+            }
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>Specify a Style for the Decoration Line</h2>
+      <p>
+        The <code class="w3-codespan">text-decoration-style</code> property is
+        used to set the style of the decoration line.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-style: solid;<br />
+            }<br /><br />
+            h2 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-style: double;<br />
+            }<br /><br />
+            h3 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-style: dotted;<br />
+            }<br /><br />
+            p.ex1 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-style: dashed;<br />
+            }<br /><br />
+            p.ex2 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-style: wavy;<br />
+            }<br /><br />
+            p.ex3 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-color: red;<br />
+            &nbsp; text-decoration-style: wavy;<br />
+            }
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <hr />
+      <h2>Specify the Thickness for the Decoration Line</h2>
+      <p>
+        The <code class="w3-codespan">text-decoration-thickness</code> property
+        is used to set the thickness of the decoration line.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-thickness: auto;<br />
+            }<br /><br />
+            h2 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-thickness: 5px;<br />
+            }<br /><br />
+            h3 {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-thickness: 25%;<br />
+            }<br /><br />
+            p {<br />
+            &nbsp; text-decoration-line: underline;<br />
+            &nbsp; text-decoration-color: red;<br />
+            &nbsp; text-decoration-style: double;<br />
+            &nbsp; text-decoration-thickness: 5px;<br />
+            }
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <hr />
+      <h2>The Shorthand Property</h2>
+      <p>
+        The <code class="w3-codespan">text-decoration</code> property is a
+        shorthand property for:
+      </p>
+      <ul>
+        <li>
+          <code class="w3-codespan">text-decoration-line</code> (required)
+        </li>
+        <li>
+          <code class="w3-codespan">text-decoration-color</code> (optional)
+        </li>
+        <li>
+          <code class="w3-codespan">text-decoration-style</code> (optional)
+        </li>
+        <li>
+          <code class="w3-codespan">text-decoration-thickness</code> (optional)
+        </li>
+      </ul>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 {<br />
+            &nbsp; text-decoration: underline;<br />
+            }<br /><br />
+            h2 {<br />
+            &nbsp; text-decoration: underline red;<br />
+            }<br /><br />
+            h3 {<br />
+            &nbsp; text-decoration: underline red double;<br />
+            }<br /><br />
+            p {<br />
+            &nbsp; text-decoration: underline red double 5px;<br />
+            }
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>A Small Tip</h2>
+      <p>
+        All links in HTML are underlined by default. Sometimes you see that
+        links are styled with no underline. The
+        <code class="w3-codespan">text-decoration: none;</code> is used to
+        remove the underline from links, like this:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            a {<br />
+            &nbsp; text-decoration: none;<br />
+            }
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>All CSS text-decoration Properties</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr style="background-color: var(--link-color); color: #fff">
+            <th style="width: 30%">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>
+              <a href="">text-decoration</a>
+            </td>
+            <td>Sets all the text-decoration properties in one declaration</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">text-decoration-color</a>
+            </td>
+            <td>Specifies the color of the text-decoration</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">text-decoration-line</a>
+            </td>
+            <td>
+              Specifies the kind of text decoration to be used (underline,
+              overline, etc.)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">text-decoration-style</a>
+            </td>
+            <td>
+              Specifies the style of the text decoration (solid, dotted, etc.)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">text-decoration-thickness</a>
+            </td>
+            <td>Specifies the thickness of the text decoration line</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Text Spacing -->
+      <hr />
+      <br />
+      <h1 id="h111">CSS Text Spacing</h1>
+      <div class="first_buttons_div">
+        <a href="#h11">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h1111">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <h2>Text Spacing</h2>
+      <p>
+        The <code class="w3-codespan">text-transform</code> property is used to
+        specify uppercase and lowercase letters in a text.
+      </p>
+      <p>
+        It can be used to turn everything into uppercase or lowercase letters,
+        or capitalize the first letter of each word:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            p.uppercase
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;text-transform<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                uppercase<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            <br />p.lowercase
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;text-transform<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                lowercase<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            <br />p.capitalize
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;text-transform<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                capitalize<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>The CSS Text Spacing Property</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr style="background-color: var(--link-color); color: #fff">
+            <th style="width: 30%">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>
+              <a href="">text-transform</a>
+            </td>
+            <td>Controls the capitalization of text</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+      <h1>CSS Text Spacing</h1>
+      <br />
+      <h2>Text Spacing</h2>
+      <p>In this chapter you will learn about the following properties:</p>
+      <ul>
+        <li><code class="w3-codespan">text-indent</code></li>
+        <li><code class="w3-codespan">letter-spacing</code></li>
+        <li><code class="w3-codespan">line-height</code></li>
+        <li><code class="w3-codespan">word-spacing</code></li>
+        <li><code class="w3-codespan">white-space</code></li>
+      </ul>
+      <br />
+      <h2>Text Indentation</h2>
+      <p>
+        The <code class="w3-codespan">text-indent</code> property is used to
+        specify the indentation of the first line of a text:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            p <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; text-indent<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                50px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>Letter Spacing</h2>
+      <p>
+        The <code class="w3-codespan">letter-spacing</code> property is used to
+        specify the space between the characters in a text.
+      </p>
+      <p>
+        The following example demonstrates how to increase or decrease the space
+        between characters:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; letter-spacing<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                5px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />h2
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;letter-spacing<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                -2px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>Line Height</h2>
+      <p>
+        The <code class="w3-codespan">line-height</code> property is used to
+        specify the space between lines:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            p.small
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; line-height<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0.8<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />p.big
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; line-height<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                1.8<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>Word Spacing</h2>
+      <p>
+        The <code class="w3-codespan">word-spacing</code> property is used to
+        specify the space between the words in a text.
+      </p>
+      <p>
+        The following example demonstrates how to increase or decrease the space
+        between words:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            p.one
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;word-spacing<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                10px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />p.two
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;word-spacing<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                -2px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>White Space</h2>
+      <p>
+        The <code class="w3-codespan">white-space</code> property specifies how
+        white-space inside an element is handled.
+      </p>
+      <p>
+        This example demonstrates how to disable text wrapping inside an
+        element:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            p <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; white-space<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                nowrap<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>The CSS Text Spacing Properties</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr style="background-color: var(--link-color); color: #fff">
+            <th style="width: 30%">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>
+              <a href="">letter-spacing</a>
+            </td>
+            <td>Specifies the space between characters in a text</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">line-height</a>
+            </td>
+            <td>Specifies the line height</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">text-indent</a>
+            </td>
+            <td>Specifies the indentation of the first line in a text-block</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">white-space</a>
+            </td>
+            <td>Specifies how to handle white-space inside an element</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">word-spacing</a>
+            </td>
+            <td>Specifies the space between words in a text</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Text Transformation-->
+      <hr />
+      <br />
+      <h1 id="h1111">CSS Text Transformation</h1>
+      <div class="first_buttons_div">
+        <a href="#h111">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h11111">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <h2>Text Transformation</h2>
+      <p>
+        The <code class="w3-codespan">text-transform</code> property is used to
+        specify uppercase and lowercase letters in a text.
+      </p>
+      <hr />
+      <p>
+        It can be used to turn everything into uppercase or lowercase letters,
+        or capitalize the first letter of each word:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            p.uppercase
+            <span class="cssdelimitercolor" style="color: black">{</span>
+            <span class="csspropertycolor" style="color: red">
+              <br />&nbsp;&nbsp;text-transform
+              <span class="csspropertyvaluecolor" style="color: mediumblue">
+                <span class="cssdelimitercolor" style="color: black">:</span>
+                uppercase
+                <span class="cssdelimitercolor" style="color: black">;</span>
+              </span>
+              <br />
+            </span>
+            <span class="cssdelimitercolor" style="color: black">}</span>
+            <br />
+            <br />p.lowercase
+            <span class="cssdelimitercolor" style="color: black">{</span>
+            <span class="csspropertycolor" style="color: red">
+              <br />&nbsp;&nbsp;text-transform
+              <span class="csspropertyvaluecolor" style="color: mediumblue">
+                <span class="cssdelimitercolor" style="color: black">:</span>
+                lowercase
+                <span class="cssdelimitercolor" style="color: black">;</span>
+              </span>
+              <br />
+            </span>
+            <span class="cssdelimitercolor" style="color: black">}</span>
+            <br />
+            <br />p.capitalize
+            <span class="cssdelimitercolor" style="color: black">{</span>
+            <span class="csspropertycolor" style="color: red">
+              <br />&nbsp;&nbsp;text-transform
+              <span class="csspropertyvaluecolor" style="color: mediumblue">
+                <span class="cssdelimitercolor" style="color: black">:</span>
+                capitalize
+                <span class="cssdelimitercolor" style="color: black">;</span>
+              </span>
+              <br />
+            </span>
+            <span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>The CSS Text Transformation Property</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr style="background: var(--link-color); color: #fff">
+            <th style="width: 30%">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>
+              <a href="">text-transform</a>
+            </td>
+            <td>Controls the capitalization of text</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Text Shadow-->
+      <hr />
+      <br />
+      <h1 id="h11111">CSS Text Shadow</h1>
+      <div class="first_buttons_div">
+        <a href="#h1111">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="font.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <br />
+      <h2>Text Shadow</h2>
+      <p>
+        The <code class="w3-codespan">text-shadow</code> property adds shadow to
+        text.
+      </p>
+      <p>
+        In its simplest use, you only specify the horizontal shadow (2px) and
+        the vertical shadow (2px):
+      </p>
+      <h2 id="simpleshadow">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp;&nbsp;text-shadow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                2px 2px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>Next, add a color (red) to the shadow:</p>
+      <h2 id="simpleshadow2">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp;&nbsp;text-shadow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                2px 2px red<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>Then, add a blur effect (5px) to the shadow:</p>
+      <h2 id="simpleshadow3">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp;&nbsp;text-shadow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                2px 2px 5px red<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>More Text Shadow Examples</h2>
+      <div class="w3-example">
+        <h3>Example 1</h3>
+        <p>Text-shadow on a white text:</p>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                white<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; text-shadow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                2px 2px 4px #000000<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-example">
+        <h3>Example 2</h3>
+        <p>Text-shadow with red neon glow:</p>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; text-shadow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span> 0
+                0 3px #ff0000<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-example">
+        <h3>Example 3</h3>
+        <p>Text-shadow with red and blue neon glow:</p>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; text-shadow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span> 0
+                0 3px #ff0000, 0 0 5px #0000ff<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-example">
+        <h3>Example 4</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            h1 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                white<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; text-shadow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-note w3-panel">
+        <p class="note">
+          <strong>Tip:</strong>
+          <a href="">Go to our CSS Fonts</a> chapter to learn about
+          how to change fonts, text size and the style of a text.
+        </p>
+        <p class="note">
+          <strong>Tip:</strong>
+          <a href="">Go to our CSS Text Effects</a> chapter
+          to learn about different text effects.
+        </p>
+      </div>
+      <br />
+      <form
+        autocomplete="off"
+        id="w3-exerciseform"
+        action=""
+        method="post"
+        target="_blank"
+      >
+        <h2>Test Yourself With Exercises</h2>
+        <div class="exercisewindow">
+          <h2>Exercise:</h2>
+          <p>Change the text color of all &lt;p&gt; elements to "red".</p>
+          <div class="exerciseprecontainer">
+            <pre>&lt;style&gt;
+                              p {
+                                <input name="ex1" maxlength="5" style="width: 56px;">: red;
+                              }
+                              &lt;/style&gt;
+                              
+                              &lt;body&gt;
+                                &lt;h1&gt;This is a heading&lt;/h1&gt;
+                                &lt;p&gt;This is a paragraph&lt;/p&gt;
+                                &lt;p&gt;This is a paragraph&lt;/p&gt;
+                              &lt;/body&gt;
+                              </pre>
+          </div>
+          <br />
+          <button type="submit" class="w3-btn w3-margin-bottom">
+            Submit Answer »
+          </button>
+          <p>
+            <a target="_blank" href=""
+              >Start the Exercise</a
+            >
+          </p>
+        </div>
+      </form>
+      <br />
+      <h2>The CSS Text Shadow Property</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr style="background-color:var(--link-color); color:#fff">
+            <th style="width: 30%">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="">text-shadow</a></td>
+            <td>Specifies the shadow effect added to text</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

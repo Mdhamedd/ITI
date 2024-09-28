@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalJS.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="homeJs.html" class="ga-nav" title="JavaScript Tutorial"
+          >JAVASCRIPT</a
+        >
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>JavaScript Introduction</h1>
+      <div class="first_buttons_div">
+        <a href="index.html">
+          <button class="first_buttons"><b>&lt;</b> Home</button>
+        </a>
+        <a href="inroJs.html">
+          <button class="first_buttons">Next <b>&gt;</b></button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <div class="w3-panel w3-info note">
+        <p>JavaScript is the world's most popular programming language.</p>
+        <p>JavaScript is the programming language of the Web.</p>
+        <p>JavaScript is easy to learn.</p>
+        <p>This tutorial will teach you JavaScript from basic to advanced.</p>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href=""
+          style="
+            font-size: 18px;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin-top: 6px;
+          "
+          >Start learning JavaScript now &raquo;</a
+        >
+      </div>
+
+      <h2>Examples in Each Chapter</h2>
+      <p>
+        With our &quot;Try it Yourself&quot; editor, you can edit the source
+        code and view the result.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <h2>My First JavaScript</h2>
+          <button
+            type="button"
+            onclick="document.getElementById('demo').innerHTML=Date()"
+          >
+            Click me to display Date and Time
+          </button>
+          <p id="demo"></p>
+        </div>
+        <p>
+          <a target="_blank" class="w3-btn" href="editor.html"
+            >Try it Yourself &raquo;</a
+          >
+        </p>
+      </div>
+      <hr />
+      <h2>Use the Menu</h2>
+      <p>
+        We recommend reading this tutorial, in the sequence listed in the menu.
+      </p>
+      <p>
+        If you have a large screen, the menu will always be present on the left.
+      </p>
+      <p>
+        If you have a small screen, open the menu by clicking the top menu sign
+        <span class="w3-xlarge">&#9776;</span>.
+      </p>
+      <hr />
+      <h2>Learn by Examples</h2>
+      <p>
+        Examples are better than 1000 words. Examples are often easier to
+        understand than text explanations.
+      </p>
+      <p>
+        This tutorial supplements all explanations with clarifying &quot;Try it
+        Yourself&quot; examples.
+      </p>
+      <div class="note">
+        <p>
+          If you try all the examples, you will learn a lot about JavaScript, in
+          a very short time!
+        </p>
+        <a class="w3-btn" href="">JavaScript Examples &raquo;</a>
+      </div>
+      <hr />
+      <h2>Why Study JavaScript?</h2>
+      <p class="note">
+        JavaScript is one of the <strong>3 languages</strong> all web developers
+        <strong> must</strong> learn:
+      </p>
+      <p>
+        &nbsp;&nbsp; 1. <a href=""><strong>HTML</strong></a> to define the
+        content of web pages
+      </p>
+      <p>
+        &nbsp;&nbsp; 2. <a href=""><strong>CSS</strong></a> to specify the
+        layout of web pages
+      </p>
+      <p>
+        &nbsp;&nbsp; 3. <strong>JavaScript</strong> to program the behavior of
+        web pages
+      </p>
+
+      <div class="w3-panel w3-info">
+        <p>This tutorial covers every version of JavaScript:</p>
+        <ul>
+          <li>The Original JavaScript ES1 ES2 ES3 (1997-1999)</li>
+          <li>The First Main Revision ES5 (2009)</li>
+          <li>The Second Revision ES6 (2015)</li>
+          <li>The Yearly Additions (2016, 2017 ... 2021, 2022)</li>
+        </ul>
+      </div>
+      <hr />
+
+      <h2>Learning Speed</h2>
+      <p>In this tutorial, the learning speed is your choice.</p>
+      <p>Everything is up to you.</p>
+      <p>If you are struggling, take a break, or re-read the material.</p>
+      <p class="note">
+        <strong>Always</strong> make sure you understand
+        <strong>all</strong> the &quot;Try-it-Yourself&quot; examples.
+      </p>
+      <p>
+        The only way to become a clever programmer is to: Practice. Practice.
+        Practice. Code. Code. Code !
+      </p>
+      <hr />
+      <form
+        autocomplete="off"
+        spellcheck="false"
+        id="w3-exerciseform"
+        action=""
+        method="post"
+        target="_blank"
+      >
+        <h2>Test Yourself With Exercises</h2>
+        <div class="w3-example">
+          <h2>Exercise:</h2>
+          <p>
+            Create a variable called
+            <code class="w3-codespan">carName</code> and assign the value
+            <code class="w3-codespan">Volvo</code> to it.
+          </p>
+          <div class="exerciseprecontainer">
+            <pre>
+        var <input name="ex1" maxlength="7" style="width: 75px;"> = "<input name="ex2" maxlength="5" style="width: 54px;">";
+        </pre>
+          </div>
+          <br />
+          <button type="submit" class="w3-btn w3-margin-bottom">
+            Submit Answer &raquo;
+          </button>
+          <p>
+            <a target="_blank" href="">Start the Exercise</a>
+          </p>
+        </div>
+      </form>
+
+      <hr />
+      <h2>Commonly Asked Questions</h2>
+      <ul>
+        <li>How do I get JavaScript?</li>
+        <li>Where can I download JavaScript?</li>
+        <li>Is JavaScript Free?</li>
+      </ul>
+      <b>
+        <p>You don't have to get or download JavaScript.</p>
+        <p>
+          JavaScript is already running in your browser on your computer, on
+          your tablet, and on your smart-phone.
+        </p>
+        <p>JavaScript is free to use for everyone.</p>
+      </b>
+
+      <hr />
+      <style>
+        #img_mylearning {
+          max-width: 100%;
+        }
+      </style>
+      <h2>My Learning</h2>
+
+      <p>
+        Track your progress with the free "My Learning" program here at
+        W3Schools.
+      </p>
+      <p>Log in to your account, and start earning points!</p>
+      <p>
+        This is an optional feature. You can study at W3Schools without using My
+        Learning.
+      </p>
+
+      <a
+        href="https://my-learning.w3schools.com/"
+        target="_blank"
+        class="ga-featured"
+      >
+        <picture>
+          <source srcset="/images/mylearning.webp" type="image/webp" />
+          <img
+            id="img_mylearning"
+            loading="lazy"
+            src="/images/mylearning.png"
+            alt="Track your progress with at W3Schools.com"
+            style="max-width: 100%"
+          />
+        </picture>
+      </a>
+      <br />
+
+      <hr />
+      <h2>JavaScript References</h2>
+      <p>
+        W3Schools maintains a complete JavaScript reference, including all HTML
+        and browser objects.
+      </p>
+      <p>
+        The reference contains examples for all properties, methods and events,
+        and is continuously updated according to the latest web standards.
+      </p>
+      <a class="ws-btn" href="">Complete JavaScript Reference &raquo;</a>
+
+      <hr />
+      <h2>JavaScript Quiz Test</h2>
+      <p>Test your JavaScript skills at W3Schools!</p>
+      <p>
+        <a href="" class="w3-button w3-blue w3-round">Start JavaScript Quiz!</a>
+      </p>
+      <br />
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img src="/images/logo/w3-footer.png" alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tables</title>
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="/src/css/img.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Logo Title -->
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Start Navbar -->
+    <div id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="index.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="homeCSS.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </div>
+    <!-- End Navbar -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+
+    <!-- Start Main Content -->
+    <div class="container">
+      <h1>HTML Tables</h1>
+      <div class="first_buttons_div">
+        <a href="img.html"
+          ><button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button></a
+        >
+        <a href="#h11">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button></a
+        >
+      </div>
+      <hr />
+      <!-- Start Main Content -->
+      <h2 class="header">What are HTML Tables?</h2>
+      <p>HTML tables allow developers to arrange data into rows and columns</p>
+      <h2>Define an HTML Table</h2>
+      <p>A table in HTML consists of table cells inside rows and columns.</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <h4>A simple HTML table:</h4>
+        <div class="w3-code notranslate htmlHigh">
+          <span class="tag">&lt;table&gt;</span><br />
+          &nbsp;
+          <span class="tag">&lt;tr&gt;</span><br />
+          &nbsp;&nbsp;
+          <span class="tag">&lt;th&gt;<mark>Company</mark></span
+          ><span class="tag">&lt;/th&gt;</span><br />
+          &nbsp;&nbsp;
+          <span class="tag">&lt;th&gt;<mark>Contact</mark></span
+          ><span class="tag">&lt;/th&gt;</span><br />
+          &nbsp;&nbsp;
+          <span class="tag">&lt;th&gt;<mark>Country</mark></span
+          ><span class="tag">&lt;/th&gt;</span><br />
+          &nbsp;
+          <span class="tag">&lt;/tr&gt;</span>
+
+          <br /><br />
+          &nbsp;
+          <span class="tag">&lt;tr&gt;</span><br />
+          &nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;<mark>Mohamed Hamed</mark></span
+          ><span class="tag">&lt;/td&gt;</span><br />
+          &nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;<mark>Ahmed Mohamed</mark></span
+          ><span class="tag">&lt;/td&gt;</span><br />
+          &nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;<mark>Egypt</mark></span
+          ><span class="tag">&lt;/td&gt;</span><br />
+          &nbsp;
+          <span class="tag">&lt;/tr&gt;</span>
+          <br /><br />
+          &nbsp;
+          <span class="tag">&lt;tr&gt;</span><br />
+          &nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;<mark>John Doe</mark></span
+          ><span class="tag">&lt;/td&gt;</span><br />
+          &nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;<mark>Mary Jones</mark></span
+          ><span class="tag">&lt;/td&gt;</span><br />
+          &nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;<mark>Brazil</mark></span
+          ><span class="tag">&lt;/td&gt;</span><br />
+          &nbsp;
+          <span class="tag">&lt;/tr&gt;</span>
+
+          <br /><br />
+          <span class="tag">&lt;/table&gt;</span><br />
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br /><br />
+      <div>
+        <table>
+          <caption>
+            Basic Elements of Table
+          </caption>
+          <tr style="background-color: var(--active-color); color: #fff">
+            <th>Element</th>
+            <th>Tag</th>
+            <th>Position</th>
+          </tr>
+          <tr>
+            <td>Table Rows</td>
+            <td>&lt;tr&gt;</td>
+            <td>Inside &lt;table&gt;</td>
+          </tr>
+          <tr>
+            <td>Table Cells</td>
+            <td>&lt;td&gt;</td>
+            <td>Inside &lt;tr&gt;</td>
+          </tr>
+          <tr>
+            <td>Table Headers</td>
+            <td>&lt;th&gt;</td>
+            <td>Inside &lt;tr&gt;</td>
+          </tr>
+        </table>
+        <p style="margin-top: 2px; color: gray">
+          By default content inside &lt;th&gt; is bold and centered
+        </p>
+      </div>
+      <h3>Learn More</h3>
+      <p>
+        To learn more about HTML, visit the
+        <a
+          href="https://www.w3schools.com/html/html_tables.asp"
+          target="_blank"
+          style="color: #04aa6d"
+          >W3Schools HTML Tables</a
+        >.
+      </p>
+      <hr />
+
+      <h1 id="h11" class="header">Table Borders</h1>
+      <div class="first_buttons_div">
+        <a href="table.html"
+          ><button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button></a
+        >
+        <a href="#h111">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button></a
+        >
+      </div>
+      <p class="note">
+        HTML tables can have borders of different styles and shapes.
+      </p>
+      <h2>How to add a border</h2>
+      <p>
+        To add a border, use the CSS border property on table, th, and td
+        elements:
+      </p>
+
+      <table style="width: 25%">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <br />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+          <span>table,th,td &lcub;</span><br />
+          &nbsp;<span> border: 1px solid black;</span><br />
+          <span>&rcub;</span>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <h2>Round Table Borders</h2>
+      <div class="table-round">
+        <table style="width: 25%">
+          <tr>
+            <td>Random</td>
+            <td>Content</td>
+            <td>Displayed</td>
+          </tr>
+          <tr>
+            <td>Character 1</td>
+            <td>Character 2</td>
+            <td>Character 3</td>
+          </tr>
+        </table>
+      </div>
+      <br />
+      <p>
+        To style borders and make them curved you can use the border-radius CSS
+        property:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+          <span>table,th,td &lcub;</span><br />
+          &nbsp;<span> border: 1px solid black;</span><br />
+          &nbsp;<span> border-radius: 10px;</span><br />
+          <span>&rcub;</span>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <p id="notebox">
+        There's many many more properties that can make our tables and borders
+        look much better but that will all be discovered in css. What's
+        mentioned above is enough to get you going in HTML!
+      </p>
+      <h3>Learn More</h3>
+      <p>
+        To learn more about HTML, visit the
+        <a
+          href="https://www.w3schools.com/html/html_tables.asp"
+          target="_blank"
+          style="color: #04aa6d"
+          >W3Schools HTML Tables</a
+        >.
+      </p>
+      <br />
+      <hr />
+      <h1 id="h111" class="header">Tables Colspan And Rowspan</h1>
+      <div class="first_buttons_div">
+        <a href="#h11"
+          ><button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button></a
+        >
+        <a href="list.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button></a
+        >
+      </div>
+      <p>HTML tables can have cells that span over multiple columns/rows</p>
+
+      <div id="tableborders" style="overflow: auto">
+        <table class="table1" style="width: 30%; float: left">
+          <tbody>
+            <tr>
+              <th colspan="2">NAME</th>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table1" style="width: 30%; float: left; margin-left: 5%">
+          <tbody>
+            <tr>
+              <th rowspan="3">APRIL</th>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table1" style="width: 30%; float: right">
+          <tbody>
+            <tr>
+              <th colspan="3">2022</th>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th colspan="2" rowspan="2">FIESTA</th>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Table - Colspan</h2>
+      <p>
+        To make a cell span over multiple columns, use the colspan attribute:
+      </p>
+
+      <br />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        The value of the colspan attribute represents the number of columns to
+        span.
+        <div class="w3-code notranslate htmlHigh">
+          <span class="tag">&lt;table&gt;</span><br />&nbsp;
+          <span class="tag">&lt;tr&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;th colspan="2"&gt;Name</span
+          ><span class="tag">&lt;/th&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;th&gt;Age</span
+          ><span class="tag">&lt;/th&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;/tr&gt;</span>
+
+          <br /><br />
+          &nbsp;
+          <span class="tag">&lt;tr&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;Jill</span
+          ><span class="tag">&lt;/td&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;Smith</span
+          ><span class="tag">&lt;/td&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;43</span
+          ><span class="tag">&lt;/td&gt;</span><br />&nbsp;
+          <span class="tag">&lt;/tr&gt;</span>
+
+          <br /><br />
+          &nbsp;
+          <span class="tag">&lt;tr&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;Eve</span
+          ><span class="tag">&lt;/td&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;Jackson</span
+          ><span class="tag">&lt;/td&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;57</span
+          ><span class="tag">&lt;/td&gt;</span><br />&nbsp;
+          <span class="tag">&lt;/tr&gt;</span>
+
+          <br /><br />
+          <span class="tag">&lt;/table&gt;</span><br />&nbsp;
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <h2>Table - Rowspan</h2>
+      <p>To make a cell span over multiple rows, use the rowspan attribute:</p>
+
+      <br />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        The value of the rowspan attribute represents the number of rows to
+        span.
+        <div class="w3-code notranslate htmlHigh">
+          <span class="tag">&lt;table&gt;</span><br />&nbsp;
+          <span class="tag">&lt;tr&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;th&gt;Name</span
+          ><span class="tag">&lt;/th&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;th&gt;Age</span
+          ><span class="tag">&lt;/th&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;/tr&gt;</span>
+
+          <br /><br />
+          &nbsp;
+          <span class="tag">&lt;tr&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;td rowspan="2"&gt;Phone</span
+          ><span class="tag">&lt;/td&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;43</span
+          ><span class="tag">&lt;/td&gt;</span><br />&nbsp;
+          <span class="tag">&lt;/tr&gt;</span>
+
+          <br /><br />
+          &nbsp;
+          <span class="tag">&lt;tr&gt;</span><br />&nbsp;&nbsp;
+          <span class="tag">&lt;td&gt;0109826755</span
+          ><span class="tag">&lt;/td&gt;</span><br />&nbsp;&nbsp;
+
+          <span class="tag">&lt;/tr&gt;</span>
+
+          <br /><br />
+          <span class="tag">&lt;/table&gt;</span><br />&nbsp;
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <h3>Learn More</h3>
+      <p>
+        To learn more about HTML, visit the
+        <a
+          href="https://www.w3schools.com/html/html_tables.asp"
+          target="_blank"
+          style="color: #04aa6d"
+          >W3Schools HTML Tables</a
+        >.
+      </p>
+      <!-- End Main Content -->
+    </div>
+    <!-- =========================================Start Footer===================================================== -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#">
+          <img src="/images/logo/w3-footer.png" alt="Our Page Logo" />
+        </a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="h3">Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="h3">Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="h3">Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="h3">Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- =========================================End Footer======================================================= -->
+    <script src="/src/js/home.js"></script>
+    <!-- Bootstrap JS Files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

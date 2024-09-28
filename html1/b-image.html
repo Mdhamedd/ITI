@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Border Images</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Border Images</h1>
+      <div class="first_buttons_div">
+        <a href="rounded.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="CSSbackground.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <p class="intro">
+        With the CSS <mark>border-image</mark> property, you can set an image to
+        be used as the border around an element.
+      </p>
+      <hr />
+      <h2 class="h2">CSS border-image Property</h2>
+      <p class="p">
+        The CSS <mark>border-image</mark> property allows you to specify an
+        image to be used instead of the normal border around an element.
+      </p>
+      <p class="intro">The property has three parts:</p>
+      <ol>
+        <li>The image to use as the border</li>
+        <li>Where to slice the image</li>
+        <li>
+          Define whether the middle sections should be repeated or stretched
+        </li>
+      </ol>
+      <p class="intro">
+        The <mark>border-image</mark> property takes the image and slices it
+        into nine sections, like a tic-tac-toe board. It then places the corners
+        at the corners, and the middle sections are repeated or stretched as you
+        specify.
+      </p>
+      <p class="intro">
+        <strong>Note:</strong> For <mark>border-image</mark> to work, the
+        element also needs the <mark>border</mark> property set!
+      </p>
+      <p class="intro">
+        Here, the middle sections of the image are repeated to create the
+        border:
+      </p>
+      <div class="exborderimag1">
+        <p class="center">An image as a border!</p>
+      </div>
+      <p class="p">Here is the code:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>#borderimg {</p>
+          <p>border: 10px solid transparent;</p>
+          <p>padding: 15px;</p>
+          <p>border-image: url(border.png) 30 round;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" target="_blank" class="w3-btn"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+      <p class="intro">
+        Here, the middle sections of the image are stretched to create the
+        border:
+      </p>
+      <div class="exborderimag2">
+        <p class="center">An image as a border!</p>
+      </div>
+      <p class="p">Here is the code:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>#borderimg {</p>
+          <p>border: 10px solid transparent;</p>
+          <p>padding: 15px;</p>
+          <p>border-image: url(border.png) 30 stretch;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" target="_blank" class="w3-btn"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+      <div class="note">
+        <p>
+          <strong>Tip:</strong> The <mark>border-image</mark> property is
+          actually a shorthand property for the
+          <mark>border-image-source</mark>, <mark>border-image-slice</mark>,
+          <mark>border-image-width</mark>, <mark>border-image-outset</mark>, and
+          <mark>border-image-repeat</mark> properties.
+        </p>
+      </div>
+      <hr />
+      <h2 class="h2">CSS border-image - Different Slice Values</h2>
+      <p class="p">
+        Different slice values completely change the look of the border:
+      </p>
+      <p class="p">Example 1:</p>
+      <div class="exborderimag3">
+        <p class="center">border-image: url(border.png) 50 round;</p>
+      </div>
+      <p class="p">Example 2:</p>
+      <div class="exborderimag4">
+        <p class="center">border-image: url(border.png) 20% round;</p>
+      </div>
+      <p class="p">Example 3:</p>
+      <div class="exborderimag5">
+        <p class="center">border-image: url(border.png) 30% round;</p>
+      </div>
+      <p class="p">Here is the code:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>#borderimg1 {</p>
+          <p>border: 10px solid transparent;</p>
+          <p>padding: 15px;</p>
+          <p>border-image: url(border.png) 50 round;</p>
+          <p>}</p>
+          <br />
+          <p>#borderimg2 {</p>
+          <p>border: 10px solid transparent;</p>
+          <p>padding: 15px;</p>
+          <p>border-image: url(border.png) 30 round;</p>
+          <p>}</p>
+          <br />
+          <p>#borderimg3 {</p>
+          <p>border: 10px solid transparent;</p>
+          <p>padding: 15px;</p>
+          <p>border-image: url(border.png) 30% round;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" target="_blank" class="w3-btn"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

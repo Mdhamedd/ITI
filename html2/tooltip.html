@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tooltip</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Tooltips</h1>
+      <div class="first_buttons_div">
+        <a href="animation.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="s-img.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <h1>CSS <span class="color_h1">Tooltip</span></h1>
+      <p class="intro">Create tooltips with CSS.</p>
+      <hr />
+      <h2>Demo: Tooltip Examples</h2>
+
+      <p>
+        A tooltip is often used to specify extra information about something
+        when the user moves the mouse pointer over an element:
+      </p>
+
+      <div
+        class="w3-row w3-center"
+        style="margin-top: 35px; margin-bottom: 35px"
+      >
+        <div class="w3-quarter">
+          <div class="tooltip">
+            Top
+            <span class="tooltiptext tooltip-top">Tooltip text</span>
+          </div>
+        </div>
+
+        <div class="w3-quarter">
+          <div class="tooltip">
+            Right
+            <span class="tooltiptext tooltip-right">Tooltip text</span>
+          </div>
+        </div>
+
+        <div class="w3-quarter">
+          <div class="tooltip">
+            Bottom
+            <span class="tooltiptext tooltip-bottom">Tooltip text</span>
+          </div>
+        </div>
+
+        <div class="w3-quarter">
+          <div class="tooltip">
+            Left
+            <span class="tooltiptext tooltip-left">Tooltip text</span>
+          </div>
+        </div>
+      </div>
+      <p style="clear: both"></p>
+      <hr />
+
+      <h2>Basic Tooltip</h2>
+
+      <p>
+        Create a tooltip that appears when the user moves the mouse over an
+        element:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          &lt;style&gt;<br />/* Tooltip container */<br />.tooltip {<br />&nbsp;&nbsp;position:
+          relative;<br />
+          &nbsp; display: inline-block;<br />&nbsp; border-bottom: 1px dotted
+          black; /* If you want dots under the hoverable text */<br />}<br /><br />/*
+          Tooltip text */<br />.tooltip .tooltiptext {<br />&nbsp;&nbsp;visibility:
+          hidden;<br />&nbsp;&nbsp;width: 120px;<br />
+          &nbsp; background-color: black;<br />&nbsp;&nbsp;color: #fff;<br />&nbsp;&nbsp;text-align:
+          center;<br />
+          &nbsp; padding: 5px 0;<br />&nbsp; border-radius: 6px;<br />&nbsp;<br />&nbsp;
+          /* Position the tooltip text - see examples below! */<br />&nbsp;
+          position: absolute;<br />
+          &nbsp; z-index: 1;<br />}<br /><br />/* Show the tooltip text when you
+          mouse over the tooltip container */<br />.tooltip:hover .tooltiptext
+          {<br />&nbsp;&nbsp;visibility: visible;<br />}<br />&lt;/style&gt;<br /><br /><span
+            class="htmlHigh"
+            >&lt;div class="tooltip"&gt;<span style="color: black !important"
+              >Hover over me</span
+            ><br />
+            &nbsp; &lt;span class=&quot;tooltiptext&quot;&gt;<span
+              style="color: black"
+              >Tooltip text</span
+            >&lt;/span&gt;<br />&lt;/div&gt;</span
+          >
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <h3>Example Explained</h3>
+      <p class="note">
+        <strong>HTML:</strong> Use a container element (like &lt;div&gt;) and
+        add the <code class="w3-codespan">&quot;tooltip&quot;</code> class to
+        it. When the user mouse over this &lt;div&gt;, it will show the tooltip
+        text.
+      </p>
+      <p>
+        The tooltip text is placed inside an inline element (like &lt;span&gt;)
+        with <code class="w3-codespan">class=&quot;tooltiptext&quot;</code>.
+      </p>
+      <p class="note">
+        <strong>CSS:</strong> The <code class="w3-codespan">tooltip</code> class
+        use <code class="w3-codespan">position:relative</code>, which is needed
+        to position the tooltip text (<code class="w3-codespan"
+          >position:absolute</code
+        >). <strong>Note:</strong> See examples below on how to position the
+        tooltip.
+      </p>
+      <p>
+        The <code class="w3-codespan">tooltiptext</code> class holds the actual
+        tooltip text. It is hidden by default, and will be visible on hover (see
+        below). We have also added some basic styles to it: 120px width, black
+        background color, white text color, centered text, and 5px top and
+        bottom padding.
+      </p>
+      <p>
+        The CSS <code class="w3-codespan">border-radius</code> property is used
+        to add rounded corners to the tooltip text.
+      </p>
+      <p>
+        The <code class="w3-codespan">:hover</code> selector is used to show the
+        tooltip text when the user moves the mouse over the &lt;div&gt; with
+        <code class="w3-codespan">class=&quot;tooltip&quot;</code>.
+      </p>
+      <hr />
+      <h2>Positioning Tooltips</h2>
+
+      <p>
+        In this example, the tooltip is placed to the right (<code
+          class="w3-codespan"
+          >left:105%</code
+        >) of the &quot;hoverable&quot; text (&lt;div&gt;). Also note that
+        <code class="w3-codespan">top:-5px</code> is used to place it in the
+        middle of its container element. We use the number
+        <strong>5</strong> because the tooltip text has a top and bottom padding
+        of 5px. If you increase its padding, also increase the value of the
+        <code class="w3-codespan">top</code> property to ensure that it stays in
+        the middle (if this is something you want). The same applies if you want
+        the tooltip placed to the left.
+      </p>
+
+      <div class="w3-example">
+        <h3>Right Tooltip</h3>
+        <div class="s-code-box">
+          .tooltip .tooltiptext {<br />&nbsp; top: -5px;<br />&nbsp; left: 105%;
+          <br />}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+          <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext2 tooltip-right2">Tooltip text</span>
+          </div>
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-top w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <div class="w3-example">
+        <h3>Left Tooltip</h3>
+        <div class="s-code-box">
+          .tooltip .tooltiptext {<br />&nbsp; top: -5px;<br />&nbsp; right:
+          105%; <br />}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+          <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext2 tooltip-left2">Tooltip text</span>
+          </div>
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-top w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>
+        If you want the tooltip to appear on top or on the bottom, see examples
+        below. Note that we use the
+        <code class="w3-codespan">margin-left</code> property with a value of
+        minus 60 pixels. This is to center the tooltip above/below the hoverable
+        text. It is set to the half of the tooltip's width (120/2 = 60).
+      </p>
+
+      <div class="w3-example">
+        <h3>Top Tooltip</h3>
+        <div class="s-code-box">
+          .tooltip .tooltiptext {<br />&nbsp; width: 120px;<br />&nbsp; bottom:
+          100%;<br />&nbsp; left: 50%; <br />&nbsp;&nbsp;margin-left: -60px; /*
+          Use half of the width (120/2 = 60), to center the tooltip */<br />}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+          <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext2 tooltip-top2">Tooltip text</span>
+          </div>
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-top w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <div class="w3-example">
+        <h3>Bottom Tooltip</h3>
+        <div class="s-code-box">
+          .tooltip .tooltiptext {<br />&nbsp; width: 120px;<br />&nbsp; top:
+          100%;<br />&nbsp; left: 50%; <br />&nbsp;&nbsp;margin-left: -60px; /*
+          Use half of the width (120/2 = 60), to center the tooltip */<br />}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+          <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext2 tooltip-bottom2">Tooltip text</span>
+          </div>
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-top w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Tooltip Arrows</h2>
+
+      <p>
+        To create an arrow that should appear from a specific side of the
+        tooltip, add "empty" content after tooltip, with the pseudo-element
+        class <code class="w3-codespan">::after</code> together with the
+        <code class="w3-codespan">content</code> property. The arrow itself is
+        created using borders. This will make the tooltip look like a speech
+        bubble.
+      </p>
+      <p>
+        This example demonstrates how to add an arrow to the bottom of the
+        tooltip:
+      </p>
+
+      <div class="w3-example">
+        <h3>Bottom Arrow</h3>
+        <div class="s-code-box">
+          .tooltip .tooltiptext::after {<br />&nbsp; content: &quot; &quot;;<br />&nbsp;
+          position: absolute;<br />
+          &nbsp; top: 100%; /* At the bottom of the tooltip */<br />&nbsp; left:
+          50%;<br />&nbsp; margin-left: -5px;<br />
+          &nbsp; border-width: 5px;<br />&nbsp; border-style: solid;<br />&nbsp;
+          border-color: black transparent transparent transparent;<br />}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+          <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext-bottomarrow">Tooltip text</span>
+          </div>
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-top w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <h3>Example Explained</h3>
+      <p>
+        Position the arrow inside the tooltip:
+        <code class="w3-codespan">top: 100%</code> will place the arrow at the
+        bottom of the tooltip. <code class="w3-codespan">left: 50%</code> will
+        center the arrow.
+      </p>
+
+      <p class="note">
+        <strong>Note:</strong> The
+        <code class="w3-codespan">border-width</code> property specifies the
+        size of the arrow. If you change this, also change the
+        <code class="w3-codespan">margin-left</code> value to the same. This
+        will keep the arrow centered.
+      </p>
+      <p>
+        The <code class="w3-codespan">border-color</code> is used to transform
+        the content into an arrow. We set the top border to black, and the rest
+        to transparent. If all sides were black, you would end up with a black
+        square box.
+      </p>
+
+      <p>
+        This example demonstrates how to add an arrow to the top of the tooltip.
+        Notice that we set the bottom border color this time:
+      </p>
+
+      <div class="w3-example">
+        <h3>Top Arrow</h3>
+        <div class="s-code-box">
+          .tooltip .tooltiptext::after {<br />&nbsp;&nbsp;content: &quot;
+          &quot;;<br />&nbsp;&nbsp;position: absolute;<br />&nbsp;&nbsp;bottom:
+          100%;&nbsp; /* At the top of the tooltip */<br />
+          &nbsp; left: 50%;<br />&nbsp; margin-left: -5px;<br />&nbsp;
+          border-width: 5px;<br />&nbsp; border-style: solid;<br />&nbsp;
+          border-color: transparent transparent black transparent;<br />}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+          <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext-toparrow">Tooltip text</span>
+          </div>
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-top w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>
+        This example demonstrates how to add an arrow to the left of the
+        tooltip:
+      </p>
+
+      <div class="w3-example">
+        <h3>Left Arrow</h3>
+        <div class="s-code-box">
+          .tooltip .tooltiptext::after {<br />&nbsp; content: &quot; &quot;;<br />&nbsp;&nbsp;position:
+          absolute;<br />&nbsp;&nbsp;top: 50%;<br />
+          &nbsp; right: 100%; /* To the left of the tooltip */<br />&nbsp;
+          margin-top: -5px;<br />&nbsp; border-width: 5px;<br />&nbsp;
+          border-style: solid;<br />&nbsp; border-color: transparent black
+          transparent transparent;<br />}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+          <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext-leftarrow">Tooltip text</span>
+          </div>
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-top w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>
+        This example demonstrates how to add an arrow to the right of the
+        tooltip:
+      </p>
+
+      <div class="w3-example">
+        <h3>Right Arrow</h3>
+        <div class="s-code-box">
+          .tooltip .tooltiptext::after {<br />&nbsp; content: &quot; &quot;;<br />&nbsp;
+          position: absolute;<br />
+          &nbsp; top: 50%;<br />&nbsp; left: 100%; /* To the right of the
+          tooltip */<br />&nbsp; margin-top: -5px;<br />&nbsp; border-width:
+          5px;<br />&nbsp; border-style: solid;<br />&nbsp; border-color:
+          transparent transparent transparent black;<br />}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+          <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext-rightarrow">Tooltip text</span>
+          </div>
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-top w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Fade In Tooltips (Animation)</h2>
+
+      <p>
+        If you want to fade in the tooltip text when it is about to be visible,
+        you can use the CSS <code class="w3-codespan">transition</code> property
+        together with the <code class="w3-codespan">opacity</code> property, and
+        go from being completely invisible to 100% visible, in a number of
+        specified seconds (1 second in our example):
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          .tooltip .tooltiptext {<br />&nbsp; opacity: 0;<br />&nbsp;
+          transition: opacity 1s;<br />}<br /><br />.tooltip:hover .tooltiptext
+          {<br />&nbsp;&nbsp;opacity: 1;<br />}
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

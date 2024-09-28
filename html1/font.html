@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Fonts</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Fonts</h1>
+
+      <div class="first_buttons_div">
+        <a href="text.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="icons.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+    <h2>Difference Between Serif and Sans-serif Fonts</h2>
+    <img alt="Serif vs. Sans-serif" src="https://www.w3schools.com/css/serif.gif" width="398" height="142" style="max-width:100%; height:auto">
+    
+    <h2>Generic Font Families</h2>
+    
+    <p>In CSS there are five generic font families:</p>
+    <ol>
+        <li>
+            <strong>Serif</strong>
+            <p>fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.</p>
+        </li>
+        <li>
+            <strong>Sans-serif</strong>
+            <p>fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.</p>
+        </li>
+        <li>
+            <strong>Monospace</strong>
+            <p>fonts - here all the letters have the same fixed width. They create a mechanical look.</p>
+        </li>
+        <li>
+            <strong>Cursive</strong>
+            <p>fonts imitate human handwriting.</p>
+        </li>
+        <li>
+            <strong>Fantasy</strong>
+            <p>fonts are decorative/playful fonts.</p>
+        </li>
+    </ol>
+    <p>All the different font names belong to one of the generic font families.</p>
+    <hr>
+    <div class="note">
+        <strong>Note:</strong> On computer screens, sans-serif fonts are considered easier to read than serif fonts.
+    </div>
+    <table>
+        <tr style="background-color:var(--link-color); color:#fff;">
+            <th>Generic Font Family</th>
+            <th>Examples of Font Names</th>
+        </tr>
+        <tr>
+            <td>Serif</td>
+            <td>
+                <ul>
+                    <li>Times New Roman</li>
+                    <li>Georgia</li>
+                    <li>Garamond</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Sans-serif</td>
+            <td>
+                <ul>
+                    <li>Arial</li>
+                    <li>Verdana</li>
+                    <li>Helvetica</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Monospace</td>
+            <td>
+                <ul>
+                    <li>Courier New</li>
+                    <li>Lucida Console</li>
+                    <li>Monaco</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Cursive</td>
+            <td>
+                <ul>
+                    <li>Brush Script MT</li>
+                    <li>Lucida Handwriting</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Fantasy</td>
+            <td>
+                <ul>
+                    <li>Copperplate</li>
+                    <li>Papyrus</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <br>
+    
+    <h2>The CSS font-family Property</h2>
+    <p>
+        In CSS, we use the <code class="w3-codespan">font-family</code> property to specify the font of a text.
+    </p>
+    <div class="w3-panel">
+        <p>
+            <div class="note">
+                <b>Note:</b> If the font name is more than one word, it must be in quotation marks, like: "Times New Roman".
+            </div>
+        </p>
+    </div>
+    <p>
+        <strong>Tip:</strong> The <code class="w3-codespan">font-family</code> property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/operating systems. Start with the font you want, and end with a generic family (to let the browser pick a similar font in the generic family, if no other fonts are available). The font names should be separated with a comma. Read more about fallback fonts in the <a href="">next chapter</a>.
+    </p>
+    
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Specify some different fonts for three paragraphs:</p>
+        <div class="s-code-box">
+            <span class="cssselectorcolor" style="color:brown">.p1<span class="cssdelimitercolor" style="color:black">{</span><br>
+            &nbsp;&nbsp;<span class="csspropertycolor" style="color:red">font-family</span>: <span class="csspropertyvaluecolor" style="color:mediumblue">"Times New Roman", Times, serif</span><span class="cssdelimitercolor" style="color:black">;</span><br>
+            </span><span class="cssdelimitercolor" style="color:black">}</span><br><br>
+            
+            .p2<span class="cssdelimitercolor" style="color:black">{</span><br>
+            &nbsp;&nbsp;<span class="csspropertycolor" style="color:red">font-family</span>: <span class="csspropertyvaluecolor" style="color:mediumblue">Arial, Helvetica, sans-serif</span><span class="cssdelimitercolor" style="color:black">;</span><br>
+            </span><span class="cssdelimitercolor" style="color:black">}</span><br><br>
+            
+            .p3<span class="cssdelimitercolor" style="color:black">{</span><br>
+            &nbsp;&nbsp;<span class="csspropertycolor" style="color:red">font-family</span>: <span class="csspropertyvaluecolor" style="color:mediumblue">"Lucida Console", "Courier New", monospace</span><span class="cssdelimitercolor" style="color:black">;</span><br>
+            </span><span class="cssdelimitercolor" style="color:black">}</span>
+        </div>
+        <div class="w3-btn-group">
+            <a href="editor.html" target="_blank" class="w3-btn">Try it Yourself »</a>
+        </div>
+    </div>
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

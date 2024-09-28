@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Combinators</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Combinators</h1>
+
+      <div class="first_buttons_div">
+        <a href="align.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="pseudo-class.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <hr />
+
+      <h2 class="h2">CSS Combinators</h2>
+
+      <div
+        style="
+          margin: 24px -32px;
+          padding: 16px 32px;
+          background-color: rgb(255, 244, 163);
+        "
+      >
+        <p style="margin: 15px 0px; color: #000">
+          A combinator is something that explains the relationship between the
+          selectors.
+        </p>
+      </div>
+
+      <p class="note">
+        A CSS selector can contain more than one simple selector. Between the
+        simple selectors, we can include a combinator.
+      </p>
+
+      <p class="p">There are four different combinators in CSS:</p>
+
+      <ul>
+        <li>descendant selector (space)</li>
+        <li>child selector (>)</li>
+        <li>adjacent sibling selector (+)</li>
+        <li>general sibling selector (~)</li>
+      </ul>
+
+      <hr />
+
+      <h2 class="h2">Descendant Selector</h2>
+
+      <p class="p">
+        The descendant selector matches all elements that are descendants of a
+        specified element.
+      </p>
+
+      <p class="p">
+        The following example selects all &lt;p> elements inside &lt;div>
+        elements:
+      </p>
+
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <div class="s-code-box">
+          <p><mark>div p {</mark></p>
+          <pre>   background-color: yellow;</pre>
+          <p>}</p>
+        </div>
+
+        <div>
+            <a
+              href="editor.html"
+              target="_blank"
+							class="w3-btn"
+              >Try it Yourself »</a
+            >
+        </div>
+      </div>
+
+      <hr />
+
+      <h2 class="h2">Child Selector (>)</h2>
+
+      <p class="note">
+        The child selector selects all elements that are the children of a
+        specified element.
+      </p>
+
+      <p class="p">
+        The following example selects all &lt;p> elements that are children of a
+        &lt;div> element:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p><mark>div > p {</mark></p>
+          <pre>   background-color: yellow;</pre>
+          <p>}</p>
+        </div>
+
+        <div>
+            <a
+              href="editor.html"
+              target="_blank"
+							class="w3-btn"
+              >Try it Yourself »</a
+            >
+        </div>
+      </div>
+
+      <hr />
+
+      <h2 class="h2">Adjacent Sibling Selector (+)</h2>
+
+      <p class="note">
+        The adjacent sibling selector is used to select an element that is
+        directly after another specific element.
+      </p>
+
+      <p class="p">
+        Sibling elements must have the same parent element, and "adjacent" means
+        "immediately following".
+      </p>
+
+      <p class="p">
+        The following example selects the first &lt;p> element that are placed
+        immediately after &lt;div> elements:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p><mark>div + p {</mark></p>
+          <pre>   background-color: yellow;</pre>
+          <p>}</p>
+        </div>
+
+        <div>
+            <a
+              href="editor.html"
+              target="_blank"
+							class="w3-btn"
+              >Try it Yourself »</a
+            >
+        </div>
+      </div>
+
+      <hr />
+
+      <h2 class="h2">General Sibling Selector (~)</h2>
+
+      <p class="p">
+        The general sibling selector selects all elements that are next siblings
+        of a specified element.
+      </p>
+
+      <p class="p">
+        The following example selects all &lt;p> elements that are next siblings
+        of &lt;div> elements:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p><mark>div ~ p {</mark></p>
+          <pre>   background-color: yellow;</pre>
+          <p>}</p>
+        </div>
+
+        <div>
+            <a
+              href="editor.html"
+              target="_blank"
+							class="w3-btn"
+              >Try it Yourself »</a
+            >
+        </div>
+      </div>
+
+      <hr />
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

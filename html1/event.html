@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalJS.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="homeJs.html" class="ga-nav" title="JavaScript Tutorial"
+          >JAVASCRIPT</a
+        >
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>JavaScript Events</h1>
+      <div class="first_buttons_div">
+        <a href="objectCo.html">
+          <button class="first_buttons"><b>&lt;</b> Previous</button>
+        </a>
+        <a href="string.html">
+          <button class="first_buttons">Next <b>&gt;</b></button>
+        </a>
+      </div>
+      <hr />
+      <!-- Start Main Content -->
+      <p class="note">
+        HTML events are <strong>"things"</strong> that happen to HTML elements.
+      </p>
+      <p class="note">
+        When JavaScript is used in HTML pages, JavaScript can
+        <strong> "react"</strong> on these events.
+      </p>
+      <hr />
+      <h2>HTML Events</h2>
+      <p>
+        An HTML event can be something the browser does, or something a user
+        does.
+      </p>
+      <p>Here are some examples of HTML events:</p>
+      <ul>
+        <li>An HTML web page has finished loading</li>
+        <li>An HTML input field was changed</li>
+        <li>An HTML button was clicked</li>
+      </ul>
+      <p>Often, when events happen, you may want to do something.</p>
+      <p>JavaScript lets you execute code when events are detected.</p>
+      <p>
+        HTML allows event handler attributes,
+        <strong>with JavaScript code</strong>, to be added to HTML elements.
+      </p>
+      <p>With single quotes:</p>
+      <div class="s-code-box">
+        <div>
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            ><em>element</em
+            ><span class="attributecolor" style="color: red">
+              <em>event</em
+              ><span class="attributevaluecolor" style="color: mediumblue"
+                >=<strong>'</strong><em><strong>some JavaScript</strong></em
+                ><strong>'</strong></span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >
+        </div>
+      </div>
+      <p>With double quotes:</p>
+      <div class="s-code-box">
+        <div>
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            ><em>element</em
+            ><span class="attributecolor" style="color: red">
+              <em>event</em
+              ><span class="attributevaluecolor" style="color: mediumblue"
+                >=<strong>"</strong><em><strong>some JavaScript</strong></em
+                ><strong>"</strong></span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >
+        </div>
+      </div>
+      <p>
+        In the following example, an
+        <code class="w3-codespan">onclick</code> attribute (with code), is added
+        to a <code class="w3-codespan">&lt;button&gt;</code> element:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >button<span class="attributecolor" style="color: red">
+              onclick<span class="attributevaluecolor" style="color: mediumblue"
+                >="document.getElementById('demo').innerHTML = Date()"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >The time is?<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/button<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>
+        In the example above, the JavaScript code changes the content of the
+        element with id="demo".
+      </p>
+      <p>
+        In the next example, the code changes the content of its own element
+        (using
+        <code class="w3-codespan"><strong>this</strong>.innerHTML</code>):
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >button<span class="attributecolor" style="color: red">
+              onclick<span class="attributevaluecolor" style="color: mediumblue"
+                >="this.innerHTML = Date()"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >The time is?<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/button<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-panel note">
+        <p>
+          JavaScript code is often several lines long. It is more common to see
+          event attributes calling functions:
+        </p>
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >button<span class="attributecolor" style="color: red">
+              onclick<span class="attributevaluecolor" style="color: mediumblue"
+                >="displayDate()"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >The time is?<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/button<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <hr />
+      <h2>Common HTML Events</h2>
+      <p>Here is a list of some common HTML events:</p>
+      <table class="ws-table-all" style="width: 100%">
+        <tbody>
+          <tr>
+            <th>Event</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>onchange</td>
+            <td>An HTML element has been changed</td>
+          </tr>
+          <tr>
+            <td>onclick</td>
+            <td>The user clicks an HTML element</td>
+          </tr>
+          <tr>
+            <td>onmouseover</td>
+            <td>The user moves the mouse over an HTML element</td>
+          </tr>
+          <tr>
+            <td>onmouseout</td>
+            <td>The user moves the mouse away from an HTML element</td>
+          </tr>
+          <tr>
+            <td>onkeydown</td>
+            <td>The user pushes a keyboard key</td>
+          </tr>
+          <tr>
+            <td>onload</td>
+            <td>The browser has finished loading the page</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        The list is much longer:
+        <a href=""
+          >W3Schools JavaScript Reference HTML DOM Events</a
+        >.
+      </p>
+      <hr />
+      <h2>JavaScript Event Handlers</h2>
+      <p>
+        Event handlers can be used to handle and verify user input, user
+        actions, and browser actions:
+      </p>
+      <ul>
+        <li>Things that should be done every time a page loads</li>
+        <li>Things that should be done when the page is closed</li>
+        <li>Action that should be performed when a user clicks a button</li>
+        <li>Content that should be verified when a user inputs data</li>
+        <li>And more ...</li>
+      </ul>
+      <p>
+        Many different methods can be used to let JavaScript work with events:
+      </p>
+      <ul>
+        <li>HTML event attributes can execute JavaScript code directly</li>
+        <li>HTML event attributes can call JavaScript functions</li>
+        <li>
+          You can assign your own event handler functions to HTML elements
+        </li>
+        <li>You can prevent events from being sent or being handled</li>
+        <li>And more ...</li>
+      </ul>
+      <div class="w3-panel w3-note">
+        <p>
+          You will learn a lot more about events and event handlers in the HTML
+          DOM chapters.
+        </p>
+      </div>
+      <hr />
+      <form
+        autocomplete="off"
+        spellcheck="false"
+        id="w3-exerciseform"
+        action=""
+        method="post"
+        target="_blank"
+      >
+        <h2>Test Yourself With Exercises</h2>
+        <div class="exercisewindow">
+          <h2>Exercise:</h2>
+          <p>
+            The <code class="w3-codespan">&lt;button&gt;</code> element should
+            do something when someone clicks on it. Try to fix it!
+          </p>
+          <div class="exerciseprecontainer">
+            <pre>&lt;button <input name="ex1" maxlength="7" style="width: 75px;">="alert('Hello')"&gt;Click me.&lt;/button&gt;
+                                 </pre>
+          </div>
+          <br />
+          <button type="submit" class="w3-btn w3-margin-bottom">
+            Submit Answer »
+          </button>
+          <p>
+            <a
+              target="_blank"
+              href=""
+              >Start the Exercise</a
+            >
+          </p>
+        </div>
+      </form>
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img src="/images/logo/w3-footer.png" alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

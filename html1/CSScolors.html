@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Colors</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Colors</h1>
+      <div class="first_buttons_div">
+        <a href="CSSbackground.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="gradient.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <p class="p">
+        CSS supports
+        <a href="https://www.w3schools.com/css/css_colors.asp"
+          >140+ color names, HEX values, RGB values</a
+        >, RGBA values, HSL values, HSLA values, and opacity.
+      </p>
+
+      <hr />
+
+      <h2 class="h2">RGBA Colors</h2>
+
+      <p class="p">
+        RGBA color values are an extension of RGB color values with an alpha
+        channel - which specifies the opacity for a color.
+      </p>
+
+      <p class="intro">
+        An RGBA color value is specified with: rgba(red, green, blue, alpha).
+        The alpha parameter is a number between 0.0 (fully transparent) and 1.0
+        (fully opaque).
+      </p>
+
+      <div class="div-Bg-RGBA" style="background-color: rgba(255, 0, 0, 0.2)">
+        rgba(255, 0, 0, 0.2);
+      </div>
+      <div class="div-Bg-RGBA" style="background-color: rgba(255, 0, 0, 0.4)">
+        rgba(255, 0, 0, 0.4);
+      </div>
+      <div class="div-Bg-RGBA" style="background-color: rgba(255, 0, 0, 0.6)">
+        rgba(255, 0, 0, 0.6);
+      </div>
+      <div class="div-Bg-RGBA" style="background-color: rgba(255, 0, 0, 0.8)">
+        rgba(255, 0, 0, 0.8);
+      </div>
+
+      <p class="p">The following example defines different RGBA colors:</p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div
+          class="s-code-box"
+          style="background-color: rgb(21, 32, 43); color: white"
+        >
+          <p>
+            <mark>#p1 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)">rgba(255, 0, 0, 0.3)</mark
+            >;} <mark style="color: gray">/* red with opacity */</mark>
+          </p>
+          <p>
+            <mark>#p2 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)">rgba(0, 255, 0, 0.3)</mark
+            >;} <mark style="color: gray">/* green with opacity */</mark>
+          </p>
+          <p>
+            <mark>#p3 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)">rgba(0, 0, 255, 0.3)</mark
+            >;} <mark style="color: gray">/* blue with opacity */</mark>
+          </p>
+        </div>
+
+        <div>
+            <a
+              href="editor.html"
+              target="_blank"
+              class="w3-btn"
+              >Try it Yourself »</a
+            >
+        </div>
+      </div>
+
+      <hr />
+      <hr />
+
+      <h2 class="h2">HSL Colors</h2>
+
+      <p class="p">HSL stands for Hue, Saturation and Lightness.</p>
+
+      <p class="p">
+        An HSL color value is specified with: hsl(hue, saturation, lightness).
+      </p>
+
+      <ol>
+        <li>
+          Hue is a degree on the color wheel (from 0 to 360):
+          <ul>
+            <li>0 (or 360) is red</li>
+            <li>120 is green</li>
+            <li>240 is blue</li>
+          </ul>
+        </li>
+        <li>Saturation is a percentage value: 100% is the full color.</li>
+        <li>
+          Lightness is also a percentage; 0% is dark (black) and 100% is white.
+        </li>
+      </ol>
+
+      <div class="div-Bg-RGBA" style="background-color: hsl(0, 100%, 30%)">
+        hsl(0, 100%, 30%);
+      </div>
+      <div class="div-Bg-RGBA" style="background-color: hsl(0, 100%, 50%)">
+        hsl(0, 100%, 50%);
+      </div>
+      <div class="div-Bg-RGBA" style="background-color: hsl(0, 100%, 70%)">
+        hsl(0, 100%, 70%);
+      </div>
+      <div class="div-Bg-RGBA" style="background-color: hsl(0, 100%, 90%)">
+        hsl(0, 100%, 90%);
+      </div>
+
+      <p class="p">The following example defines different HSL colors:</p>
+
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <div
+        class="s-code-box"
+          style="background-color: rgb(21, 32, 43); color: white"
+        >
+          <p>
+            <mark>#p1 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)">hsl(120, 100%, 50%)</mark>;}
+            <mark style="color: gray">/* green */</mark>
+          </p>
+          <p>
+            <mark>#p2 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)">hsl(120, 100%, 75%)</mark>;}
+            <mark style="color: gray">/* light green */</mark>
+          </p>
+          <p>
+            <mark>#p3 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)">hsl(120, 100%, 25%)</mark>;}
+            <mark style="color: gray">/* dark green *//</mark>
+          </p>
+          <p>
+            <mark>#p4 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)">hsl(120, 60%, 70%)</mark>;}
+            <mark style="color: gray">/* pastel green */</mark>
+          </p>
+        </div>
+
+        <div>
+            <a
+              href="editor.html"
+              target="_blank"
+              class="w3-btn"
+              >Try it Yourself »</a
+            >
+        </div>
+      </div>
+
+      <hr />
+
+      <div
+        class="div-Bg-RGBA"
+        style="background-color: hsla(0, 100%, 30%, 0.3)"
+      >
+        hsla(0, 100%, 30%, 0.3);
+      </div>
+      <div
+        class="div-Bg-RGBA"
+        style="background-color: hsla(0, 100%, 50%, 0.3)"
+      >
+        hsla(0, 100%, 50%, 0.3);
+      </div>
+      <div
+        class="div-Bg-RGBA"
+        style="background-color: hsla(0, 100%, 70%, 0.3)"
+      >
+        hsla(0, 100%, 70%, 0.3);
+      </div>
+      <div
+        class="div-Bg-RGBA"
+        style="background-color: hsla(0, 100%, 90%, 0.3)"
+      >
+        hsla(0, 100%, 90%, 0.3);
+      </div>
+
+      <p class="p">The following example defines different HSLA colors:</p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div
+        class="s-code-box"
+          style="background-color: rgb(21, 32, 43); color: white"
+        >
+          <p>
+            <mark>#p1 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)"
+              >hsla(120, 100%, 50%, 0.3)</mark
+            >;} <mark style="color: gray">/* green with opacity */</mark>
+          </p>
+          <p>
+            <mark>#p2 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)"
+              >hsla(120, 100%, 75%, 0.3)</mark
+            >;} <mark style="color: gray">/* light green with opacity */</mark>
+          </p>
+          <p>
+            <mark>#p3 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)"
+              >hsla(120, 100%, 25%, 0.3)</mark
+            >;} <mark style="color: gray">/* dark green with opacity *//</mark>
+          </p>
+          <p>
+            <mark>#p4 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            >
+            <mark style="color: rgb(136, 201, 139)"
+              >hsla(120, 60%, 70%, 0.3)</mark
+            >;} <mark style="color: gray">/* pastel green with opacity */</mark>
+          </p>
+        </div>
+
+        <div>
+            <a
+              href="editor.html"
+              target="_blank"
+              class="w3-btn"
+              >Try it Yourself »</a
+            >
+        </div>
+      </div>
+
+      <h2 class="h2">Opacity</h2>
+
+      <p class="p">
+        The CSS <mark>opacity</mark> property sets the opacity for the whole
+        element (both background color and text will be opaque/transparent).
+      </p>
+
+      <p class="intro">
+        The <mark>opacity</mark> property value must be a number between 0.0
+        (fully transparent) and 1.0 (fully opaque).
+      </p>
+
+      <div
+        class="div-Bg-RGBA"
+        style="background-color: rgb(255, 0, 0); opacity: 0.2"
+      >
+        rgb(255, 0, 0);opacity:0.2;
+      </div>
+      <div
+        class="div-Bg-RGBA"
+        style="background-color: rgb(255, 0, 0); opacity: 0.4"
+      >
+        rgb(255, 0, 0);opacity:0.4;
+      </div>
+      <div
+        class="div-Bg-RGBA"
+        style="background-color: rgb(255, 0, 0); opacity: 0.6"
+      >
+        rgb(255, 0, 0);opacity:0.6;
+      </div>
+      <div
+        class="div-Bg-RGBA"
+        style="background-color: rgb(255, 0, 0); opacity: 0.8"
+      >
+        rgb(255, 0, 0);opacity:0.8;
+      </div>
+
+      <p class="intro">
+        Notice that the text above will also be transparent/opaque!
+      </p>
+
+      <p class="p">
+        The following example shows different elements with opacity:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div
+        class="s-code-box"
+          style="background-color: rgb(21, 32, 43); color: white"
+        >
+          <p>
+            <mark>#p1 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            ><mark style="color: rgb(136, 201, 139)">rgba(255, 0, 0)</mark
+            >;<mark style="color: rgb(197, 165, 197)">opacity</mark
+            ><mark style="color: rgb(136, 201, 139)">0.6</mark>}
+            <mark style="color: gray">/* red with opacity */</mark>
+          </p>
+          <p>
+            <mark>#p2 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            ><mark style="color: rgb(136, 201, 139)">rgba(0, 255, 0)</mark
+            >;<mark style="color: rgb(197, 165, 197)">opacity</mark
+            ><mark style="color: rgb(136, 201, 139)">0.6</mark>}
+            <mark style="color: gray">/* green with opacity */</mark>
+          </p>
+          <p>
+            <mark>#p3 </mark>{<mark style="color: rgb(197, 165, 197)"
+              >background-color</mark
+            ><mark style="color: rgb(136, 201, 139)">rgba(0, 0, 255)</mark
+            >;<mark style="color: rgb(197, 165, 197)">opacity</mark
+            ><mark style="color: rgb(136, 201, 139)">0.6</mark>}
+            <mark style="color: gray">/* blue with opacity */</mark>
+          </p>
+        </div>
+
+        <div>
+            <a
+              href="editor.html"
+              target="_blank"
+              class="w3-btn"
+              >Try it Yourself »</a
+            >
+        </div>
+      </div>
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

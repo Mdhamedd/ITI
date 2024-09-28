@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Backgounds</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Backgounds</h1>
+      <div class="first_buttons_div">
+        <a href="colors.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h1">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <br />
+      <hr />
+      <!-- Start Main Content -->
+      <p>
+        The CSS background properties are used to add background effects for
+        elements.
+      </p>
+      <br />
+
+      <div class="back">
+        <p>
+          In these chapters, you will learn about the following CSS background
+          properties:
+        </p>
+        <br />
+        <ul>
+          <li class="brown">background-color</li>
+          <li class="brown">background-image</li>
+          <li class="brown">background-repeat</li>
+          <li class="brown">background-attachment</li>
+          <li class="brown">background-position</li>
+          <li class="brown">
+            background <span class="normal"> (shorthand property)</span>
+          </li>
+        </ul>
+        <br /><br />
+      </div>
+      <hr />
+      <h2>CSS background-color</h2>
+      <p>
+        The <span class="crimson-p">background-color</span> property specifies
+        the background color of an element.
+      </p>
+      <br /><br />
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <code class="brown">body </code><code>{</code><br />
+          <code class="tomato">background-color</code><code>: </code
+          ><code class="blue">lightblue</code><code>;</code> <br /><code
+            >}</code
+          >
+          <br />
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <p>With CSS, a color is most often specified by:</p>
+      <ul>
+        <li>a valid color name - like "red"</li>
+        <li>a HEX value - like "#ff0000"</li>
+        <li>an RGB value - like "rgb(255,0,0)"</li>
+      </ul>
+      <p>
+        Look at CSS Color Values for a complete list of possible color values.
+      </p>
+      <br />
+      <hr />
+      <h2>Other Elements</h2>
+      <p>You can set the background color for any HTML elements:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>
+          Here, the &lt;h1&gt;, &lt;p&gt;, and &lt;div&gt; elements will have
+          different background colors:
+        </p>
+        <div class="s-code-box">
+          <code class="brown">h1 </code><code>{</code><br />
+          <code class="tomato">background-color</code><code>: </code
+          ><code class="blue">green</code><code>;</code> <br /><code>}</code>
+          <br />
+          <code class="brown">div </code><code>{</code><br />
+          <code class="tomato">background-color</code><code>: </code
+          ><code class="blue">lightblue</code><code>;</code> <br /><code
+            >}</code
+          >
+          <br />
+          <code class="brown">p </code><code>{</code><br />
+          <code class="tomato">background-color</code><code>: </code
+          ><code class="blue">yellow</code><code>;</code> <br /><code>}</code>
+          <br />
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <h2>Opacity / Transparency</h2>
+      <p>
+        The <span class="crimson-p">opacity</span> property specifies the
+        opacity/transparency of an element. It can take a value from 0.0 - 1.0.
+        The lower value, the more transparent:
+      </p>
+      <br />
+      <img
+        src="/images/bg_color/Screenshot 2024-08-23 172718.png"
+        alt="no images"
+        width="100%"
+        loading="lazy"
+      />
+      <br />
+      <br />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <code class="brown">div </code><code>{</code><br />
+          <code class="tomato">background-color</code><code>: </code
+          ><code class="blue">lightblue</code><code>;</code>
+          <br />
+          <br />
+          <code class="tomato">opacity</code><code>: </code
+          ><code class="blue">0.3</code><code>;</code> <br /><code>}</code>
+          <br />
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <p class="note">
+        <span class="big">Note:</span> When using the opacity property to add
+        transparency to the background of an element, all of its child elements
+        inherit the same transparency. This can make the text inside a fully
+        transparent element hard to read.
+      </p>
+      <br />
+      <hr />
+      <h2>Transparency using RGBA</h2>
+      <p>
+        If you do not want to apply opacity to child elements, like in our
+        example above, use RGBA color values. The following example sets the
+        opacity for the background color and not the text:
+      </p>
+      <br />
+      <img
+        src="/images/bg_color/Screenshot 2024-08-23 173545.png"
+        alt="no img"
+        width="100%"
+        loading="lazy"
+      />
+      <br />
+      <br />
+      <p>
+        You learned from our CSS Colors Chapter, that you can use RGB as a color
+        value. In addition to RGB, you can use an RGB color value with an alpha
+        channel (RGBA) - which specifies the opacity for a color.
+      </p>
+      <p>
+        An RGBA color value is specified with: rgba(red, green, blue, alpha).
+        The alpha parameter is a number between 0.0 (fully transparent) and 1.0
+        (fully opaque).
+      </p>
+      <br />
+      <p class="note">
+        <span class="big">Tip:</span> You will learn more about RGBA Colors in
+        our CSS Colors Chapter.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <code class="brown">div </code><code>{</code><br />
+          <code class="tomato">background-color</code><code>: </code
+          ><code class="blue">rgba(0, 128, 0, 0.3) </code>
+          <code class="green">/* Green background with 30% opacity */</code
+          ><code>;</code>
+          <br />
+          <br />
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br /><br />
+      <h1 id="h1">CSS Background Image</h1>
+
+      <div class="first_buttons_div">
+        <a href="background.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h11">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <br />
+      <hr />
+      <h2>CSS background-image</h2>
+      <p>
+        The <span class="crimson-p">background-image</span> property specifies
+        the background color of an element.
+      </p>
+      <p>By default, the image is repeated so it covers the entire element.</p>
+      <br />
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Set the background image for a page:</p>
+        <div class="s-code-box">
+          <code class="brown">body </code><code>{</code><br />
+          <code class="tomato">background-image</code><code>: </code
+          ><code class="blue">url("paper.gif")</code><code>;</code> <br /><code
+            >}</code
+          >
+          <br />
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>
+          This example shows a bad combination of text and background image. The
+          text is hardly readable:
+        </p>
+        <div class="s-code-box">
+          <code class="brown">body </code><code>{</code><br />
+          <code class="tomato">background-image</code><code>: </code
+          ><code class="blue">url("bgdesert.jpg")</code><code>;</code>
+          <br /><code>}</code>
+          <br />
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <p class="note">
+        <span class="big">Note:</span>When using a background image, use an
+        image that does not disturb the text.
+      </p>
+      <p>
+        The background image can also be set for specific elements, like the
+        element:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>
+          This example shows a bad combination of text and background image. The
+          text is hardly readable:
+        </p>
+        <div class="s-code-box">
+          <code class="brown">body </code><code>{</code><br />
+          <code class="tomato">background-image</code><code>: </code
+          ><code class="blue">url("paper.gif")</code><code>;</code> <br /><code
+            >}</code
+          >
+          <br />
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br /><br />
+      <hr />
+      <h1 id="h11">CSS Background Image Repeat</h1>
+      <div class="first_buttons_div">
+        <a href="#h1">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h111">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <h2>CSS background-repeat</h2>
+      <p>
+        By default, the <span class="crimson-p">background-image</span> property
+        repeats an image both horizontally and vertically.
+      </p>
+      <p>
+        Some images should be repeated only horizontally or vertically, or they
+        will look strange, like this:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Set the background image for a page:</p>
+        <div class="s-code-box">
+          <code class="brown">body </code><code>{</code><br />
+          <code class="tomato">background-image</code><code>: </code
+          ><code class="blue">url("gradient_bg.png")</code><code>;</code>
+          <br /><code>}</code>
+          <br />
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <p>
+        If the image above is repeated only horizontally (background-repeat:
+        repeat-x;), the background will look better:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Set the background image for a page:</p>
+        <div class="s-code-box">
+          <code class="brown">body </code><code>{</code><br />
+          <code class="tomato">background-image</code><code>: </code
+          ><code class="blue">url("gradient_bg.png")</code><code>;</code>
+          <br />
+
+          <code class="tomato">background-repeat</code><code>: </code
+          ><code class="blue">repeat-x</code><code>;</code> <br /><code>}</code>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <p class="note">
+        <span class="big">Tip: </span>To repeat an image vertically, set
+        background-repeat: repeat-y;
+      </p>
+      <br />
+      <hr />
+      <h2>CSS background-repeat: no-repeat</h2>
+      <p>
+        Showing the background image only once is also specified by the
+        <span class="crimson-p">background-repeat</span> property:
+      </p>
+      <br />
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Show the background image only once:</p>
+
+        <div class="s-code-box">
+          <code class="brown">body </code><code>{</code><br />
+          <code class="tomato">background-image</code><code>: </code
+          ><code class="blue">url("gradient_bg.png")</code><code>;</code>
+          <br />
+
+          <code class="tomato">background-repeat</code><code>: </code
+          ><code class="blue">no-repeat</code><code>;</code> <br /><code
+            >}</code
+          >
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <p>
+        In the example above, the background image is placed in the same place
+        as the text. We want to change the position of the image, so that it
+        does not disturb the text too much.
+      </p>
+
+      <br />
+      <hr />
+      <h2>CSS background-position</h2>
+
+      <p>
+        The <span class="crimson-p">background-position</span> property is used
+        to specify the position of the background image.
+      </p>
+      <br />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Position the background image in the top-right corner:</p>
+
+        <div class="s-code-box">
+          <code class="brown">body </code><code>{</code><br />
+          <code class="tomato">background-image</code><code>: </code
+          ><code class="blue">url("img_tree.png")</code><code>;</code>
+          <br />
+
+          <code class="tomato">background-repeat</code><code>: </code
+          ><code class="blue">no-repeat</code><code>;</code>
+          <br />
+          <code class="tomato">background-position</code><code>: </code
+          ><code class="blue">right top</code><code>;</code>
+          <br />
+          <code>}</code>
+          <br />
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br /><br />
+      <hr />
+      <br />
+      <h1 id="h111">CSS Background Attachment</h1>
+      <div class="first_buttons_div">
+        <a href="#h11">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h1111">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <h2>CSS background-attachment</h2>
+      <p>
+        The <code id="html">background-attachment</code> property specifies
+        whether the background image should scroll or be fixed (will not scroll
+        with the rest of the page):
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <p>
+          Specify that the background image should scroll with the rest of the
+          page:
+        </p>
+        <div class="w3-code notranslate cssHigh" style="width: 95%">
+          <div class="s-code-box">
+            <span class="cssselectorcolor" style="color: brown"
+              >body <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp;&nbsp;background-image
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  url("img_tree.png")<span
+                    class="cssdelimitercolor"
+                    style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;&nbsp;background-repeat
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  no-repeat<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;&nbsp;background-position
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  right top<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; background-attachment
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  scroll<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black"
+                >}</span
+              ></span
+            >
+          </div>
+          <br />
+          <div>
+            <button class="first_buttons">
+              <a href="editor.html" target="_blank">Try it Yourself »</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr />
+
+      <h2>The CSS Background Attachment Property</h2>
+      <br />
+
+      <table border="1" style="width: 100%">
+        <tr style="background-color: var(--eighth-color); color: #fff">
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>background-attachment</td>
+          <td>
+            Sets whether a background image is fixed or scrolls with the rest of
+            the page
+          </td>
+        </tr>
+      </table>
+
+      <br /><br />
+      <hr />
+      <br />
+      <h1 id="h1111">CSS Background Shorthand</h1>
+
+      <div class="first_buttons_div">
+        <a href="#h111">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="border.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <h2>CSS background - Shorthand property</h2>
+      <p>
+        To shorten the code, it is also possible to specify all the background
+        properties in one single property. This is called a shorthand property.
+      </p>
+      <p>Instead of writing:</p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <div class="s-code-box">
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown"
+              >body <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; background-color<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  #ffffff
+                  <span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; background-image<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  url("img_tree.png")
+                  <span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; background-repeat<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  no-repeat<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; background-position
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  right top<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+
+      <p>
+        You can use the shorthand property <code id="html">background</code> :
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <p>
+          Use the shorthand property to set the background properties in one
+          declaration:
+        </p>
+        <div class="w3-code notranslate cssHigh" style="width: 95%">
+          <div class="s-code-box">
+            <span class="cssselectorcolor" style="color: brown"
+              >body <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; background<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                >
+                  <span class="cssdelimitercolor" style="color: black">:</span>
+                  #ffffff url("img_tree.png") no-repeat right top<span
+                    class="cssdelimitercolor"
+                    style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+
+      <p>
+        When using the shorthand property the order of the property values is:
+      </p>
+
+      <ul>
+        <li><code id="html">background-color</code></li>
+        <li><code id="html">background-image</code></li>
+        <li><code id="html">background-repeat</code></li>
+        <li><code id="html">background-attachment</code></li>
+        <li><code id="html">background-position</code></li>
+      </ul>
+
+      <p>
+        It does not matter if one of the property values is missing, as long as
+        the other ones are in this order. Note that we do not use the
+        background-attachment property in the examples above, as it does not
+        have a value.
+      </p>
+      <br />
+      <hr />
+
+      <h2>All CSS Background Properties</h2>
+
+      <table>
+        <tr style="background-color: var(--eighth-color); color: #fff">
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td href="">background</td>
+          <td>Sets all the background properties in one declaration</td>
+        </tr>
+
+        <tr>
+          <td href="">background-attachment</td>
+          <td>
+            Sets whether a background image is fixed or scrolls with the rest of
+            the page
+          </td>
+        </tr>
+
+        <tr>
+          <td href="">background-clip</td>
+          <td>Specifies the painting area of the background</td>
+        </tr>
+
+        <tr>
+          <td href="">background-color</td>
+          <td>Sets the background color of an element</td>
+        </tr>
+
+        <tr>
+          <td href="">background-image</td>
+          <td>Sets the background image for an element</td>
+        </tr>
+
+        <tr>
+          <td href="">background-origin</td>
+          <td>Specifies where the background image(s) is/are positioned</td>
+        </tr>
+
+        <tr>
+          <td href="">background-position</td>
+          <td>Sets the starting position of a background image</td>
+        </tr>
+
+        <tr>
+          <td href="">background-repeat</td>
+          <td>Sets how a background image will be repeated</td>
+        </tr>
+
+        <tr>
+          <td href="">background-size</td>
+          <td>Specifies the size of the background image(s)</td>
+        </tr>
+      </table>
+
+      <br />
+      <br />
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

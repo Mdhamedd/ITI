@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Id</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="index.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="#" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+
+    <!-- Start Main Content -->
+    <div class="container">
+      <h1>HTML id Attribute</h1>
+      <div class="first_buttons_div">
+        <a href="class.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="iframe.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <p>
+        The HTML <code id="html">id</code> attribute is used to specify a unique
+        id for an HTML element.
+      </p>
+      <p>
+        You cannot have more than one element with the same id in an HTML
+        document.
+      </p>
+      <hr />
+
+      <h2>Using The id Attribute</h2>
+      <p>
+        The <code id="html">id</code> attribute specifies a unique id for an
+        HTML element. The value of the <code id="html">id</code> attribute must
+        be unique within the HTML document.
+      </p>
+      <p>
+        The <code id="html">id</code> attribute is used to point to a specific
+        style declaration in a style sheet. It is also used by JavaScript to
+        access and manipulate the element with the specific id.
+      </p>
+      <p>
+        The syntax for id is: write a hash character (#), followed by an id
+        name. Then, define the CSS properties within curly braces {}.
+      </p>
+      <p>
+        In the following example we have an
+        <code class="w3-codespan">&lt;h1&gt;</code> element that points to the
+        id name "myHeader". This
+        <code class="w3-codespan">&lt;h1&gt;</code> element will be styled
+        according to the <code id="html">#myHeader</code> style definition in
+        the head section:
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh" style="width: 95%">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >style<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="cssselectorcolor" style="color: brown"
+            ><br /><span class="commentcolor" style="color: green"
+              >/* Style the element with the id "myHeader" */</span
+            ><br />
+            <strong>#myHeader</strong>
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                lightblue<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; color
+              <span class="csspropertyvaluecolor" style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                black<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                40px
+                <span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;text-align<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                center<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />
+            <span class="commentcolor" style="color: green"
+              >/* Style all elements with the class name "city" */</span
+            ><br /><strong>.city</strong>
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                tomato<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                white<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                10px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span> <br
+          /></span>
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/style<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><br />
+          <span class="commentcolor" style="color: green"
+            >&lt;!-- An element with a unique id --&gt;</span
+          ><br /><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>h1<span
+              class="attributecolor"
+              style="color: red"
+            >
+              id<span class="attributevaluecolor" style="color: mediumblue"
+                >="myHeader"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >My Cities
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/h1<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><br /><span class="commentcolor" style="color: green"
+            >&lt;!-- Multiple elements with same class --&gt;</span
+          ><br /><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>h2<span
+              class="attributecolor"
+              style="color: red"
+            >
+              class<span class="attributevaluecolor" style="color: mediumblue"
+                >="city"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >London<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/h2<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>p<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >London is the capital of England.<span
+            class="tagnamecolor"
+            style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/p<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><br />
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>h2<span
+              class="attributecolor"
+              style="color: red"
+            >
+              class<span class="attributevaluecolor" style="color: mediumblue"
+                >="city"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >Paris<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/h2<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>p<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >Paris is the capital of France.<span
+            class="tagnamecolor"
+            style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/p<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><br />
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>h2<span
+              class="attributecolor"
+              style="color: red"
+            >
+              class<span class="attributevaluecolor" style="color: mediumblue"
+                >="city"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >Tokyo<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/h2<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>p<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >Tokyo is the capital of Japan.<span
+            class="tagnamecolor"
+            style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/p<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+
+      <div id="note" border="1" style="width: 100%">
+        <p class="note">
+          <strong>Tip:</strong>You can learn much more about CSS in our CSS
+          Tutorial.
+        </p>
+      </div>
+      <br />
+      <hr />
+
+      <h2>HTML Bookmarks with ID and Links</h2>
+      <p>
+        HTML bookmarks are used to allow readers to jump to specific parts of a
+        webpage.
+      </p>
+      <p>Bookmarks can be useful if your page is very long.</p>
+      <p>
+        To use a bookmark, you must first create it, and then add a link to it.
+      </p>
+      <p>
+        Then, when the link is clicked, the page will scroll to the location
+        with the bookmark.
+      </p>
+      <br />
+
+      <h2>Example</h2>
+      <p>
+        First, create a bookmark with the <code id="html">id</code> attribute:
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <div class="w3-example" style="width: 95%">
+          <div class="w3-code notranslate htmlHigh" style="width: 100%">
+            <span class="tagnamecolor" style="color: brown"
+              ><span class="tagcolor" style="color: mediumblue">&lt;</span
+              >h2<span class="attributecolor" style="color: red">
+                id<span class="attributevaluecolor" style="color: mediumblue"
+                  >="C4"</span
+                ></span
+              >
+              <span class="tagcolor" style="color: mediumblue">&gt;</span></span
+            >Chapter 4<span class="tagnamecolor" style="color: brown"
+              ><span class="tagcolor" style="color: mediumblue">&lt;</span
+              >/h2<span class="tagcolor" style="color: mediumblue"
+                >&gt;</span
+              ></span
+            >
+          </div>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <p>
+        Then, add a link to the bookmark ("Jump to Chapter 4"), from within the
+        same page:
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh" style="width: 95%">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>a<span
+              class="attributecolor"
+              style="color: red"
+            >
+              href<span class="attributevaluecolor" style="color: mediumblue"
+                >="#C4"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >Jump to Chapter 4
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/a<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+
+      <h2>Using The id Attribute in JavaScript</h2>
+      <p>
+        The <code id="html">id</code> attribute can also be used by JavaScript
+        to perform some tasks for that specific element.
+      </p>
+      <p>
+        JavaScript can access an element with a specific id with the
+        <code id="html">getElementById()</code> method:
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <p>
+          Use the <code id="html">id</code> attribute to manipulate text with
+          JavaScript:
+        </p>
+        <div class="w3-code notranslate htmlHigh" style="width: 100%">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >script<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="jscolor" style="color: black"
+            ><br /><span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >
+            displayResult() {<br />&nbsp;&nbsp;document.
+            <span class="jspropertycolor" style="color: black"
+              >getElementById</span
+            >(<span class="jsstringcolor" style="color: brown">"myHeader"</span
+            >).<span class="jspropertycolor" style="color: black"
+              >innerHTML</span
+            >
+            =
+            <span class="jsstringcolor" style="color: brown"
+              >"Have a nice day!"</span
+            >;<br />}<br /><span class="jsnumbercolor" style="color: red">
+            </span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/script
+            <span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+
+      <div id="note" border="1" style="width: 100%">
+        <p class="note">
+          <strong>Tip:</strong> Study JavaScript in the HTML JavaScript chapter,
+          or in our JavaScript Tutorial.
+        </p>
+      </div>
+      <br />
+      <hr />
+
+      <h2>Chapter Summary</h2>
+      <ul>
+        <li>
+          The <code id="html">id</code> attribute is used to specify a unique
+          <code id="html">id</code> for an HTML element
+        </li>
+        <li>
+          The value of the <code id="html">id</code> attribute must be unique
+          within the HTML document
+        </li>
+        <li>
+          The <code id="html">id</code> attribute is used by CSS and JavaScript
+          to style/select a specific element
+        </li>
+        <li>
+          The value of the <code id="html">id</code> attribute is case sensitive
+        </li>
+        <li>
+          The <code id="html">id</code> attribute is also used to create HTML
+          bookmarks
+        </li>
+        <li>
+          JavaScript can access an element with a specific id with the
+          <code id="html">getElementById() </code>method
+        </li>
+      </ul>
+      <br />
+      <hr />
+
+      <!-- End Main Content -->
+    </div>
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img src="/images/logo/w3-footer.png" alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

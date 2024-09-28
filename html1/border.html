@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Borders</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Borders</h1>
+
+      <div class="first_buttons_div">
+        <a href="background.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h1">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <br />
+      <hr />
+      <!-- Start Main Content -->
+      <p>
+        The CSS border properties allow you to specify the style, width, and
+        color of an element's border.
+      </p>
+      <hr />
+      <br />
+
+      <p class="all">I have borders on all sides.</p>
+      <p class="down">I have a blue bottom border.</p>
+      <p class="round">I have rounded borders.</p>
+      <p class="colord">I have a colored border.</p>
+      <br />
+      <hr />
+
+      <h2>CSS Border Style</h2>
+      <p>
+        The <code id="html">border-style</code> property specifies what kind of
+        border to display.
+      </p>
+      <p>The following values are allowed:</p>
+      <ul>
+        <li><code id="html">dotted</code> - Defines a dotted border</li>
+        <li><code id="html">dashed</code> - Defines a dashed border</li>
+        <li><code id="html">solid</code> - Defines a solid border</li>
+        <li>
+          <code id="html">groove</code> - Defines a 3D grooved border. The
+          effect depends on the border-color value
+        </li>
+        <li>
+          <code id="html">ridge</code> - Defines a 3D ridged border. The effect
+          depends on the border-color value
+        </li>
+        <li>
+          <code id="html">inset</code> - Defines a 3D inset border. The effect
+          depends on the border-color value
+        </li>
+        <li>
+          <code id="html">outset</code> - Defines a 3D outset border. The effect
+          depends on the border-color value
+        </li>
+        <li><code id="html">none</code> - Defines no border</li>
+        <li><code id="html">hidden</code> - Defines a hidden border</li>
+        <li><code id="html">double</code> - Defines a double border</li>
+      </ul>
+
+      <p>
+        The <code id="html">border-style</code> property can have from one to
+        four values (for the top border, right border, bottom border, and the
+        left border).
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>Demonstration of the different border styles:</p>
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown"
+              >p.dotted
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  dotted<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />p.dashed
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  dashed<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />p.solid
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />p.double
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  double<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />p.groove
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  groove<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />p.ridge
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  ridge<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />p.inset
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  inset<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />p.outset
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  outset<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />p.none
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  none<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />p.hidden
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  hidden<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br />
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                >border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  dotted dashed solid double<span
+                    class="cssdelimitercolor"
+                    style="color: black"
+                    >;</span
+                  ></span
+                ></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+
+      <div class="note" border="1" style="width: 100%">
+        <p>
+          <strong>Note:</strong> None of the OTHER CSS border properties (which
+          you will learn more about in the next chapters) will have ANY effect
+          unless the <code id="html">border-style</code> property is set!
+        </p>
+      </div>
+      <hr />
+      <br />
+      <h1 id="h1">CSS Border Width</h1>
+      <div class="first_buttons_div">
+        <a href="border.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h11">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <h2>CSS Border Width</h2>
+      <p>
+        The <code id="html">border-width</code> property specifies the width of
+        the four borders.
+      </p>
+      <p>
+        The width can be set as a specific size (in px, pt, cm, em, etc) or by
+        using one of the three pre-defined values: thin, medium, or thick:
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>Demonstration of the different border widths:</p>
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown">
+              p.one <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp;border-style
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; border-width
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  5px<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /> </span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />p.two
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />
+                &nbsp;border-style
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;&nbsp;border-width
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  medium<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /> </span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />p.three
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />
+                &nbsp;border-style
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  dotted<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;&nbsp;border-width
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  2px<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /> </span
+              ><span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />p.four
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; border-style
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  dotted<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;&nbsp;border-width
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  thick<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /> </span
+              ><span class="cssdelimitercolor" style="color: black"
+                >}</span
+              ></span
+            >
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <br />
+      <h4>Result:</h4>
+      <div class="w3-example notranslate cssHigh" style="width: 95%">
+        <p class="one">5px border-width</p>
+        <p class="two">medium border-width</p>
+        <p class="three">2px border-width</p>
+        <p class="four">thick border-width</p>
+      </div>
+      <br />
+      <br />
+      <hr />
+
+      <h2>Specific Side Widths</h2>
+      <p>
+        The <code id="html">border-width</code> property can have from one to
+        four values (for the top border, right border, bottom border, and the
+        left border):
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <div class="s-code-box">
+          <h3>Example</h3>
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown"
+              >p.one
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; border-width<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  5px 20px<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                >
+                <span class="commentcolor" style="color: green"
+                  >/* 5px top and bottom, 20px on the sides */</span
+                ><br
+              /></span>
+              <span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />p.two
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid
+                  <span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; border-width<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  20px 5px<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                >
+                <span class="commentcolor" style="color: green"
+                  >/* 20px top and bottom, 5px on the sides */</span
+                ><br
+              /></span>
+              <span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />p.three
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; border-width<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  25px 10px 4px 35px
+                  <span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                >
+                <span class="commentcolor" style="color: green"
+                  >/* 25px top, 10px right, 4px bottom and 35px left */</span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <h1 id="h11">CSS Border Color</h1>
+      <div class="first_buttons_div">
+        <a href="#h1">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h111">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+
+      <h2>CSS Border Color</h2>
+      <p>
+        The <code id="html">border-color</code> property is used to set the
+        color of the four borders.
+      </p>
+      <p>The color can be set by:</p>
+
+      <ul>
+        <li>name - specify a color name, like "red"</li>
+        <li>HEX - specify a HEX value, like "#ff0000"</li>
+        <li>RGB - specify a RGB value, like "rgb(255,0,0)"</li>
+        <li>HSL - specify a HSL value, like "hsl(0, 100%, 50%)"</li>
+        <li>transparent</li>
+      </ul>
+
+      <p class="note">
+        <strong>Note:</strong> If border-color is not set, it inherits the color
+        of the element.
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>Demonstration of the different border colors:</p>
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown"
+              >p.one
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp;border-style
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;border-color
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  red<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />
+                <span class="cssdelimitercolor" style="color: black">}</span
+                ><br /><br />p.two</span
+              >
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp;border-style
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;&nbsp;border-color
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  green<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br
+              /></span>
+              <span class="cssdelimitercolor" style="color: black">}</span
+              ><br /><br />p.three
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp;&nbsp;border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                >
+                  <span class="cssdelimitercolor" style="color: black">:</span>
+                  dotted<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;&nbsp;border-color<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  blue
+                  <span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+          <br />
+        </div>
+
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="w3-example">
+        <h4>Result:</h4>
+        <div class="w3-code notranslate cssHigh" style="width: 95%">
+          <p class="one">Red border</p>
+          <p class="two">Green border</p>
+          <p class="three">Blue border</p>
+        </div>
+      </div>
+      <br />
+      <br />
+      <hr />
+
+      <h2>Specific Side Colors</h2>
+      <p>
+        The <code id="html">border-color</code> property can have from one to
+        four values (for the top border, right border, bottom border, and the
+        left border).
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown"
+              >p.one
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp;&nbsp;border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid
+                  <span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;&nbsp;border-color<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  red green blue yellow<span
+                    class="cssdelimitercolor"
+                    style="color: black"
+                    >;</span
+                  ></span
+                >
+                <span class="commentcolor" style="color: green"
+                  >/* red top, green right, blue bottom and yellow left */</span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+
+      <h2>HEX Values</h2>
+      <p>
+        The color of the border can also be specified using a hexadecimal value
+        (HEX):
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown">
+              p.one <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp;&nbsp;border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid
+                  <span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp;&nbsp;border-color<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  #ff0000<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                >
+                <span class="commentcolor" style="color: green">/* red */</span
+                ><br
+              /></span>
+              <span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+
+      <h2>RGB Values</h2>
+      <p>Or by using RGB values:</p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown"
+              >p.one
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; border-color
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  rgb(255, 0, 0)<span
+                    class="cssdelimitercolor"
+                    style="color: black"
+                    >;</span
+                  ></span
+                >
+                <span class="commentcolor" style="color: green">/* red */</span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+
+      <h2>HSL Values</h2>
+      <p>You can also use HSL values:</p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <div class="w3-code notranslate cssHigh">
+            <span class="cssselectorcolor" style="color: brown"
+              >p.one
+              <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp; border-style<span
+                  class="csspropertyvaluecolor"
+                  style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  solid<span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br />&nbsp; border-color
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  hsl(0, 100%, 50%)<span
+                    class="cssdelimitercolor"
+                    style="color: black"
+                    >;</span
+                  ></span
+                >
+                <span class="commentcolor" style="color: green">/* red */</span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+
+      <div class="note" border="1" style="width: 100%">
+        <p>
+          You can learn more about HEX, RGB and HSL values in our CSS Colors
+          chapters.
+        </p>
+      </div>
+      <br />
+
+      <br />
+      <hr />
+      <br />
+      <h1 id="h111">CSS Shorthand Border Property</h1>
+      <div class="first_buttons_div">
+        <a href="#h11">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="margin.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <h2>CSS Border - Shorthand Property</h2>
+      <p>
+        Like you saw in the previous page, there are many properties to consider
+        when dealing with borders.
+      </p>
+      <p>
+        To shorten the code, it is also possible to specify all the individual
+        border properties in one property.
+      </p>
+      <p>
+        The <code id="html">border</code> property is a shorthand property for
+        the following individual border properties:
+      </p>
+
+      <ul>
+        <li><code id="html">border-width</code></li>
+        <li><code id="html">border-style</code> (required)</li>
+        <li><code id="html">border-color</code></li>
+      </ul>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown"
+              >p <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp;border
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  5px solid red
+                  <span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <div class="w3-example">
+        <h4>Result:</h4>
+        <div class="w3-code notranslate cssHigh" style="width: 95%">
+          <p class="one">The Text</p>
+        </div>
+      </div>
+      <hr />
+
+      <p>
+        You can also specify all the individual border properties for just one
+        side:
+      </p>
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <div class="w3-code notranslate cssHigh" style="width: 95%">
+            <span class="cssselectorcolor" style="color: brown"
+              >p <span class="cssdelimitercolor" style="color: black">{</span
+              ><span class="csspropertycolor" style="color: red"
+                ><br />&nbsp;border-left
+                <span class="csspropertyvaluecolor" style="color: mediumblue"
+                  ><span class="cssdelimitercolor" style="color: black">:</span>
+                  6px solid red
+                  <span class="cssdelimitercolor" style="color: black"
+                    >;</span
+                  ></span
+                ><br /></span
+              ><span class="cssdelimitercolor" style="color: black">}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="w3-example">
+        <h4>Result:</h4>
+        <div class="w3-code notranslate cssHigh" style="width: 95%">
+          <p class="two">The Text</p>
+        </div>
+      </div>
+      <hr />
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

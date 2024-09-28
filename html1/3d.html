@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 3D Transforms</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS 3D Transforms</h1>
+      <div class="first_buttons_div">
+        <a href="2d.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="transition.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <h2 class="header">3D Transform</h2>
+      <div>
+        CSS transforms allow you to move, rotate, scale, and skew elements.
+
+        <br /><br />
+        In this chapter you will learn about the following CSS property:
+        <span class="keyword">transform</span>
+      </div>
+
+      <h2 class="header">CSS 3D rotate() Methods</h2>
+      <ul class="keyword">
+        <li>
+          rotateX(): rotates an element around its X-axis at a given degree:
+        </li>
+        <li>
+          rotateY(): rotates an element around its Y-axis at a given degree:
+        </li>
+        <li>
+          rotateZ(): rotates an element around its Z-axis at a given degree:
+        </li>
+      </ul>
+      <p class="keyword">
+        Hover Over the elements below to get an intuition about the different
+        axis!
+      </p>
+      <div class="transform-x">3D Rotate X</div>
+      <br />
+      <div class="transform-y">3D Rotate Y</div>
+      <br />
+      <div class="transform-z">3D Rotate Z</div>
+
+      <div class="w3-example">
+        <h4 class="keyword">Example of all 3</h4>
+        <div class="s-code-box">
+          <span class="attribute">.rotate-3d&lcub;</span><br />
+          <span class="tag">&nbsp;transform: rotateX(20deg)</span><br />
+          <span class="tag">&nbsp;transform: rotateY(50deg)</span><br />
+          <span class="tag">&nbsp;transform: rotateZ(70deg)</span><br />
+          <span class="attribute">&rcub;</span><br />
+        </div>
+        <a href="editor.html" class="w3-btn">Try it yourself &raquo;</a>
+      </div>
+
+      <h2 class="header">CSS Transform Methods</h2>
+
+      <table>
+        <tr>
+          <th>Function</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</td>
+          <td>Defines a 3D transformation, using a 4x4 matrix of 16 values</td>
+        </tr>
+        <tr>
+          <td>translate3d(x,y,z)</td>
+          <td>Defines a 3D translation</td>
+        </tr>
+        <tr>
+          <td>translateX(x)</td>
+          <td>Defines a 3D translation, using only the value for the X-axis</td>
+        </tr>
+        <tr>
+          <td>translateY(y)</td>
+          <td>Defines a 3D translation, using only the value for the Y-axis</td>
+        </tr>
+        <tr>
+          <td>translateZ(z)</td>
+          <td>Defines a 3D translation, using only the value for the Z-axis</td>
+        </tr>
+        <tr>
+          <td>scale3d(x,y,z)</td>
+          <td>Defines a 3D scale transformation</td>
+        </tr>
+        <tr>
+          <td>scaleX(x)</td>
+          <td>
+            Defines a 3D scale transformation by giving a value for the X-axis
+          </td>
+        </tr>
+        <tr>
+          <td>scaleY(y)</td>
+          <td>
+            Defines a 3D scale transformation by giving a value for the Y-axis
+          </td>
+        </tr>
+        <tr>
+          <td>scaleZ(z)</td>
+          <td>
+            Defines a 3D scale transformation by giving a value for the Z-axis
+          </td>
+        </tr>
+        <tr>
+          <td>rotate3d(x,y,z,angle)</td>
+          <td>Defines a 3D rotation</td>
+        </tr>
+        <tr>
+          <td>rotateX(angle)</td>
+          <td>Defines a 3D rotation along the X-axis</td>
+        </tr>
+        <tr>
+          <td>rotateY(angle)</td>
+          <td>Defines a 3D rotation along the Y-axis</td>
+        </tr>
+        <tr>
+          <td>rotateZ(angle)</td>
+          <td>Defines a 3D rotation along the Z-axis</td>
+        </tr>
+        <tr>
+          <td>perspective(n)</td>
+          <td>Defines a perspective view for a 3D transformed element</td>
+        </tr>
+      </table>
+      <br>
+      <h2 class="header">CSS Transform Properties</h2>
+
+      <table>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>transform</td>
+          <td>Applies a 2D or 3D transformation to an element</td>
+        </tr>
+        <tr>
+          <td>transform-origin</td>
+          <td>Allows you to change the position on transformed elements</td>
+        </tr>
+        <tr>
+          <td>transform-style</td>
+          <td>Specifies how nested elements are rendered in 3D space</td>
+        </tr>
+        <tr>
+          <td>perspective</td>
+          <td>Specifies the perspective on how 3D elements are viewed</td>
+        </tr>
+        <tr>
+          <td>perspective-origin</td>
+          <td>Specifies the bottom position of 3D elements</td>
+        </tr>
+        <tr>
+          <td>backface-visibility</td>
+          <td>
+            Defines whether or not an element should be visible when not facing
+            the screen
+          </td>
+        </tr>
+      </table>
+
+      <h3>Learn More</h3>
+      <p>
+        To learn more about CSS, visit the
+        <a
+          href="https://www.w3schools.com/css"
+          target="_blank"
+          style="color: #04aa6d"
+          >W3Schools CSS</a
+        >.
+      </p>
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

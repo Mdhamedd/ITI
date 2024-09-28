@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS The object-fit Property</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS The object-fit Property</h1>
+      <div class="first_buttons_div">
+        <a href="img-ref.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Pervious
+          </button>
+        </a>
+
+        <a href="ob-fit-postion.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <p>
+        The CSS <code id="html">object-fit</code> property is used to specify
+        how an &lt;img&gt; or &lt;video&gt; should be resized to fit its
+        container.
+      </p>
+      <hr />
+
+      <h2>The CSS object-fit Property</h2>
+      <p>
+        The CSS <code>object-fit</code> property is used to specify how an
+        &lt;img&gt; or &lt;video&gt; should be resized to fit its container.
+      </p>
+      <p>
+        This property tells the content to fill the container in a variety of
+        ways; such as "preserve that aspect ratio" or "stretch up and take up as
+        much space as possible".
+      </p>
+      <p>
+        Look at the following image from Paris. This image is 400 pixels wide
+        and 300 pixels high:
+      </p>
+
+      <img class="img1" src="/images/open-flower.jpg" alt="Paris" />
+
+      <p>
+        owever, if we style the image above to be half its width (200 pixels)
+        and same height (300 pixels), it will look like this:
+      </p>
+
+      <img class="img2" src="/images/open-flower.jpg" alt="Paris" />
+
+      <div class="w3-example" id="code" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                200px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;height<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                300px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br />
+      </div>
+
+      <p>
+        We see that the image is being squished to fit the container of 200x300
+        pixels (its original aspect ratio is destroyed).
+      </p>
+      <p>
+        Here is where the <code>object-fit</code> property comes in. The
+        <code>object-fit</code> property can take one of the following values:
+      </p>
+
+      <ul>
+        <li>
+          <code>fill</code> - This is default. The image is resized to fill the
+          given dimension. If necessary, the image will be stretched or squished
+          to fit
+        </li>
+        <li>
+          <code>contain</code> - The image keeps its aspect ratio, but is
+          resized to fit within the given dimension
+        </li>
+        <li>
+          <code>cover</code> - The image keeps its aspect ratio and fills the
+          given dimension. The image will be clipped to fit
+        </li>
+        <li><code>none</code>- The image is not resized</li>
+        <li>
+          <code>scale-down</code> - the image is scaled down to the smallest
+          version of <code>none</code> or
+          <code>contain</code>
+        </li>
+      </ul>
+      <hr />
+
+      <h2>Using object-fit: cover;</h2>
+      <p>
+        If we use <code>object-fit: cover;</code> the image keeps its aspect
+        ratio and fills the given dimension. The image will be clipped to fit:
+      </p>
+
+      <img class="img3" src="/images/open-flower.jpg" alt="Paris" />
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                200px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; height<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                300px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; object-fit<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                cover<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br />
+      </div>
+      <br />
+      <hr />
+
+      <h2>Using object-fit: contain;</h2>
+      <p>
+        If we use <code>object-fit: contain;</code> the image keeps its aspect
+        ratio, but is resized to fit within the given dimension:
+      </p>
+
+      <img class="img4" src="/images/open-flower.jpg" alt="Paris" />
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                200px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; height<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                300px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; object-fit<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                contain<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br />
+      </div>
+      <br />
+      <hr />
+
+      <h2>Another Example</h2>
+      <p>
+        Here we have two images and we want them to fill the width of 50% of the
+        browser window and 100% of the height.
+      </p>
+      <p>
+        In the following example we do NOT use
+        <code>object-fit,</code> so when we resize the browser window, the
+        aspect ratio of the images will be destroyed:
+      </p>
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box" style="width: 95%">
+          <div style="width: 100%; height: 400px">
+            <img
+              src="/images/open-flower.jpg"
+              alt="Norway"
+              style="float: left; width: 50%; height: 100%"
+            />
+            <img
+              src="/images/clo-flower.jpg"
+              alt="Paris"
+              style="float: left; width: 50%; height: 100%"
+            />
+          </div>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br />
+      </div>
+      <br />
+      <hr />
+
+      <p>
+        In the next example, we use<code>object-fit: cover;</code> ,so when we
+        resize the browser window, the aspect ratio of the images is preserved:
+      </p>
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box" style="width: 95%">
+          <div style="width: 100%; height: 400px">
+            <img
+              src="/images/open-flower.jpg"
+              alt="Norway"
+              style="float: left; width: 50%; height: 100%; object-fit: cover"
+            />
+            <img
+              src="/images/clo-flower.jpg"
+              alt="Paris"
+              style="float: left; width: 50%; height: 100%; object-fit: cover"
+            />
+          </div>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br />
+      </div>
+      <br />
+      <hr />
+
+      <h2>CSS object-fit More Examples</h2>
+      <p>
+        The following example demonstrates all the possible values of the
+        <code>bject-fit</code> property in one example:
+      </p>
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            .fill <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              >object-fit<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                fill<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            .contain
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              >object-fit<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                contain<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            .cover <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              >object-fit<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                cover<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            .scale-down
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              >object-fit<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                scale-down<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            .none <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              >object-fit<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br />
+      </div>
+      <br />
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

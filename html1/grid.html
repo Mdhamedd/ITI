@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Grid Layout</h1>
+      <div class="first_buttons_div">
+        <a href="flexbox.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Pervious
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <h2 class="header">CSS Grid Layout</h2>
+      <p class="note">
+        The CSS Grid Layout Module offers a grid-based layout system, with rows
+        and columns, making it easier to design web pages without having to use
+        floats and positioning.
+      </p>
+      <h2 class="header">Grid Elements</h2>
+      <p>
+        A grid layout consists of a parent element, with one or more child
+        elements.
+      </p>
+
+      <br /><br />
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="tag">&lt;div class="grid-container"&gt;</span><br />
+          <span class="tag"
+            >&nbsp;&nbsp;&lt;div class="grid-item"&gt;1&lt;/div&gt;</span
+          ><br />
+          <span class="tag"
+            >&nbsp;&nbsp;&lt;div class="grid-item"&gt;2&lt;/div&gt;</span
+          ><br />
+          <span class="tag"
+            >&nbsp;&nbsp;&lt;div class="grid-item"&gt;3&lt;/div&gt;</span
+          ><br />
+          <span class="tag"
+            >&nbsp;&nbsp;&lt;div class="grid-item"&gt;4&lt;/div&gt;</span
+          ><br />
+          <span class="tag"
+            >&nbsp;&nbsp;&lt;div class="grid-item"&gt;5&lt;/div&gt;</span
+          ><br />
+          <span class="tag"
+            >&nbsp;&nbsp;&lt;div class="grid-item"&gt;6&lt;/div&gt;</span
+          ><br />
+          <span class="tag"
+            >&nbsp;&nbsp;&lt;div class="grid-item"&gt;7&lt;/div&gt;</span
+          ><br />
+          <span class="tag"
+            >&nbsp;&nbsp;&lt;div class="grid-item"&gt;8&lt;/div&gt;</span
+          ><br />
+          <span class="tag"
+            >&nbsp;&nbsp;&lt;div class="grid-item"&gt;9&lt;/div&gt;</span
+          ><br />
+          <span class="tag">&lt;/div&gt;</span><br />
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn">Try it Yourself</a>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+
+      <h2 class="header">Display Property</h2>
+      <p>
+        An HTML element becomes a grid container when its display property is
+        set to grid or inline-grid.
+      </p>
+      <br />
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="tag">.grid-container &lcub;</span><br />
+          <span class="tag">&nbsp;display: grid;</span><br />
+          <span class="tag">&rcub;</span><br />
+        </div>
+        <a
+        target="_blank"
+        href="editor.html"
+        class="w3-btn"
+        >Try it Yourself</a
+      >
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="tag">.grid-container &lcub;</span><br />
+          <span class="tag">&nbsp;display: inline-grid;</span><br />
+          <span class="tag">&rcub;</span><br />
+        </div>
+        <a
+        target="_blank"
+        href="editor.html"
+        class="w3-btn"
+        >Try it Yourself</a
+      >
+      </div>
+      <p class="note">
+        All direct children of the grid container automatically become grid
+        items.
+      </p>
+      <hr />
+
+      <h3>Grid Columns:</h3>
+      <span>The vertical lines of grid items are called columns.</span>
+      <h3>Grid Rows:</h3>
+      <span>The horizontal lines of grid items are called rows.</span>
+      <h3>Grid Gaps:</h3>
+      <span>The spaces between each column/row are called gaps.</span>
+
+      <p>
+        You can adjust the gap size by using one of the following properties:
+      </p>
+      <ul>
+        <li>column-gap</li>
+        <li>row-gap</li>
+        <li>gap</li>
+      </ul>
+      <div class="w3-example">
+        <h5 class="keyword">
+          The column-gap property sets the gap between the columns:
+        </h5>
+        <div class="s-code-box">
+          <span class="tag">.grid-container &lcub;</span><br />
+          <span class="tag">&nbsp;&nbsp;display: grid;</span><br />
+          <span class="tag">&nbsp;&nbsp;column-gap: 50px;</span><br />
+          <span class="tag">&rcub;</span><br />
+        </div>
+        <a
+        target="_blank"
+        href="editor.html"
+        class="w3-btn"
+        >Try it Yourself</a
+      >
+      </div>
+      <div class="w3-example">
+        <h5 class="keyword">
+          The row-gap property sets the gap between the rows:
+        </h5>
+        <div class="s-code-box">
+          <span class="tag">.grid-container &lcub;</span><br />
+          <span class="tag">&nbsp;&nbsp;display: grid;</span><br />
+          <span class="tag">&nbsp;&nbsp;row-gap: 50px;</span><br />
+          <span class="tag">&rcub;</span><br />
+        </div>
+        <a
+        target="_blank"
+        href="editor.html"
+        class="w3-btn"
+        >Try it Yourself</a
+      >
+      </div>
+      <div class="w3-example">
+        <h5 class="keyword">
+          The gap property is a shorthand property for the row-gap and the
+          column-gap properties:
+        </h5>
+        <div class="s-code-box">
+          <span class="tag">.grid-container &lcub;</span><br />
+          <span class="tag">&nbsp;&nbsp;display: grid;</span><br />
+          <span class="tag">&nbsp;&nbsp;gap: 50px 100px;</span><br />
+          <span class="tag">&rcub;</span><br />
+        </div>
+        <a
+        target="_blank"
+        href="editor.html"
+        class="w3-btn"
+        >Try it Yourself</a
+      >
+      </div>
+
+      <h2 class="header">Grid Lines</h2>
+      <p>
+        The lines between columns are called column lines.
+        <br />
+        The lines between rows are called row lines.
+      </p>
+      <br />
+      <img src="/images/gridlinesimage.JPG" />
+      <p>Refer to line numbers when placing a grid item in a grid container:</p>
+      <div class="w3-example">
+        <h5 class="keyword">
+          Place a grid item at column line 1, and let it end on column line 3:
+        </h5>
+        <div class="s-code-box">
+          <span class="tag">.grid-item1 &lcub;</span><br />
+          <span class="tag">&nbsp;&nbsp;grid-column-start: 1</span><br />
+          <span class="tag">&nbsp;&nbsp;grid-column-end: 3</span><br />
+          <span class="tag">&rcub;</span><br />
+        </div>
+        <a
+        target="_blank"
+        href="editor.html"
+        class="w3-btn"
+        >Try it Yourself</a
+      >
+      </div>
+
+      <h2 class="header">All CSS Grid Properties</h2>
+
+      <table>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>column-gap</td>
+          <td>Specifies the gap between the columns</td>
+        </tr>
+        <tr>
+          <td>gap</td>
+          <td>
+            A shorthand property for the row-gap and the column-gap properties
+          </td>
+        </tr>
+        <tr>
+          <td>grid</td>
+          <td>
+            A shorthand property for the grid-template-rows,
+            grid-template-columns, grid-template-areas, grid-auto-rows,
+            grid-auto-columns, and the grid-auto-flow properties
+          </td>
+        </tr>
+        <tr>
+          <td>grid-area</td>
+          <td>
+            Either specifies a name for the grid item, or this property is a
+            shorthand property for the grid-row-start, grid-column-start,
+            grid-row-end, and grid-column-end properties
+          </td>
+        </tr>
+        <tr>
+          <td>grid-auto-columns</td>
+          <td>Specifies a default column size</td>
+        </tr>
+        <tr>
+          <td>grid-auto-flow</td>
+          <td>Specifies how auto-placed items are inserted in the grid</td>
+        </tr>
+        <tr>
+          <td>grid-auto-rows</td>
+          <td>Specifies a default row size</td>
+        </tr>
+        <tr>
+          <td>grid-column</td>
+          <td>
+            A shorthand property for the grid-column-start and the
+            grid-column-end properties
+          </td>
+        </tr>
+        <tr>
+          <td>grid-column-end</td>
+          <td>Specifies where to end the grid item</td>
+        </tr>
+        <tr>
+          <td>grid-column-gap</td>
+          <td>Specifies the size of the gap between columns</td>
+        </tr>
+        <tr>
+          <td>grid-column-start</td>
+          <td>Specifies where to start the grid item</td>
+        </tr>
+        <tr>
+          <td>grid-gap</td>
+          <td>
+            A shorthand property for the grid-row-gap and grid-column-gap
+            properties
+          </td>
+        </tr>
+        <tr>
+          <td>grid-row</td>
+          <td>
+            A shorthand property for the grid-row-start and the grid-row-end
+            properties
+          </td>
+        </tr>
+        <tr>
+          <td>grid-row-end</td>
+        </tr>
+      </table>
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

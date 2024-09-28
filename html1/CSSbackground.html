@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Multiple Backgrounds</title>
+    <link rel="stylesheet" href="/src/css/block.css">
+    <link rel="stylesheet" href="/src/css/globalcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon">
+</head>
+<body>
+    <nav id="subtopnav">
+        <div class="toggle-container">
+            <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+                &#9776;
+            </button>
+        </div>
+        <div id="nav-links">
+            <a href="home.html" class="ga-nav subtopnav_firstitem" title="HTML Tutorial">HTML</a>
+            <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+            <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+            <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+            <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+            <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+            <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+            <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+            <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+            <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+        </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+        <h1>CSS Multiple Backgrounds</h1>
+        <div class="first_buttons_div">
+            <a href="b-image.html">
+                <button class="first_buttons" id="home_button">
+                    <b>&lt;</b> Previous
+                </button>
+            </a>
+            <a href="CSScolors.html">
+                <button class="first_buttons" id="next_button">
+                    Next <b>&gt;</b>
+                </button>
+            </a>
+        </div>
+        <hr>
+        <br>
+        <!-- Start Main Content -->
+        <div class="intro">
+            <p>In this chapter you will learn how to add multiple background images to one element.</p>
+            <p>You will also learn about the following properties:</p>
+            <ul>
+                <li><mark style="background-color: unset;">background-size</mark></li>
+                <li><mark style="background-color: unset;">background-origin</mark></li>
+                <li><mark style="background-color: unset;">background-clip</mark></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">CSS Multiple Backgrounds</h2>
+
+        <p class="intro">CSS allows you to add multiple background images for an element, through the <mark>background-image</mark> property.</p>
+
+        <p class="intro">The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.</p>
+
+        <p class="intro">The following example has two background images, the first image is a flower (aligned to the bottom and right) and the second image is a paper background (aligned to the top-left corner):</p>
+
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <div class="s-code-box">
+                <p><mark>#example1 {</mark></p>
+                <pre>   background-image: url(img_flwr.gif), url(paper.gif);</pre>
+                <pre>   background-position: right bottom, left top;</pre>
+                <pre>   background-repeat: no-repeat, repeat;</pre>
+                <p>}</p>
+            </div>
+            
+            <div>
+              <a href="editor.html" class="w3-btn" target="_blank"> Try it Yourself »</a>
+            </div>
+        </div>
+
+        <p class="p">Multiple background images can be specified using either the individual background properties (as above) or the <mark>background</mark> shorthand property.</p>
+
+        <p class="p">The following example uses the <mark>background</mark> shorthand property (same result as example above):</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="s-code-box">
+                <p><mark>#example1 {</mark></p>
+                <pre>   background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;</pre>
+                <p>}</p>
+            </div>
+            
+            <div>
+              <a href="editor.html" class="w3-btn target="_blank">Try it Yourself »</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">CSS Background Size</h2>
+
+        <p class="intro">The CSS <mark>background-size</mark> property allows you to specify the size of background images.</p>
+
+        <p class="intro">The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.</p>
+
+        <p class="intro">The following example resizes a background image to much smaller than the original image (using pixels):</p>
+
+        <div id="div1">
+            <h2>Lorem Ipsum Dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <p class="p">Here is the code:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="s-code-box">
+                <p><mark>#div1 {</mark></p>
+                <pre>   background: url(img_flower.jpg);</pre>
+                <pre>   background-size: 100px 80px;</pre>
+                <pre>   background-repeat: no-repeat;</pre>
+                <p>}</p>
+            </div>
+            
+            <div>
+                <a href="editor.html" class="w3-btn" target="_blank">Try it Yourself »</a>
+            </div>
+        </div>
+
+        <p class="intro">The two other possible values for <mark>background-size</mark> are <mark>contain</mark> and <mark>cover</mark>.</p>
+
+        <p class="p">The <mark>contain</mark> keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.</p>
+
+        <p class="p">The <mark>cover</mark> keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area.</p>
+
+        <p class="p">The following example illustrates the use of <mark>contain</mark> and <mark>cover</mark></p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="s-code-box">
+                <p><mark>#div1 {</mark></p>
+                <pre>   background: url(img_flower.jpg);</pre>
+                <pre>   background-size: contain;</pre>
+                <pre>   background-repeat: no-repeat;</pre>
+                <p>}</p>
+                <br>
+                <p><mark>#div1 {</mark></p>
+                <pre>   background: url(img_flower.jpg);</pre>
+                <pre>   background-size: cover;</pre>
+                <pre>   background-repeat: no-repeat;</pre>
+                <p>}</p>
+            </div>
+            
+            <div>
+              <a href="editor.html" target="_blank" class="w3-btn">Try it Yourself »</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">Define Sizes of Multiple Background Images</h2>
+
+        <p class="p">The <mark>background-size</mark> property also accepts multiple values for background size (using a comma-separated list), when working with multiple backgrounds.</p>
+
+        <p class="p">The following example has three background images specified, with different background-size value for each image:</p>
+
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <div class="s-code-box">
+                <p><mark>#div1 {</mark></p>
+                <pre>   background: url(img_tree.gif) left top no-repeat, url(img_flwr.gif) right</pre>
+                <pre>bottom no-repeat, url(paper.gif) left top repeat;</pre>
+                <pre>   background-size: 50px, 130px, auto;</pre>
+                <p>}</p>
+            </div>
+            
+            <div>
+                <a href="editor.html" class="w3-btn" target="_blank">Try it Yourself »</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">Full Size Background Image</h2>
+
+        <p class="p">Now we want to have a background image on a website that covers the entire browser window at all times.</p>
+
+        <p class="p">The requirements are as follows:</p>
+
+        <ul>
+            <li>Fill the entire page with the image (no white space)</li>
+            <li>Scale image as needed</li>
+            <li>Center image on page</li>
+            <li>Do not cause scrollbars</li>
+        </ul>
+
+        <p class="intro">The following example shows how to do it; Use the <html> element (the <html> element is always at least the height of the browser window). Then set a fixed and centered background on it. Then adjust its size with the background-size property:</p>
+
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <div class="s-code-box">
+                <p><mark>html {</mark></p>
+                <pre>   background: url(img_man.jpg) no-repeat center fixed;</pre>
+                <pre>   background-size: cover;</pre>
+                <p>}</p>
+            </div>
+            
+            <div>
+              <a href="editor.html" class="w3-btn" target="_blank">Try it Yourself »</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">Hero Image</h2>
+
+        <p class="p">You could also use different background properties on a &lt;div> to create a hero image (a large image with text), and place it where you want.</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="s-code-box">
+                <p><mark>#div1 {</mark></p>
+                <pre>   background: url(img_man.jpg) no-repeat center;</pre>
+                <pre>   background-size: cover;</pre>
+                <pre>   height: 500px;</pre>
+                <pre>   position: relative;</pre>
+                <p>}</p>
+            </div>
+            
+            <div>
+                <a href="editor.html" class="w3-btn" target="_blank">Try it Yourself »</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">CSS background-origin Property</h2>
+
+        <p class="p">The CSS <mark>background-origin</mark> property specifies where the background image is positioned.</p>
+
+        <p class="p">The property takes three different values:</p>
+
+        <ul>
+            <li>border-box - the background image starts from the upper left corner of the border</li>
+            <li>padding-box - (default) the background image starts from the upper left corner of the padding edge</li>
+            <li>content-box - the background image starts from the upper left corner of the content</li>
+        </ul>
+
+        <p class="p">The following example illustrates the <mark>background-origin</mark> property:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="ex1-b">
+                <p><mark>#example1 {</mark></p>
+                <pre>   border: 10px solid black;</pre>
+                <pre>   padding: 35px;</pre>
+                <pre>   background: url(img_flwr.gif);</pre>
+                <pre>   background-repeat: no-repeat;</pre>
+                <pre>   background-origin: content-box;</pre>
+                <p>}</p>
+            </div>
+            
+            <div>
+                <a href="editor.html" class="w3-btn" target="_blank">Try it Yourself »</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">CSS background-clip Property</h2>
+
+        <p class="intro">The CSS <mark>background-clip</mark> property specifies the painting area of the background.</p>
+
+        <p class="intro">The property takes three different values:</p>
+
+        <ul>
+            <li>border-box - (default) the background is painted to the outside edge of the border</li>
+            <li>padding-box - the background is painted to the outside edge of the padding</li>
+            <li>content-box - the background is painted within the content box</li>
+        </ul>
+
+        <p class="p">The following example illustrates the <mark>background-clip</mark> property:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="s-code-box">
+                <p><mark>#example1 {</mark></p>
+                <pre>   border: 10px dotted black;</pre>
+                <pre>   padding: 35px;</pre>
+                <pre>   background: yellow;</pre>
+                <pre>   background-clip: content-box;</pre>
+                <p>}</p>
+            </div>
+            
+            <div>
+                <a href="editor.html" class="w3-btn" target="_blank">Try it Yourself »</a>
+            </div>
+        </div>
+        <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+        <div class="footer-logo">
+            <a href="#"><img src="/images/logo/w3-footer.png" loading="lazy" alt="Our Page Logo"></a>
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Top Tutorials</h3>
+                <ul>
+                    <li><a href="#">HTML Tutorial</a></li>
+                    <li><a href="#">CSS Tutorial</a></li>
+                    <li><a href="#">JavaScript Tutorial</a></li>
+                    <li><a href="#">HOW TO Tutorial</a></li>
+                    <li><a href="#">SQL Tutorial</a></li>
+                    <li><a href="#">Python Tutorial</a></li>
+                    <li><a href="#">W3.CSS Tutorial</a></li>
+                    <li><a href="#">Bootstrap Tutorial</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Top References</h3>
+                <ul>
+                    <li><a href="#">HTML References</a></li>
+                    <li><a href="#">CSS Reference</a></li>
+                    <li><a href="#">JavaScript Reference</a></li>
+                    <li><a href="#">HOW TO Reference</a></li>
+                    <li><a href="#">SQL Reference</a></li>
+                    <li><a href="#">Python References</a></li>
+                    <li><a href="#">W3.CSS References</a></li>
+                    <li><a href="#">Bootstrap References</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Top Examples</h3>
+                <ul>
+                    <li><a href="#">HTML Examples</a></li>
+                    <li><a href="#">CSS Examples</a></li>
+                    <li><a href="#">JavaScript Examples</a></li>
+                    <li><a href="#">HOW TO Examples</a></li>
+                    <li><a href="#">SQL Examples</a></li>
+                    <li><a href="#">Python Examples</a></li>
+                    <li><a href="#">W3.CSS Examples</a></li>
+                    <li><a href="#">Bootstrap Examples</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get Certified</h3>
+                <ul>
+                    <li><a href="#">HTML Certified</a></li>
+                    <li><a href="#">CSS Certified</a></li>
+                    <li><a href="#">JavaScript Certified</a></li>
+                    <li><a href="#">HOW TO Certified</a></li>
+                    <li><a href="#">SQL Certified</a></li>
+                    <li><a href="#">Python Certified</a></li>
+                    <li><a href="#">W3.CSS Certified</a></li>
+                    <li><a href="#">Bootstrap Certified</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-images">
+            <img src="/images/astronaut1.png" alt="Astronaut Illustration" class="astronaut-image" loading="lazy">
+            <img src="/images/plant-footer.png" alt="Plant Illustration" class="plant-image" loading="lazy">
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; All Right Reserved | This Designed by <span class="std">ITI students</span> under supervise <span class="eng">Eng: Seham</span></p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" type="text/javascript"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

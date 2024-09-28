@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tutorial</title>
+    <link rel="stylesheet" href="/src/css/home.css" />
+    <!-- <link rel="stylesheet" href="/src/css/styles.css" /> -->
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <!-- Link to external CSS -->
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Fonts Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- logo title-->
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!--Start Navbar -->
+    <div id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="index.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="homeCss.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="homeJs.html" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </div>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+
+    <!--End Navbar -->
+    <!-- Start Main Content -->
+    <div class="container">
+      <h1 id="h1">HTML Tutorial</h1>
+      <div class="first_buttons_div">
+        <a href="index.html"
+          ><button class="first_buttons" id="home_button">
+            <b>&lt;</b> Home
+          </button></a
+        >
+        <a href="intro.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button></a
+        >
+      </div>
+      <div class="def_of_html">
+        <p>HTML is the standard markup language for Web pages.</p>
+        <p>With HTML you can create your own Website.</p>
+        <p>HTML is easy to learn - You will enjoy it!</p>
+      </div>
+      <hr />
+      <h2 id="fst_h2">Easy Learning with HTML "Try it Yourself"</h2>
+      <p id="fst_p">
+        With our "Try it Yourself" editor, you can edit the HTML code and view
+        the result:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+          <span class="tag"
+            >&lt;!DOCTYPE <span class="attribute">html</span>&gt;</span
+          ><br />
+          <span class="tag">&lt;html&gt;</span><br />
+          <span class="tag">&lt;head&gt;</span><br />
+          <span class="tag">&lt;title&gt;</span>
+          <span class="value">Page Title</span>
+          <span class="tag">&lt;/title&gt;</span><br />
+          <span class="tag">&lt;/head&gt;</span><br />
+          <span class="tag">&lt;body&gt;</span><br /><br />
+          <span class="tag">&lt;h1&gt;</span>
+          <span class="value">This is a Heading</span>
+          <span class="tag">&lt;/h1&gt;</span><br />
+          <span class="tag">&lt;p&gt;</span>
+          <span class="value">This is a paragraph.</span>
+          <span class="tag">&lt;/p&gt;</span><br /><br />
+          <span class="tag">&lt;/body&gt;</span><br />
+          <span class="tag">&lt;/html&gt;</span>
+        </div>
+      </div>
+      <a href="/src/html/editor.html">
+        <button class="first_buttons" id="Try_button">
+          Try it yourself
+        </button></a
+      >
+    </div>
+    <!-- =========================================Start Footer===================================================== -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#">
+          <img src="/images/logo/w3-footer.png" alt="Our Page Logo" />
+        </a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- =========================================End Footer======================================================= -->
+    <!-- End Main Content -->
+    <!-- Link to external JavaScript -->
+    <script src="/src/js/home.js"></script>
+    <script src="/src/js/main.js"></script>
+  </body>
+</html>

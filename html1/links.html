@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Links - Hyperlinks</title>
+    <link rel="stylesheet" href="/src/css/links.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="index.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="homeCSS.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <!-- Start Scrolled Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+
+    <!-- Start Main Content -->
+    <div class="container">
+      <h1>HTML Links</h1>
+      <div class="first_buttons_div">
+        <a href="formating.html"
+          ><button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button></a
+        >
+        <a href="#h11">
+          <button class="first_buttons" id="next_button">
+            Bookmarks <b>&gt;</b>
+          </button></a
+        >
+      </div>
+      <hr />
+      <p id="intro">
+        Links are found in nearly all web pages. Links allow users to click
+        their way from page to page.
+      </p>
+
+      <hr />
+
+      <h2 class="h2">HTML Links - Hyperlinks</h2>
+
+      <p class="p">HTML links are hyperlinks.</p>
+      <p class="p">You can click on a link and jump to another document.</p>
+      <p class="p">
+        When you move the mouse over a link, the mouse arrow will turn into a
+        little hand.
+      </p>
+      <p class="note">
+        <strong>Note:</strong> A link does not have to be text. A link can be an
+        image or any other HTML element!
+      </p>
+      <hr />
+
+      <h2 class="h2">HTML Links - Syntax</h2>
+
+      <p class="p">
+        The HTML <mark>&lt;a&gt;</mark> tag defines a hyperlink. It has the
+        following syntax:
+      </p>
+
+      <div class="w3-example">
+        <div class="ex1-b">
+          <p>&lt;a href="url"&gt;<mark>link text</mark>&lt;/a&gt;</p>
+        </div>
+      </div>
+      <p class="p">
+        The most important attribute of the &lt;a&gt; element is the href
+        attribute, which indicates the link's destination.
+      </p>
+      <p class="p">
+        The link text is the part that will be visible to the reader.
+      </p>
+      <p class="p">
+        Clicking on the link text, will send the reader to the specified URL
+        address.
+      </p>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <p class="p">
+          This example shows how to create a link to W3Schools.com:
+        </p>
+        <div class="ex1-b">
+          <p>
+            &lt;a href="https://www.w3schools.com/"&gt;<mark
+              >Visit W3Schools.com!</mark
+            >&lt;/a&gt;
+          </p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <p class="p">By default, links will appear as follows in all browsers:</p>
+
+      <ul class="list">
+        <li>An unvisited link is underlined and blue</li>
+        <li>A visited link is underlined and purple</li>
+        <li>An active link is underlined and red</li>
+      </ul>
+      <p class="note">
+        <strong>Tip:</strong> Links can of course be styled with CSS, to get
+        another look!
+      </p>
+      <hr />
+
+      <h2 class="h2">HTML Links - The target Attribute</h2>
+
+      <p class="p">
+        By default, the linked page will be displayed in the current browser
+        window. To change this, you must specify another target for the link.
+      </p>
+
+      <p class="p">
+        The target attribute specifies where to open the linked document.
+      </p>
+      <p class="p">
+        The target attribute can have one of the following values:
+      </p>
+
+      <ul class="list">
+        <li>
+          _self - Default. Opens the document in the same window/tab as it was
+          clicked
+        </li>
+        <li>_blank - Opens the document in a new window or tab</li>
+        <li>_parent - Opens the document in the parent frame</li>
+        <li>_top - Opens the document in the full body of the window</li>
+      </ul>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <p class="p">
+          Use target="_blank" to open the linked document in a new browser
+          window or tab:
+        </p>
+        <div class="ex1-b">
+          <p>
+            &lt;a href="https://www.w3schools.com/" target="_blank"&gt;<mark
+              >Visit W3Schools!</mark
+            >&lt;/a&gt;
+          </p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <hr />
+
+      <h2 class="h2">Absolute URLs vs. Relative URLs</h2>
+
+      <p class="p">
+        Both examples above are using an <strong>absolute</strong> URL (a full
+        web address) in the href attribute.
+      </p>
+      <p class="p">
+        A local link (a link to a page within the same website) is specified
+        with a <strong>relative</strong> URL (without the "https://www" part):
+      </p>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <div class="ex1-b">
+          <p>&lt;h2&gt;<mark>Absolute URLs</mark>&lt;/h2&gt;</p>
+          <p>
+            &lt;p&gt;&lt;a
+            href="https://www.w3.org/"&gt;<mark>W3C</mark>&lt;/a&gt;&lt;/p&gt;
+          </p>
+          <p>
+            &lt;p&gt;&lt;a
+            href="https://www.google.com/"&gt;<mark>Google</mark>&lt;/a&gt;&lt;/p&gt;
+          </p>
+          <br />
+          <p>&lt;h2&gt;<mark>Relative URLs</mark>&lt;/h2&gt;</p>
+          <p>
+            &lt;p&gt;&lt;a href="html_images.asp"&gt;<mark>HTML Images</mark
+            >&lt;/a&gt;&lt;/p&gt;
+          </p>
+          <p>
+            &lt;p&gt;&lt;a href="/css/default.asp"&gt;<mark>CSS Tutorial</mark
+            >&lt;/a&gt;&lt;/p&gt;
+          </p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <hr />
+      <hr />
+      <h2 class="h2">HTML Links - Use an Image as a Link</h2>
+      <p class="p">
+        To use an image as a link, just put the &lt;<mark>img</mark>&gt; tag
+        inside the &lt;a&gt; tag:
+      </p>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <div class="ex1-b">
+          <p>&lt;a href="default.asp"&gt;</p>
+          <p>
+            &lt;img src="smiley.gif" alt="HTML tutorial"
+            style="width:42px;height:42px;"&gt;
+          </p>
+          <p>&lt;/a&gt;</p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it yourself »</a>
+          </button>
+        </div>
+      </div>
+      <hr />
+
+      <h2 class="h2">Link to an Email Address</h2>
+      <p class="p">
+        Use <mark>mailto:</mark> inside the href attribute to create a link that
+        opens the user's email program (to let them send a new email):
+      </p>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <div class="ex1-b">
+          <p>
+            &lt;a href="mailto:someone@example.com"&gt;<mark>Send email</mark
+            >&lt;/a&gt;
+          </p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <h2 class="h2">Button as a Link</h2>
+      <p class="p">
+        To use an HTML button as a link, you have to add some JavaScript code.
+      </p>
+      <p class="p">
+        JavaScript allows you to specify what happens at certain events, such as
+        a click of a button:
+      </p>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <div class="ex1-b">
+          <p>
+            &lt;button onclick="document.location='default.asp'"&gt;<mark
+              >HTML Tutorial</mark
+            >&lt;/button&gt;
+          </p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it yourself »</a>
+          </button>
+        </div>
+      </div>
+      <p class="note">
+        <strong>Tip:</strong> Learn more about JavaScript in our JavaScript
+        Tutorial.
+      </p>
+      <hr />
+
+      <h2 class="h2">Link Titles</h2>
+      <p class="p">
+        The <mark>title</mark> attribute specifies extra information about an
+        element. The information is most often shown as a tooltip text when the
+        mouse moves over the element.
+      </p>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <div class="ex1-b">
+          <p>
+            &lt;a href="https://www.w3schools.com/html/" title="Go to W3Schools
+            HTML section"&gt;<mark>Visit our HTML Tutorial</mark>&lt;/a&gt;
+          </p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <h2 class="h2">More on Absolute URLs and Relative URLs</h2>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <p class="p">Use a full URL to link to a web page:</p>
+        <div class="ex1-b">
+          <p>
+            &lt;a
+            <mark>href="https://www.w3schools.com/html/default.asp"</mark>
+            &gt;HTML tutorial&lt;/a&gt;
+          </p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it yourself »</a>
+          </button>
+        </div>
+      </div>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <p class="p">
+          Link to a page located in the html folder on the current web site:
+        </p>
+        <div class="ex1-b">
+          <p>
+            &lt;a href="/html/default.asp"&gt;<mark>HTML tutorial</mark
+            >&lt;/a&gt;
+          </p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it yourself »</a>
+          </button>
+        </div>
+      </div>
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <p class="p">
+          Link to a page located in the same folder as the current page:
+        </p>
+        <div class="ex1-b">
+          <p>
+            &lt;a href="default.asp"&gt;<mark>HTML tutorial</mark>&lt;/a&gt;
+          </p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <hr />
+      <!-- End Main Content -->
+      <h1 id="h11">HTML Links - Create Bookmarks</h1>
+      <div class="first_buttons_div">
+        <a href="links.html"
+          ><button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button></a
+        >
+        <a href="img.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button></a
+        >
+      </div>
+      <!-- Start Main Content -->
+      <hr />
+
+      <p id="intro">
+        HTML links can be used to create bookmarks, so that readers can jump to
+        specific parts of a web page.
+      </p>
+
+      <hr />
+
+      <h2 class="h2">Create a Bookmark in HTML</h2>
+
+      <p class="p">Bookmarks can be useful if a web page is very long.</p>
+
+      <p class="p">
+        To create a bookmark - first create the bookmark, then add a link to it.
+      </p>
+
+      <p class="p">
+        When the link is clicked, the page will scroll down or up to the
+        location with the bookmark.
+      </p>
+
+      <p class="p">
+        First, use the <mark>id</mark> attribute to create a bookmark:
+      </p>
+
+      <div class="w3-example">
+        <h3 class="ex1-head">Example</h3>
+        <div class="ex1-b">
+          <p>&lt;h2 id="c4"&gt;<mark>chapter 4</mark>&lt;/h2&gt;</p>
+        </div>
+      </div>
+
+      <p class="note">
+        Then, add a link to the bookmark ("Jump to Chapter 4"), from within the
+        same page:
+      </p>
+
+      <div class="w3-example">
+        <h3 id="ex-head">Example</h3>
+        <div class="ex1-b">
+          <p>&lt;a href="#C4"><mark>Jump to Chapter 4</mark>&lt;/a></p>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <p>You can also add a link to a bookmark on another page:</p>
+
+      <div class="w3-example">
+        <div class="ex1-b">
+          <p>
+            &lt;a href="html_demo.html#C4"&gt;<mark>Jump to Chapter 4</mark
+            >&lt;/a&gt;
+          </p>
+        </div>
+      </div>
+
+      <hr />
+      <h2 class="h2">Chapter Summary</h2>
+
+      <ul>
+        <li>
+          Use the <mark>id</mark> attribute (id="value") to define bookmarks in
+          a page
+        </li>
+        <li>
+          Use the <mark>href</mark> attribute (href="#value") to link to the
+          bookmark
+        </li>
+      </ul>
+
+      <hr />
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img src="/images/logo/w3-footer.png" alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p class="p">
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <script src="/src/js/home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

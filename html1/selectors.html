@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Selectors</h1>
+      <div class="first_buttons_div">
+        <a href="syntaxCSS.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="commentsCSS.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <h2 class="header">What Are CSS Selectors?</h2>
+      <p>A CSS selector selects the HTML element(s) you want to style.</p>
+      <hr />
+      <div>
+        <p>
+          CSS selectors are used to "find" (or select) the HTML elements you
+          want to style.
+        </p>
+        <ul>
+          We can divide CSS selectors into five categories:
+          <li>Simple selectors (select elements based on name, id, class)</li>
+          <li>
+            Combinator selectors (select elements based on a specific
+            relationship between them)
+          </li>
+          <li>
+            Pseudo-class selectors (select elements based on a certain state)
+          </li>
+          <li>
+            Pseudo-elements selectors (select and style a part of an element)
+          </li>
+          <li>
+            Attribute selectors (select elements based on an attribute or
+            attribute value)
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="header">The CSS element Selectors</h2>
+      <p>Element selector selects HTML elements based on element name</p>
+      <div class="w3-example">
+        <p>
+          Here, all &lt;p&gt;elements on the page will be center-aligned, with a
+          red text color:
+        </p>
+        <div class="w3-code notranslate htmlHigh">
+          <span class="tag">p&lcub;</span><br />
+          <span class="attribute">&nbsp;color:red</span><br />
+          <span class="attribute">&nbsp;text-align:center</span><br />
+          <span>&rcub;</span>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <h2 class="header">The CSS ID Selectors</h2>
+      <p>
+        The id selector uses the id attribute of an HTML element to select a
+        specific element.
+      </p>
+      <p>
+        To select an element with a specific id, write a hash (#) character,
+        followed by the id of the element.
+      </p>
+      <div class="w3-example">
+        <p>
+          The CSS rule below will be applied to the HTML element with
+          id="para1":
+        </p>
+        <div class="w3-code notranslate htmlHigh">
+          <span class="tag">#para1&nbsp;&lcub;</span><br />
+          <span class="attribute">&nbsp;color:red</span><br />
+          <span class="attribute">&nbsp;text-align:center</span><br />
+          <span>&rcub;</span>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <h2 class="header">The CSS Class Selectors</h2>
+      <p>
+        To select elements with a specific class, write a period (.) character,
+        followed by the class name.
+      </p>
+      <div class="w3-example">
+        <p>
+          In this example all HTML elements with class="center" will be red and
+          center-aligned:
+        </p>
+        <div class="w3-code notranslate htmlHigh">
+          <span class="tag">.center&nbsp;&lcub;</span><br />
+          <span class="attribute">&nbsp;color:red</span><br />
+          <span class="attribute">&nbsp;text-align:center</span><br />
+          <span>&rcub;</span>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <p>
+        You can also "combine" two selectors to be more specific as shown below:
+      </p>
+      <div class="w3-example">
+        <p>
+          In this example only &lt;p&gt; elements with class="center" will be
+          red and center-aligned:
+        </p>
+        <div class="w3-code notranslate htmlHigh">
+          <span class="tag">p.center&nbsp;&lcub;</span><br />
+          <span class="attribute">&nbsp;color:red</span><br />
+          <span class="attribute">&nbsp;text-align:center</span><br />
+          <span>&rcub;</span>
+        </div>
+        <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+
+      <h2 class="header">The CSS Grouping Selector</h2>
+      <p>
+        Having multiple elements with the same styling can be tedious so you can
+        combine them all in one grouping selector as follows
+      </p>
+      <p>Just don't forget to separate them by commas!</p>
+      <div class="w3-example">
+        <p>Grouping several selectors:</p>
+        <div class="w3-code notranslate htmlHigh">
+          <span class="tag">h1,h2,p&nbsp;&lcub;</span><br />
+          <span class="attribute">&nbsp;color:red</span><br />
+          <span class="attribute">&nbsp;text-align:center</span><br />
+          <span>&rcub;</span>
+        </div>
+                <div>
+          <button class="first_buttons">
+            <a href="editor.html" target="_blank">Try it Yourself »</a>
+          </button>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <div>
+        <table>
+          <caption>
+            All Basic CSS Selectors
+          </caption>
+          <tr style="background-color: var(--eighth-color); color: #fff;">
+            <th>Selector</th>
+            <th>Example</th>
+            <th>Example description</th>
+          </tr>
+          <tr>
+            <td>#id</td>
+            <td>#firstname</td>
+            <td>Selects the element with id="firstname"</td>
+          </tr>
+          <tr>
+            <td>.class</td>
+            <td>.intro</td>
+            <td>Selects all elements with class="intro"</td>
+          </tr>
+          <tr>
+            <td>element.class</td>
+            <td>p.intro</td>
+            <td>Selects only &lt;p&gt; elements with class="intro"</td>
+          </tr>
+          <tr>
+            <td>*</td>
+            <td>*</td>
+            <td>Selects ALL elements</td>
+          </tr>
+        </table>
+      </div>
+
+      <h3>Learn More</h3>
+      <p>
+        To learn more about CSS, visit the
+        <a
+          href="https://www.w3schools.com/css/default.asp"
+          target="_blank"
+          style="color: #04aa6d"
+          >W3Schools CSS</a
+        >.
+      </p>
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img src="/images/logo/w3-footer.png" alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

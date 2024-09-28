@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Div</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="index.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="#" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+
+    <!-- Start Main Content -->
+    <div class="container">
+      <h1>HTML Div</h1>
+      <div class="first_buttons_div">
+        <a href="block.html"
+          ><button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button></a
+        >
+        <a href="class.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button></a
+        >
+      </div>
+      <hr />
+      <br />
+       <p class="p">The <mark>&lt;div></mark> element has no required attributes, but style, class and id are common.</p>
+
+        <hr>
+
+        <h2 class="h2"><div> as a container</h2>
+
+        <p class="p">The <mark>&lt;div></mark> element is often used to group sections of a web page together.</p>
+
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <p class="p">A &lt;div> element with HTML elements:</p>
+            <div class="ex1-b">
+                <p><mark>&lt;div></mark></p>
+                <pre>   <mark>&lt;h2></mark>London<mark>&lt;/h2></mark></pre>
+                <pre>   <mark>&lt;p></mark>London is the capital city of England.<mark>&lt;/p></mark></pre>
+                <pre>   <mark>&lt;p></mark>London has over 13 million inhabitants.<mark>&lt;/p></mark></pre>
+                <p><mark>&lt;/div></mark></p>
+            </div>
+            <h3 id="ex-head">Result</h3>
+            <div class="ex1-b">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+                <p>London has over 13 million inhabitants.</p>
+            </div>
+            <div>
+                <button class="first_buttons"><a href="editor.html" target="_blank" >Try it Yourself »</a></button>
+            </div>
+        </div>
+
+        <hr><hr>
+
+        <h2 class="h2">Center align a &lt;div> element</h2>
+
+        <P class="P">If you have a <mark>&lt;div></mark> element that is not 100% wide, and you want to center-align it, set the CSS <mark>margin</mark> property to <mark>auto</mark>.</P>
+
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <div class="ex1-b">
+                <p><mark>&lt;style></mark></p>
+                <p>div {</p>
+                <pre>   width:300px;</pre>
+                <pre>   margin:auto;</pre>
+                <p>}</p>
+                <p><mark>&lt;/style></mark></p>
+            </div>
+            <h3 id="ex-head">Result</h3>
+            <div class="ex1-b">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+                <p>London has over 13 million inhabitants.</p>
+            </div>
+            <div>
+                <button class="first_buttons"><a href="editor.html" target="_blank" >Try it Yourself »</a></button>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">Multiple &lt;div> elements</h2>
+
+        <p class="p">You can have many &lt;div> containers on the same page.</p>
+        
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <div class="ex1-b">
+                <p><mark>&lt;div></mark></p>
+                <pre>   <mark>&lt;h2></mark>London<mark>&lt;/h2></mark></pre>
+                <pre>   <mark>&lt;p></mark>London is the capital city of England.<mark>&lt;p></mark></pre>
+                <pre>   <mark>&lt;p></mark>London has over 13 million inhabitants.<mark>&lt;/p></mark></pre>
+                <p><mark>&lt;/div></mark></p>
+                <p></p>
+                <p><mark>&lt;div></mark></p>
+                <pre>   <mark>&lt;h2></mark>Oslo<mark>&lt;/h2></mark></pre>
+                <pre>   <mark>&lt;p></mark>Oslo is the capital city of Norway.<mark>&lt;p></mark></pre>
+                <pre>   <mark>&lt;p></mark>Oslo has over 600.000 inhabitants.<mark>&lt;/p></mark></pre>
+                <p><mark>&lt;/div></mark></p>
+                <p></p>
+                <p><mark>&lt;div></mark></p>
+                <pre>   <mark>&lt;h2></mark>Rome<mark>&lt;/h2></mark></pre>
+                <pre>   <mark>&lt;p></mark>London is the capital city of England.<mark>&lt;p></mark></pre>
+                <pre>   <mark>&lt;p></mark>London has over 13 million inhabitants.<mark>&lt;/p></mark></pre>
+                <p><mark>&lt;/div></mark></p>
+            </div>
+                <h3 id="ex-head">Result</h3>
+                <div class="ex1-b" style="background-color: #232931;">
+                    <div style="background-color:#FFF4A3;">
+                        <h2>London</h2>
+                        <p>London is the capital city of England.</p>
+                        <p>London has over 13 million inhabitants.</p>
+                    </div>
+                    <div style="background-color:#FFC0C7;">
+                        <h2>Oslo</h2>
+                        <p>Oslo is the capital city of Norway.</p>
+                        <p>Oslo has over 600.000 inhabitants.</p>
+                    </div>
+                    <div style="background-color:#D9EEE1;">
+                        <h2>Rome</h2>
+                        <p>Rome is the capital city of Italy.</p>
+                        <p>Rome has almost 3 million inhabitants.</p>
+                    </div>
+                </div>
+            <div>
+                
+                <button class="first_buttons"><a href="editor.html" target="_blank" >Try it Yourself »</a></button>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">Aligning &lt;div> elements side by side</h2>
+
+        <p class="p">When building web pages, you often want to have two or more <mark>&lt;div></mark> elements side by side, like this:</p>
+
+        <div class="mycontainer">
+            <div id="MC-div1">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+                <p>London has over 13 million inhabitants.</p>
+            </div>
+            <div id="MC-div2">
+                <h2>Oslo</h2>
+                <p>Oslo is the capital city of Norway.</p>
+                <p>Oslo has over 600.000 inhabitants.</p>
+            </div>
+            <div id="MC-div3">
+                <h2>Rome</h2>
+                <p>Rome is the capital city of Italy.</p>
+                <p>Rome has almost 3 million inhabitants.</p>
+            </div>
+        </div>
+
+        <p class="p">There are different methods for aligning elements side by side, all include some CSS styling. We will look at the most common methods:</p>
+
+        <hr>
+
+        <h2 class="h2">Float</h2>
+
+        <p class="p">The CSS <mark>float</mark> property was not originally meant to align <mark>&lt;div></mark> elements side-by-side, but has been used for this purpose for many years.</p>
+
+        <p class="p">The CSS <mark>float</mark> property is used for positioning and formatting content and allow elements float next to each other instead of on top of each other.</p>
+
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <p class="p">How to use float to align div elements side by side:</p>
+            <div class="ex1-b">
+                <p><mark>&lt;style></mark></p>
+                <p><mark>.mycontainer</mark> {</p>
+                <pre>  width:100%;</pre>
+                <pre>  overflow:auto;</pre>
+                <p>}</p>
+                <p>.mycontainer div {</p>
+                <pre>  width:33%;</pre>
+                <pre>  float:left;</pre>
+                <p>}</p>
+                <p><mark>&lt;/style></mark></p>
+            </div>
+                <h3 id="ex-head">Result</h3>
+                <div class="mycontainer">
+                    <div id="MC-div1">
+                        <h2>London</h2>
+                        <p>London is the capital city of England.</p>
+                        <p>London has over 13 million inhabitants.</p>
+                    </div>
+                    <div id="MC-div2">
+                        <h2>Oslo</h2>
+                        <p>Oslo is the capital city of Norway.</p>
+                        <p>Oslo has over 600.000 inhabitants.</p>
+                    </div>
+                    <div id="MC-div3">
+                        <h2>Rome</h2>
+                        <p>Rome is the capital city of Italy.</p>
+                        <p>Rome has almost 3 million inhabitants.</p>
+                    </div>
+                </div>
+            <div>
+                
+                <button class="first_buttons"><a href="ثيهف" target="_blank" >Try it Yourself »</a></button>
+            </div>
+        </div>
+
+        <p class="p">Learn more about float in our <a href="https://www.w3schools.com/css/css_float.asp">CSS float tutorial</a>.</p>
+
+        <hr>
+
+        <h2 class="h2">Inline-block</h2>
+
+        <p class="p">If you change the <mark>&lt;div></mark> element's <mark>display</mark> property from <mark>block</mark> to <mark>inline-block</mark>, the <mark>&lt;div></mark> elements will no longer add a line break before and after, and will be displayed side by side instead of on top of each other.</p>
+
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <p class="p">How to use display: inline-block to align div elements side by side:</p>
+            <div class="ex1-b">
+                <p><mark>&lt;style></mark></p>
+                <p><mark>div</mark> {</p>
+                <pre>  width: 30%;</pre>
+                <pre>  display: inline-block;</pre>
+                <p>}</p>
+                <p><mark>&lt;/style></mark></p>
+            </div>
+                <h3 id="ex-head">Result</h3>
+                <div class="mycontainer">
+                    <div id="MC-div1">
+                        <h2>London</h2>
+                        <p>London is the capital city of England.</p>
+                        <p>London has over 13 million inhabitants.</p>
+                    </div>
+                    <div id="MC-div2">
+                        <h2>Oslo</h2>
+                        <p>Oslo is the capital city of Norway.</p>
+                        <p>Oslo has over 600.000 inhabitants.</p>
+                    </div>
+                    <div id="MC-div3">
+                        <h2>Rome</h2>
+                        <p>Rome is the capital city of Italy.</p>
+                        <p>Rome has almost 3 million inhabitants.</p>
+                    </div>
+                </div>
+            <div>
+
+                <button class="first_buttons"><a href="editor.html" target="_blank" >Try it Yourself »</a></button>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="h2">Flex</h2>
+
+        <p class="p">The CSS Flexbox Layout Module was introduced to make it easier to design flexible responsive layout structure without using float or positioning.</p>
+
+        <p class="p">To make the CSS flex method work, surround the <mark>&lt;div></mark> elements with another <mark>&lt;div></mark> element and give it the status as a flex container.</p>
+
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <p class="p">How to use flex to align div elements side by side:</p>
+            <div class="ex1-b">
+                <p><mark>&lt;style></mark></p>
+                <p><mark>.mycontainer</mark> {</p>
+                <pre>  display: flex;</pre>
+                <p>}</p>
+                <p><mark>.mycontainer > div</mark> {</p>
+                <pre>  width:33%;</pre>
+                <p>}</p>
+                <p><mark>&lt;/style></mark></p>
+            </div>
+                <h3 id="ex-head">Result</h3>
+                <div class="mycontainer">
+                    <div id="MC-div1">
+                        <h2>London</h2>
+                        <p>London is the capital city of England.</p>
+                        <p>London has over 13 million inhabitants.</p>
+                    </div>
+                    <div id="MC-div2">
+                        <h2>Oslo</h2>
+                        <p>Oslo is the capital city of Norway.</p>
+                        <p>Oslo has over 600.000 inhabitants.</p>
+                    </div>
+                    <div id="MC-div3">
+                        <h2>Rome</h2>
+                        <p>Rome is the capital city of Italy.</p>
+                        <p>Rome has almost 3 million inhabitants.</p>
+                    </div>
+                </div>
+            <div>
+
+                <button class="first_buttons"><a href="editor.html" target="_blank" >Try it Yourself »</a></button>
+            </div>
+        </div>
+
+        <p>Learn more about flex in our <a href="https://www.w3schools.com/css/css3_flexbox.asp">CSS flexbox tutorial</a>.</p>
+
+        <hr>
+
+        <h2 class="h2">Grid</h2>
+
+        <p class="p">The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+
+        <p class="p">Sounds almost the same as flex, but has the ability to define more than one row and position each row individually.</p>
+
+        <p class="p">The CSS grid method requires that you surround the <mark>&lt;div></mark> elements with another <mark>&lt;div></mark> element and give the status as a grid container, and you must specify the width of each column.</p>
+
+        <div class="w3-example">
+            <h3 id="ex-head">Example</h3>
+            <p class="p">How to use grid to align &lt;div> elements side by side:</p>
+            <div class="ex1-b">
+                <p><mark>&lt;style></mark></p>
+                <p><mark>.grid-container</mark> {</p>
+                <pre>  display: grid;</pre>
+                <pre>  grid-template-columns: 33% 33% 33%;</pre>
+                <p>}</p>
+                <p><mark>&lt;/style></mark></p>
+            </div>
+                <h3 id="ex-head">Result</h3>
+                <div class="mycontainer">
+                    <div id="MC-div1">
+                        <h2>London</h2>
+                        <p>London is the capital city of England.</p>
+                        <p>London has over 13 million inhabitants.</p>
+                    </div>
+                    <div id="MC-div2">
+                        <h2>Oslo</h2>
+                        <p>Oslo is the capital city of Norway.</p>
+                        <p>Oslo has over 600.000 inhabitants.</p>
+                    </div>
+                    <div id="MC-div3">
+                        <h2>Rome</h2>
+                        <p>Rome is the capital city of Italy.</p>
+                        <p>Rome has almost 3 million inhabitants.</p>
+                    </div>
+                </div>
+            <div>
+
+                <button class="first_buttons"><a href="editor.html" target="_blank" >Try it Yourself »</a></button>
+            </div>
+        </div>
+
+        <p>Learn more about grid in our <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">CSS grid tutorial</a>.</p>
+</div>
+      <!-- End Main Content -->
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img src="/images/logo/w3-footer.png" alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p class="p">
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <script src="/src/js/home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

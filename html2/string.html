@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Strings</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalJS.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="homeJs.html" class="ga-nav" title="JavaScript Tutorial"
+          >JAVASCRIPT</a
+        >
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>JavaScript Strings</h1>
+      <div class="first_buttons_div">
+        <a href="event.html">
+          <button class="first_buttons"><b>&lt;</b> Previous</button>
+        </a>
+        <a href="s-method.html">
+          <button class="first_buttons">Next <b>&gt;</b></button>
+        </a>
+      </div>
+      <hr />
+      <!-- Start Main Content -->
+      <div class="note">
+        <p class="w3-large">Strings are for <b>storing text</b></p>
+        <p class="w3-large">Strings are written <b>with quotes</b></p>
+      </div>
+      <h2>Using Quotes</h2>
+      <p>
+        A JavaScript string is zero or more characters written inside quotes.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            text =
+            <span class="jsstringcolor" style="color: brown">"John Doe"</span
+            >;<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>You can use single or double quotes:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            carName1 =
+            <span class="jsstringcolor" style="color: brown">"Volvo XC60"</span
+            >;&nbsp; <span class="jsnumbercolor" style="color: red"> </span>
+            <span class="commentcolor" style="color: green"
+              >// Double quotes<br
+            /></span>
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            carName2 =
+            <span class="jsstringcolor" style="color: brown">'Volvo XC60'</span
+            >;&nbsp;
+            <span class="commentcolor" style="color: green"
+              >// Single quotes
+            </span></span
+          >
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="note">
+        <h2>Note</h2>
+        <p>Strings created with single or double quotes works the same.</p>
+        <p>There is no difference between the two.</p>
+      </div>
+      <h2>Quotes Inside Quotes</h2>
+      <p>
+        You can use quotes inside a string, as long as they don't match the
+        quotes surrounding the string:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            answer1 =
+            <span class="jsstringcolor" style="color: brown"
+              >"It's alright"</span
+            >;<br />
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            answer2 =
+            <span class="jsstringcolor" style="color: brown"
+              >"He is called 'Johnny'"</span
+            >;<br />
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            answer3 =
+            <span class="jsstringcolor" style="color: brown"
+              >'He is called "Johnny"'</span
+            >;<br /><span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <hr />
+      <h2>Template Strings</h2>
+      <p>Templates were introduced with ES6 (JavaScript 2016).</p>
+      <p>
+        Templates are strings enclosed in backticks (`This is a template
+        string`).
+      </p>
+      <p>Templates allow single and double quotes inside a string:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            text =
+            <span class="jsstringtempcolor" style="color: #f50"
+              >`He's often called "Johnny"`</span
+            >;<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <p>
+          <a
+            class="w3-btn"
+            href="editor.html"
+            target="_blank"
+            >Try it Yourself »</a
+          >
+        </p>
+      </div>
+      <div class="note">
+        <h2>Note</h2>
+        <p>Templates are not supported in Internet Explorer.</p>
+      </div>
+      <hr />
+      <h2>String Length</h2>
+      <p>
+        To find the length of a string, use the built-in
+        <code class="w3-codespan">length</code> property:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            text =
+            <span class="jsstringcolor" style="color: brown"
+              >"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span
+            >;<br />
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            length = text.<span class="jspropertycolor" style="color: black"
+              >length</span
+            >;<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <hr />
+      <h2>Escape Characters</h2>
+      <p>
+        Because strings must be written within quotes, JavaScript will
+        misunderstand this string:
+      </p>
+      <div class="w3-example">
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            text =
+            <span class="jsstringcolor" style="color: brown"
+              >"We are the so-called "</span
+            >Vikings<span class="jsstringcolor" style="color: brown"
+              >" from the north."</span
+            >;<br /><span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+      </div>
+      <p>The string will be chopped to "We are the so-called ".</p>
+      <p>
+        To solve this problem, you can use an <b>backslash escape character</b>.
+      </p>
+      <p>
+        The backslash escape character (<code class="w3-codespan">\</code>)
+        turns special characters into string characters:
+      </p>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th width="25%">Code</th>
+            <th>Result</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>\'</td>
+            <td>'</td>
+            <td>Single quote</td>
+          </tr>
+          <tr>
+            <td>\"</td>
+            <td>"</td>
+            <td>Double quote</td>
+          </tr>
+          <tr>
+            <td>\\</td>
+            <td>\</td>
+            <td>Backslash</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="w3-example">
+        <h3>Examples</h3>
+        <p>\" inserts a double quote in a string:</p>
+        <p></p>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            text =
+            <span class="jsstringcolor" style="color: brown"
+              >"We are the so-called \"Vikings\" from the north."</span
+            >;
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+        <p>\' inserts a single quote in a string:</p>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            text=
+            <span class="jsstringcolor" style="color: brown"
+              >'It\'s alright.'</span
+            >;<br /><span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+        <p>\\ inserts a backslash in a string:</p>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            text =
+            <span class="jsstringcolor" style="color: brown"
+              >"The character \\ is called backslash."</span
+            >;<br /><span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>Six other escape sequences are valid in JavaScript:</p>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th width="25%">Code</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>\b</td>
+            <td>Backspace</td>
+          </tr>
+          <tr>
+            <td>\f</td>
+            <td>Form Feed</td>
+          </tr>
+          <tr>
+            <td>\n</td>
+            <td>New Line</td>
+          </tr>
+          <tr>
+            <td>\r</td>
+            <td>Carriage Return</td>
+          </tr>
+          <tr>
+            <td>\t</td>
+            <td>Horizontal Tabulator</td>
+          </tr>
+          <tr>
+            <td>\v</td>
+            <td>Vertical Tabulator</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="w3-panel note">
+        <h2>Note</h2>
+        <p>
+          The 6 escape characters above were originally designed to control
+          typewriters, teletypes, and fax machines. They do not make any sense
+          in HTML.
+        </p>
+      </div>
+      <hr />
+      <h2>Breaking Long Lines</h2>
+      <p>For readability, programmers often like to avoid long code lines.</p>
+      <p>A safe way to break up a <b>statement</b> is after an operator:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            document.<span class="jspropertycolor" style="color: black"
+              >getElementById</span
+            >(<span class="jsstringcolor" style="color: brown">"demo"</span
+            >).<span class="jspropertycolor" style="color: black"
+              >innerHTML</span
+            >
+            =<br /><span class="jsstringcolor" style="color: brown"
+              >"Hello Dolly!"</span
+            >;
+          </span>
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>A safe way to break up a <b>string</b> is by using string addition:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            document.<span class="jspropertycolor" style="color: black"
+              >getElementById</span
+            >(<span class="jsstringcolor" style="color: brown">"demo"</span
+            >).<span class="jspropertycolor" style="color: black"
+              >innerHTML</span
+            >
+            = <span class="jsstringcolor" style="color: brown">"Hello "</span> +
+            <br /><span class="jsstringcolor" style="color: brown"
+              >"Dolly!"</span
+            >;<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <hr />
+      <h2>Template Strings</h2>
+      <p>Templates were introduced with ES6 (JavaScript 2016).</p>
+      <p>
+        Templates are strings enclosed in backticks (`This is a template
+        string`).
+      </p>
+      <p>Templates allow multiline strings:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span>
+            text =<br />
+            <span class="jsstringtempcolor" style="color: #f50"
+              >`The quick<br />
+              brown fox<br />
+              jumps over<br />
+              the lazy dog`</span
+            >;<br /><span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <p>
+          <a
+            class="w3-btn"
+            href="editor.html"
+            target="_blank"
+            >Try it Yourself »</a
+          >
+        </p>
+      </div>
+      <div class="note">
+        <h2>Note</h2>
+        <p>Templates are not supported in Internet Explorer.</p>
+      </div>
+      <hr />
+      <h2>JavaScript Strings as Objects</h2>
+      <p>
+        Normally, JavaScript strings are primitive values, created from
+        literals:
+      </p>
+      <div class="w3-example">
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> x
+            =
+            <span class="jsstringcolor" style="color: brown">"John"</span
+            >;<br /><span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+      </div>
+      <p>
+        But strings can also be defined as objects with the keyword
+        <code class="w3-codespan">new</code>:
+      </p>
+      <div class="w3-example">
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> y
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            String(<span class="jsstringcolor" style="color: brown">"John"</span
+            >);<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> x
+            =
+            <span class="jsstringcolor" style="color: brown">"John"</span
+            >;<br />
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> y
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            String(<span class="jsstringcolor" style="color: brown">"John"</span
+            >);<br /><span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-panel note">
+        <p>Do not create Strings objects.</p>
+        <p>
+          The <code class="w3-codespan">new</code> keyword complicates the code
+          and slows down execution speed.
+        </p>
+        <p>String objects can produce unexpected results:</p>
+      </div>
+      <div class="w3-example">
+        <p>
+          When using the <code class="w3-codespan">==</code> operator, x and y
+          are <b>equal</b>:
+        </p>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> x
+            =
+            <span class="jsstringcolor" style="color: brown">"John"</span
+            >;<br />
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> y
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            String(<span class="jsstringcolor" style="color: brown">"John"</span
+            >);<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-example">
+        <p>
+          When using the <code class="w3-codespan">===</code> operator, x and y
+          are <b>not equal</b>:
+        </p>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> x
+            =
+            <span class="jsstringcolor" style="color: brown">"John"</span
+            >;<br />
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> y
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            String(<span class="jsstringcolor" style="color: brown">"John"</span
+            >);<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-panel note">
+        <p>
+          Note the difference between
+          <code class="w3-codespan">(x==y)</code> and
+          <code class="w3-codespan">(x===y)</code>.
+        </p>
+      </div>
+      <div class="w3-example">
+        <p><code class="w3-codespan">(x == y)</code> true or false?</p>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> x
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            String(<span class="jsstringcolor" style="color: brown">"John"</span
+            >);<br />
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> y
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            String(<span class="jsstringcolor" style="color: brown">"John"</span
+            >);<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-example">
+        <p><code class="w3-codespan">(x === y)</code> true or false?</p>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> x
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            String(<span class="jsstringcolor" style="color: brown">"John"</span
+            >);<br />
+            <span class="jskeywordcolor" style="color: mediumblue">let</span> y
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            String(<span class="jsstringcolor" style="color: brown">"John"</span
+            >);<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          target="_blank"
+          >Try it Yourself »</a
+        >
+      </div>
+      <div class="w3-panel w3-note">
+        <p>
+          Comparing two JavaScript objects <b>always</b> returns <b>false</b>.
+        </p>
+      </div>
+      <div class="note">
+        <h2>Complete String Reference</h2>
+        <p>For a complete String reference, go to our:</p>
+        <p>
+          <a href=""
+            >Complete JavaScript String Reference</a
+          >.
+        </p>
+        <p>
+          The reference contains descriptions and examples of all string
+          properties and methods.
+        </p>
+      </div>
+      <form
+        autocomplete="off"
+        spellcheck="false"
+        id="w3-exerciseform"
+        action=""
+        method="post"
+        target="_blank"
+      >
+        <h2>Test Yourself With Exercises</h2>
+        <div class="exercisewindow">
+          <h2>Exercise:</h2>
+          <p>
+            Use the <code class="w3-codespan">length</code> property to alert
+            the length of <code class="w3-codespan">txt</code>.
+          </p>
+          <div class="exerciseprecontainer">
+            <pre>let txt = "Hello World!";
+              let x = <input name="ex1" maxlength="10" style="width: 105px;">;
+              alert(x);
+              </pre>
+          </div>
+          <br />
+          <button type="submit" class="w3-btn w3-margin-bottom">
+            Submit Answer »
+          </button>
+          <p>
+            <a
+              target="_blank"
+              href=""
+              >Start the Exercise</a
+            >
+          </p>
+        </div>
+      </form>
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img src="/images/logo/w3-footer.png" alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

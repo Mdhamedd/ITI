@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Styling Images</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Styling Images</h1>
+      <div class="first_buttons_div">
+        <a href="tooltip.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Pervious
+          </button>
+        </a>
+
+        <a href="img-ref.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <p>Learn how to style images using CSS.</p>
+      <hr />
+
+      <h2>Rounded Images</h2>
+      <p>
+        Use the <code id="html">border-radius</code> property to create rounded
+        images:
+      </p>
+      <br />
+
+      <img
+        id="img1"
+        src="/images/style-img/open-flower.jpg"
+        alt="Paris"
+        width="300"
+        height="300"
+      />
+
+      <img
+        id="img2"
+        src="/images/style-img/open-flower.jpg"
+        alt="Paris"
+        width="300"
+        height="300"
+      />
+
+      <div class="w3-example" id="code" style="width: 45%">
+        <h3>Right Tooltip</h3>
+        <p>Rounded Image:</p>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;border-radius<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                8px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn w3-margin-bottom"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br />
+      </div>
+
+      <div class="w3-example" style="width: 45%">
+        <h3>Right Tooltip</h3>
+        <p>Circled Image:</p>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; border-radius<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                50%<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn w3-margin-bottom"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br /><br />
+      </div>
+      <br />
+      <hr />
+
+      <h2>Thumbnail Images</h2>
+      <p>
+        Use the <code>border</code> property to create thumbnail
+        images.
+      </p>
+
+      <div class="w3-example"  style="width: 100%">
+        <h3>Right Tooltip</h3>
+        <p>Image with Border:</p>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;border<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                1px solid #ddd<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;border-radius<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                4px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                5px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                150px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />
+            <span class="tagnamecolor" style="color: brown"
+              ><span class="tagcolor" style="color: mediumblue">&lt;</span
+              >img<span class="attributecolor" style="color: red">
+                src<span class="attributevaluecolor" style="color: mediumblue"
+                  >="paris.jpg"</span
+                >
+                alt<span class="attributevaluecolor" style="color: mediumblue"
+                  >="Paris"</span
+                ></span
+              ><span class="tagcolor" style="color: mediumblue"
+                >&gt;</span
+              ></span
+            >
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn w3-margin-bottom"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br /><br />
+      </div>
+      <br />
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Right Tooltip</h3>
+        <p>Image as a Link:</p>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; border<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                1px solid #ddd<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;border-radius<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                4px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                5px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                150px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />img:hover
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; box-shadow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span> 0
+                0 2px 1px rgba(0, 140, 186, 0.5)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />
+            <span class="tagnamecolor" style="color: brown"
+              ><span class="tagcolor" style="color: mediumblue">&lt;</span
+              >a<span class="attributecolor" style="color: red">
+                href<span class="attributevaluecolor" style="color: mediumblue"
+                  >="paris.jpg"</span
+                ></span
+              ><span class="tagcolor" style="color: mediumblue"
+                >&gt;</span
+              ></span
+            ><br />&nbsp;
+            <span class="tagnamecolor" style="color: brown"
+              ><span class="tagcolor" style="color: mediumblue">&lt;</span
+              >img<span class="attributecolor" style="color: red">
+                src<span class="attributevaluecolor" style="color: mediumblue"
+                  >="paris.jpg"</span
+                >
+                alt<span class="attributevaluecolor" style="color: mediumblue"
+                  >="Paris"</span
+                ></span
+              ><span class="tagcolor" style="color: mediumblue"
+                >&gt;</span
+              ></span
+            ><br /><span class="tagnamecolor" style="color: brown"
+              ><span class="tagcolor" style="color: mediumblue">&lt;</span
+              >/a<span class="tagcolor" style="color: mediumblue"
+                >&gt;</span
+              ></span
+            >
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br /><br />
+      </div>
+      <br />
+      <hr />
+
+      <h2>Responsive Images</h2>
+      <p>
+        Responsive images will automatically adjust to fit the size of the
+        screen.
+      </p>
+      <p>Resize the browser window to see the effect:</p>
+
+      <img
+        id="img3"
+        src="/images/style-img/photo.jpg"
+        alt="Cinque Terre"
+        width="1000"
+        height="300"
+      />
+
+      <p>
+        If you want an image to scale down if it has to, but never scale up to
+        be larger than its original size, add the following:
+      </p>
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Right Tooltip</h3>
+        <div class="w3-code notranslate htmlHigh" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; max-width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                100%<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; height<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                auto<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br /><br />
+      </div>
+      <br />
+
+      <p class="note">
+        <strong>Tip:</strong> Read more about Responsive Web Design in our CSS
+        RWD Tutorial.
+      </p>
+      <hr />
+
+      <h2>Center an Image</h2>
+      <p>
+        To center an image, set left and right margin to
+        <code>auto</code> and make it into a
+        <coed id="" html>block</coed> element:
+      </p>
+      <br />
+
+      <img id="img4" src="/images/style-img/open-flower.jpg" alt="Paris" style="width: 50%" />
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Right Tooltip</h3>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;display<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                block<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; margin-left<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                auto<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; margin-right<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                auto<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                50%<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br /><br />
+      </div>
+      <br />
+      <hr />
+
+      <h2>Transparent Image</h2>
+      <p>
+        The <code >opacity</code> property can take a value from 0.0 -
+        1.0. The lower value, the more transparent:
+      </p>
+
+      <div id="left">
+        <img id="img02" src="/images/style-img/photo.jpg" alt="Forest" width="170" height="100" />
+        <p>opacity 0.2</p>
+      </div>
+
+      <div id="center">
+        <img id="img05" src="/images/style-img/photo.jpg" alt="Forest" width="170" height="100" />
+        <p>opacity 0.5</p>
+      </div>
+
+      <div id="right">
+        <img
+          id="img001"
+          src="/images/style-img/photo.jpg"
+          alt="Forest"
+          width="170"
+          height="100"
+        />
+        <p>opacity 1</p>
+      </div>
+      <br /><br /><br />
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; opacity<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0.5<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br /><br />
+      </div>
+      <br />
+      <hr />
+
+      <h2>Image Filters</h2>
+      <p>
+        The CSS <code>filter</code> property adds visual effects (like
+        blur and saturation) to an element.
+      </p>
+      <p class="note">
+        <strong> Note: </strong> The filter property is not supported in
+        Internet Explorer or Edge 12.
+      </p>
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Example</h3>
+        <p>Change the color of all images to black and white (100% gray):</p>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;filter<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                grayscale(100%)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br /><br />
+      </div>
+      <br />
+
+      <p class="note"> 
+        <strong>Tip:</strong> Go to our CSS filter Reference to learn more about
+        CSS filters.
+      </p>
+      <hr />
+
+      <h2>Flip an Image</h2>
+      <p>Move your mouse over the image:</p>
+
+      <img id="img5" src="/images/style-img/photo.jpg" alt="Paris" width="400" height="300" />
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box" style="width: 95%">
+          <span class="cssselectorcolor" style="color: brown">
+            img:hover
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; transform<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                scaleX(-1)<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br /><br />
+      </div>
+      <br />
+      <hr />
+
+      <h2>Image Modal (Advanced)</h2>
+      <p>
+        This is an example to demonstrate how CSS and JavaScript can work
+        together.
+      </p>
+      <p>
+        First, use CSS to create a modal window (dialog box), and hide it by
+        default.
+      </p>
+
+      <div class="w3-example" style="width: 100%">
+        <h3>Example</h3>
+        <div class="s-code-box" style="width: 95%">
+          <span class="jscolor" style="color: black"
+            ><span class="jsnumbercolor" style="color: red"> </span
+            ><span class="commentcolor" style="color: green"
+              >// Get the modal<br /></span
+            ><span class="jskeywordcolor" style="color: mediumblue">var</span>
+            modal = document.<span class="jspropertycolor" style="color: black"
+              >getElementById</span
+            >(<span class="jsstringcolor" style="color: brown">'myModal'</span
+            >);<br /><br /><span class="commentcolor" style="color: green"
+              >// Get the image and insert it inside the modal - use its "alt"
+              text as a caption<br /></span
+            ><span class="jskeywordcolor" style="color: mediumblue">var</span>
+            img = document.<span class="jspropertycolor" style="color: black"
+              >getElementById</span
+            >(<span class="jsstringcolor" style="color: brown">'myImg'</span
+            >);<br /><span class="jskeywordcolor" style="color: mediumblue"
+              >var</span
+            >
+            modalImg = document.<span
+              class="jspropertycolor"
+              style="color: black"
+              >getElementById</span
+            >(<span class="jsstringcolor" style="color: brown">"img01"</span
+            >);<br />
+            <span class="jskeywordcolor" style="color: mediumblue">var</span>
+            captionText = document.<span
+              class="jspropertycolor"
+              style="color: black"
+              >getElementById</span
+            >(<span class="jsstringcolor" style="color: brown">"caption"</span
+            >);<br />img.<span class="jspropertycolor" style="color: black"
+              >onclick</span
+            >
+            =
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >(){<br />&nbsp; modal.<span
+              class="jspropertycolor"
+              style="color: black"
+              >style</span
+            >.<span class="jspropertycolor" style="color: black">display</span>
+            =
+            <span class="jsstringcolor" style="color: brown">"block"</span
+            >;<br />&nbsp;&nbsp;modalImg.<span
+              class="jspropertycolor"
+              style="color: black"
+              >src</span
+            >
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">src</span
+            >;<br />&nbsp;&nbsp;captionText.<span
+              class="jspropertycolor"
+              style="color: black"
+              >innerHTML</span
+            >
+            =
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">alt</span
+            >;<br />}<br /><br /><span class="jsnumbercolor" style="color: red">
+            </span
+            ><span class="commentcolor" style="color: green"
+              >// Get the &lt;span&gt; element that closes the modal<br /></span
+            ><span class="jskeywordcolor" style="color: mediumblue">var</span>
+            span = document.<span class="jspropertycolor" style="color: black"
+              >getElementsByClassName</span
+            >(<span class="jsstringcolor" style="color: brown">"close"</span
+            >)[<span class="jsnumbercolor" style="color: red">0</span
+            >];<br /><br /><span class="commentcolor" style="color: green"
+              >// When the user clicks on &lt;span&gt; (x), close the modal<br /></span
+            >span.<span class="jspropertycolor" style="color: black"
+              >onclick</span
+            >
+            =
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >() { <br />&nbsp; modal.<span
+              class="jspropertycolor"
+              style="color: black"
+              >style</span
+            >.<span class="jspropertycolor" style="color: black">display</span>
+            =
+            <span class="jsstringcolor" style="color: brown">"none"</span
+            >;<br />}
+          </span>
+        </div>
+        <br />
+        <a href="editor.html" target="_blank" class="w3-btn"
+          ><b>Try it yourself &gt;&gt;</b></a
+        >
+        <br /><br />
+      </div>
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

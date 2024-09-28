@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo-elements</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Pseudo-elements</h1>
+
+      <div class="first_buttons_div">
+        <a href="pseudo-class.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="opacity.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <h2 class="h2">What are Pseudo-Elements?</h2>
+      <p class="note">
+        A CSS pseudo-element is used to style specified parts of an element.
+      </p>
+      <p class="p">For example, it can be used to:</p>
+      <ul class="list">
+        <li>Style the first letter, or line, of an element</li>
+        <li>Insert content before, or after, the content of an element</li>
+      </ul>
+      <hr />
+
+      <h2 class="h2">Syntax</h2>
+      <p class="p">The syntax of pseudo-elements:</p>
+      <div class="example_without_try">
+        <div class="ex1-b">
+          <p>selector::pseudo-element {</p>
+          <p>property: value;</p>
+          <p>}</p>
+        </div>
+      </div>
+      <hr />
+
+      <h2 class="h2">The ::first-line Pseudo-element</h2>
+      <p class="p">
+        The <mark>::first-line</mark> pseudo-element is used to add a special
+        style to the first line of a text.
+      </p>
+      <p class="note">
+        The following example formats the first line of the text in all
+        &lt;p&gt; elements:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>p::first-line {</p>
+          <p>font-variant: small-caps;</p>
+          <p>color: #FF0000;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" class="w3-btn" target="_blank"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+      <p class="note">
+        <strong>Note:</strong> The <mark>::first-line</mark> pseudo-element can
+        only be applied to block-level elements:
+      </p>
+      <p class="note">
+        The following properties apply to the <mark>::first-line</mark>
+        pseudo-element:
+      </p>
+      <ul class="list">
+        <li>font properties</li>
+        <li>color properties</li>
+        <li>background properties</li>
+        <li>word-spacing</li>
+        <li>letter-spacing</li>
+        <li>text-decoration</li>
+        <li>vertical-align</li>
+        <li>text-transform</li>
+        <li>line-height</li>
+        <li>clear</li>
+      </ul>
+      <div class="note">
+        <p>
+          <strong>Notice the double colon notation -</strong>
+          <mark>::first-line</mark> versus <mark>:first-line</mark>
+        </p>
+        <p>
+          The double colon replaced the single-colon notation for
+          pseudo-elements in CSS3. This was an attempt from W3C to distinguish
+          between<strong>pseudo-classes and pseudo-elements.</strong>
+        </p>
+        <p>
+          The single-colon syntax was used for both pseudo-classes and
+          pseudo-elements in CSS2 and CSS1.
+        </p>
+        <p>
+          For backward compatibility, the single-colon syntax is acceptable for
+          CSS2 and CSS1 pseudo-elements.
+        </p>
+      </div>
+      <hr />
+
+      <h2 class="h2">The ::first-letter Pseudo-element</h2>
+      <p class="p">
+        The <mark>::first-letter</mark> pseudo-element is used to add a special
+        style to the first letter of a text.
+      </p>
+      <p class="p">
+        The following example formats the first letter of the text in all
+        &lt;p&gt; elements:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>p::first-letter {</p>
+          <p>font-size: xx-large;</p>
+          <p>color: #FF0000;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" class="w3-btn" target="_blank"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+      <p class="note">
+        <strong>Note:</strong> The <mark>::first-letter</mark> pseudo-element
+        can only be applied to block-level elements.
+      </p>
+      <p class="p">
+        The following properties apply to the <mark>::first-letter</mark>
+        pseudo-element:
+      </p>
+      <ul class="list">
+        <li>font properties</li>
+        <li>color properties</li>
+        <li>background properties</li>
+        <li>margin properties</li>
+        <li>padding properties</li>
+        <li>border properties</li>
+        <li>text-decoration</li>
+        <li>vertical-align (only if "float" is "none")</li>
+        <li>text-transform</li>
+        <li>line-height</li>
+        <li>float</li>
+        <li>clear</li>
+      </ul>
+      <hr />
+
+      <h2 class="h2">Pseudo-elements and HTML Classes</h2>
+      <p class="p">Pseudo-elements can be combined with HTML classes:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>p.intro::first-letter {</p>
+          <p>color: #ff0000;</p>
+          <p>font-size: 200%;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" class="w3-btn" target="_blank"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+      <p class="p">
+        In this example, only the first letter of the paragraph with class
+        <mark>.intro</mark> will be formatted.
+      </p>
+      <hr />
+
+      <h2 class="h2">The ::before Pseudo-element</h2>
+      <p class="p">
+        The <mark>::before</mark> pseudo-element can be used to insert some
+        content before the content of an element.
+      </p>
+      <p class="p">The following example inserts a quotation mark before:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>p::before {</p>
+          <p>content: "♥";</p>
+          <p>color: red;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" class="w3-btn" target="_blank"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+      <hr />
+
+      <h2 class="h2">The ::after Pseudo-element</h2>
+      <p class="p">
+        The <mark>::after</mark> pseudo-element can be used to insert some
+        content after the content of an element.
+      </p>
+      <p class="p">The following example inserts a copyright symbol after:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>p::after {</p>
+          <p>content: "©";</p>
+          <p>color: red;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" class="w3-btn" target="_blank"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+      <hr />
+
+      <h2 class="h2">The ::marker Pseudo-element</h2>
+      <p class="p">
+        The <mark>::marker</mark> pseudo-element selects the marker of a list
+        item.
+      </p>
+      <p class="p">
+        The following example demonstrates how to style the markers of list
+        items:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>::marker {</p>
+          <p>color: red;</p>
+          <p>font-size: 20px;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" class="w3-btn" target="_blank"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+      <hr />
+
+      <h2 class="h2">The ::selection Pseudo-element</h2>
+      <p class="p">
+        The <mark>::selection</mark> pseudo-element matches the portion of an
+        element that is selected by a user.
+      </p>
+      <p class="p">
+        The following example demonstrates how to style selection:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <p>::selection {</p>
+          <p>color: white;</p>
+          <p>background: red;</p>
+          <p>}</p>
+        </div>
+        <div>
+          <a href="editor.html" class="w3-btn" target="_blank"
+            >Try it Yourself »</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

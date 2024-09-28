@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Masking</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Masking</h1>
+      <div class="first_buttons_div">
+        <a href="object-fit.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Pervious
+          </button>
+        </a>
+
+        <a href="button.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <p class="intro">
+        With CSS masking you create a mask layer to place over an element to
+        partially or fully hide portions of the element.
+      </p>
+      <hr />
+      <br />
+      <h2>The CSS mask-image Property</h2>
+      <p>
+        The CSS <code class="w3-codespan">mask-image</code> property specifies a
+        mask layer image.
+      </p>
+      <p>
+        The mask layer image can be a PNG image, an SVG image, a
+        <a href="">CSS gradient</a>, or an
+        <a href="">SVG &lt;mask&gt; element</a>.
+      </p>
+      <br />
+      <h2>Browser Support</h2>
+      <p>
+        The numbers in the table below specify the first browser version that
+        fully supports the property.
+      </p>
+      <p>
+        Numbers followed by -webkit- specify the first version that worked with
+        a prefix.
+      </p>
+      <div class="w3-responsive">
+        <table class="browserref notranslate">
+          <tbody>
+            <tr>
+              <th style="width: 20%; font-size: 16px; text-align: left">
+                Property
+              </th>
+              <th style="width: 16%" class="bsChrome" title="Chrome"></th>
+              <th
+                style="width: 16%"
+                class="bsEdge"
+                title="Internet Explorer / Edge"
+              ></th>
+              <th style="width: 16%" class="bsFirefox" title="Firefox"></th>
+              <th style="width: 16%" class="bsSafari" title="Safari"></th>
+              <th style="width: 16%" class="bsOpera" title="Opera"></th>
+            </tr>
+            <tr>
+              <td style="text-align: left">mask-image</td>
+              <td>120</td>
+              <td>120</td>
+              <td>53</td>
+              <td>15.4</td>
+              <td>15 -webkit-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <h2>Use an Image as the Mask Layer</h2>
+      <p>
+        To use a PNG or an SVG image as the mask layer, use a url() value to
+        pass in the mask layer image.
+      </p>
+      <p>
+        The mask image needs to have a transparent or semi-transparent area.
+        Black indicates fully transparent.
+      </p>
+      <p>Here is the mask image (a PNG image) we will use:</p>
+      <img
+        alt=""
+        id="dimg_5"
+        src="data:image/png;base64,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"
+        data-csiid="BwrTZvWrIvL5kdUPw4zfyQc_1"
+        data-atf="1"
+      />
+      <p>Here is an image from Cinque Terre, in Italy:</p>
+      <img
+        class="VeBrne"
+        alt=""
+        id="dimg_41"
+        src="data:image/jpeg;base64,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"
+        data-csiid="NwrTZvuoKIWckdUPje_R8QY_1"
+        data-atf="1"
+      />
+      <p>
+        Now, we apply the mask image (the PNG image above) as the mask layer for
+        the image from Cinque Terre, Italy:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Here is the source code:</p>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            .mask1 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; -webkit-mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                url(w3logo.png)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                url(w3logo.png)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; mask-repeat<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                no-repeat<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              >
+              <br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+        <br />
+      </div>
+      <h3>Example Explained</h3>
+      <p>
+        The <code class="w3-codespan">mask-image</code> property specifies the
+        image to be used as a mask layer for an element.
+      </p>
+      <p>
+        The <code class="w3-codespan">mask-repeat</code> property specifies if
+        or how a mask image will be repeated.&nbsp;The
+        <code class="w3-codespan">no-repeat</code> value indicates that the mask
+        image will not be repeated (the mask image will only be shown once).
+      </p>
+      <h2>Another Example</h2>
+      <p>
+        If we omit the <code class="w3-codespan">mask-repeat</code> property,
+        the mask image will be repeated all over the image from Cinque Terre,
+        Italy:
+      </p>
+      <br />
+      <h2>Use Gradients as the Mask Layer</h2>
+      <p>CSS linear and radial gradients can also be used as mask images.</p>
+      <h3>Linear Gradient Examples</h3>
+      <p>
+        Here, we use a linear-gradient as the mask layer for our image. This
+        linear gradient goes from top (black) to bottom (transparent):
+      </p>
+      <div class="mask1">
+        <img
+          class="VeBrne"
+          alt=""
+          id="dimg_41"
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTExIWFhUXFRYWFxcXFhgYFxkWFRgXFhcXFxYYHiggGBolGxcVITEiJikrLi4uGh8zODMtNygtLisBCgoKDg0OGxAQGzAlICYtLSstLy8tLS0tLS0vLS0tLS8tMC8tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAIDBQYBBwj/xABAEAACAQMDAgQEAggEBgEFAAABAhEAAyEEEjEFQRMiUWEGcZGhMoEUI0JSscHR8AdicuEkM1OCsvFDNHODwtL/xAAbAQACAwEBAQAAAAAAAAAAAAABAgADBAUGB//EADARAAICAQMDAgUDBAMBAAAAAAABAhEDEiExBBNBMlEFImFxgRTB8EKRobFy0fEz/9oADAMBAAIRAxEAPwDJk1ylXK+g6Tyh2ktsnABPyE11RJAAyaltM1u4JlSCJ9aEtgxRuvhOxbNkeSG7zz96tdT01HGbSt8wKH6Fpk3bpzGQfX1HpVx1PqVqwAW715zLNvL8vJ2oRShueU9d6U1i4RBCkkrI4E/71VkV6p8RWhqdPNuJiR8jzXmF60VJBEGut0ubuR35Rzeox6JbcENKKfFc21qKLGxSinEUooUGxsVyKfFcipRLGxSp0UoqUSzkUq7FdipRLG0op0UooUCzkUop0Uooks5FKnRSipQLGxSinRXQtGiWNiuxToroWhQLGxS21JFKKILGRSinxSIqAsbSrsVypRDa9N+DhB8bntBj71o+k9D0WnUs6CQpDO8EAHkwfpWBu/4iao8JbBPfYSFx2z+eZqo13xJq7rFmvMAcwvlUDEgL2GOO9eRy/FZ5PL39j0EOmhHhHsdj4Y0Vq3v2IAi79+JgAkkseBE1UdX0/TmsC4mp0/lYkMXU5/dxknBrybV9Xv3YW5de4AsKCxMAwdoH5D6CnCwotq5Pn3Tt7qBBDY5zWd9flTu2XLFFqqNX0zrDLeYkys8rkH0M+hFaDryi/Z3LyAQPzHb84rGaDWXLasGZdjkYIBzIkqfke/ymtT0HqCEeFcZFfdFsBo3qfwxP7WCCPauhHr8eVqSVSRm/Tyimm7RXaG/qPD2CzdYnAhT/ABoPU/DmrYlmtEfNl4H516d03VBBtI49qd17QtdUFOfY/wAq0x69xntFKyuXSKS3bPE2SMEQak02mZ2CqJJrcaz4Wv3PMygbJPm5f2EHig+haMm9s8E2wCQxBz7Tng+1dL9XFwbXgw/ppKVMyus0bW22tExOM1Btr2O98GWLjbxKsVjGR8wDUOl+BNOgO6XJESQuPcCOf6VnXxPFW/JY+hyXseQxSitJ8VfDZ0zEpJtTAJIkH0NZ6K6GPJHJHVHgxzi4OmMIrkVJFKKehbI4rsVIFpBahLI4ru2pNtKKFA1Ee2u7akilFGgWMilFPiu7aJLGRXYp0V2KgLGRXYp8UoqEsZFdinRSioCxsU1qlio2opBTGTXKkA9qVNQxTXCRAiYnM8euKdcBggjac8mPyk1GzyITj6E/OitP1e4nlC4/09/mK+Y6peD1aRGLDCWDHHIUE/nIHf3ob9Ofd+Eh1MzxGe/Gam1XWLr4Bjb2ERI9J4NQveJKsUgxEiMmeWHc+9MtS3lyR14CNL1F5AD7SMTu9DMSeBNEm8zsrNcMg/iJPlYGd27uDz6UC7FjC47mP6gR/CnaW2WOGUgd5j59qHckla2Bvwej9D+MVV/D1MbtwUOB5CT8uO3tXoQ6moHIivnvTeGAdwbHeAfofy9KL6f127v3bmB2hCSdzFZkblY8itmPq018/gRxa4PfNHr0cEyD/fpUN+yu7dIB+WSO1eY6f4iZVDLAkGWzE+kcqfnWg6D1sv8A8wgwOeBP866cIKcXkxytf5M7y1LTJbm1s6goJPAqnPxZbJI3DmD7e3zqk+J/iJ1QLbMFjg+w5rENcYkknLGT862dL0HcjqkZOo63ty0xNB8Y9d8ZjbUQAcmeay22pdtc212sWOOOKjE5WTK5y1Mj213bUm2ltq0SyPbXdtPArsUAWR7aUVLtpRRBZFFdipNtKKhLI4pRUkUoqEsZFdiu0iaNEs5FKlTSKKQUImuTTttLZRpDUNrqrTwlSKtBseKIdlKpytKhZZRSajpdhHfcrr5jB3gZPaOYpjWLO6AHYRiXgkfId8f+qkvalUcrgySQITBY+pHpH2qfTNJ4aOSQEAgHjdHOa+WSnM9SilOjtqZ/WZgiSABMc+XB/jTLiyxPnMcYbEnvj2rRXbiqNybif3TsjvzC+vNV7X7kA4kxMesYNOs0rv8AcVqivQO0qAcj0Yn5wBmuW7BGDEdokH1k4wKubTmFFzcxMkAKT25I/nUOo06MpPgvAHqADHtu+dRZndUAqHYbdwZontgfMe1EWdN5wAHkxxDSD6VHo2YET5VztUsBI9iO4HOKtOm6ZnuK6yriCP2pAONoJk9sTWhyrYkVZYolhTNt23i2oCHMvuG4LH+U49a7Y6qniwAQDEntIGN0d/8Aau9a6JcCC8UKMSZUZAHOPcQfb3oDSW5tC6ceZlacbo80fPJ/MUMc3jfci6Y2TGpLTJFvdulzO7cOMGmgVUB4yFPM5JGOO3tNFabWHuPLk85A+Z59K9J0XxqLShmVfVcHD6n4bL1Y3f08hsUopWGDCR/uPnT9hrvxnGStM5LjJOmhu2ltqQrXAtFMVobtpbadBpbKIKY2K5TxbpC3R2DTGVypfDrvh02wyiQUtpojw674dSxlEF213ZRQtV0WaOpDKIILdPFuihapwt0HMZRBRbpeHRgt13w6XWMkCC3Uq2qnFupVt0rmPGIJ4NKjPCpUusaiDTdFQhmhrjb2At7DDKDIzEkhSJmrFekWhbc3AgQ2z4WBbBLBirIdv4sqBzxOag6f0nUDewLhQXdQgdSVZRJ22V2nMicfnVl1u6RpdCEQvctizdCqZ/CNi75UkAtx6weMivnKhS+57CDjG3RierIsl1trbJjyoQViIn7ZnvNDJ0e+87bLOVXxIyPKuWMkz6du9bzW6u9tCPaY3SBtVLarbh3BWSyzuhzI4BmRyartXfu6lfB8QIrEW/1Xh7iDnz7iNswAQcZPtSRguWVSxpGAdLudtvM4K5kE5kxiI5pFxtFvcVMmThsDJEgE+wjFavq+lvLYv6U2SXtssQgG63uhXxnIDGcjIrGnSMGCswHrJAj6kZq+EI/1Dxwxj6mWvR7aO6ogJeGMuSy4HpsEfX8q2S6qwbVy2VJIDB4UgkceVmw3GBNY/wCHenxdA8VU3ym8j8G8Fd5IPAnt9avOj9JtBHuXdRc22yVlV3bmO4LgjC+U980ckUuB320vlB9Xrzdi015vCIIAYgFWESZEgke+cmm6bSH9He1uV2ksrK0ndbxAHoVniea1PTdBoURhrRuLytvwg7GRMvMxu+3NZ/p3R7ljdetXFZFki0f+aRkMyryflyaSUdJSoye9FIFJIAIJORxNPtaQbW3PxzH55I9Mfb86sdRYt3X8rBBtLuh7FRL4GJjMT3+VH6PRaVrTM98o8kAPaVt4XcFVFYNtiBme/BwaEFvQI4H5KDp91QARhgNoI4Pz7Z/lWl6XpDe2gEK7AEKQxOQSIhc8UL0PU7HW34yeGbb7oQKzICW2qUXcS0wDOJmg9H1K0nUEK2nsot0DcLjtcAYbdyhh6N3Bxnmulh6vPgi1B/uZcvQ48svmXH4LbqdgWbjJuFzaoZmtwQJ7GYgjH1FdtaUpve8pFsLMEbbskqFAUmTzmBHOaG0ml1Gp1SiwVW2bjMlu6xbcyMfO/c7kXOfYAcDSdeuXlZ0dFF4L5btpWVle6xEWnk5K7mkyckc1MvxHqZUnKvtsTF0PT499N/cym+5tVtm0Ewd0jiJjH+Zf7NXg6UoVSxcFvDIAUEEXNwWDu/y59JHrVclkafU3Q3iXkKtZUjubw2lpbgjdP/afStH17RMlpGul1WzaNtYzuYnk7Cce+IxUj8U6mLVzv8IL+HdLK6j/ALKbW9PNsgZzMSIPlJU4+YI/Kh/Cq8sae3qFYpe3Lb8NVLgiUYzBLQZLeIB+VVPTdoFxLh2QC027bXNvlyNygDt3HcGung+NWlGS38nN6j4TpucXtexF4VdFqtC/QCo824SP1e5CN5JIABk5MAwf3hVZ4Mdq6fT9dDOric/N0s8L+YC8Kui3RotV0Wa0dwqUQIWq74VHi1XRZod0dRABap3gUeLNOFmg8oygAizThZo8WKcLFK8oygACzUq2aMFmpBZpHlLFEr/BpVY+DSod0mkyFj4o4tozqi7QNrOHYCd2+Gz9h7VUp8Qqr+IsNxlpJkCJx2kzA9jzQ9geYgKxxDKASwI7t3X3pg02wH9UFHGV9fdq8Jrfmz08pSkq8BvR/ia7ptQby3huKMoJBb8UHgk+gOKHu664zb7LFZLF2BZZZjODiPSJ9OKiMK4BEEgbtpIABmDE94qZkBOLUx3me0ZjJNM5N7FdMgu3mHmbUHecE/iJU8jmYx7/ACodrjO4W3ve40AKoBJmcZHpXdbomc7iSomAc5nAGeKsPh+0njIpZGksI3EnbtYzP4QcZ+VNGFUFxCR0y7ash7gX9kMNwLBis7SB35HzqOIBJVjbWRCfvSDwB5RzmrXrtq8La2LVlTaRt1srsbawBSdwyD+ER/SoFvalF8NWKliN250JZCIKiZMROPsat7mxbDDqYWt2y2zxLR8W6GLEvtAA8Qj2ViFUzHBFC9QvJbst4SFH8FIbxSWwwIHzIMlu/etnrOlWL7LYS1vtlwTetgbwdhbLMpAmIz61538RX/AvXLdlmKoGt7tylvIQrJAUSJUfakitTLZR0vZnbFi2G814wQN24H9tYgALBz3mIo/pF3TXWIvu1tLe4gxuLZmBHCxPvAqn0jLIwCWjPONsjkdjMehp+jKIzxcWYYHbLEYJzuwDLMfoKZ1KRUnJGg0YsC9bW1acDcieY4AIAkEZ4aMzxVhc6Hp36mdPsub9whw42hlQnzHuAbcRCnme1UegNy4RetW7zBSp8pLKMSvlUeXiaB6LaDgqbtsOCVK3Ljqbg3NOAsk+fuRmrooSU3Z6b034a0+l1Qu/pKyGJhnXEhgQWBC8MeRNXuo0+681xLS3rZOnZCTCgpvl0KjJEj+tZ7QnZbRYtW9sqqqr3AVSUDbiwkbY9eYoG91a5pbdxbd53lt1sICUZSFDbcEgYYATGDVOa3QccIyvcL/xGc29Ebj6YW7lzUKzG2+8OVV4MmCDt3du1ZzpvWLo0zNbsed/KFLO7ACAIDzIkmR35qyHWrmt0wS61owFITcDcJ8ytvUkbMEifeqrSdM024hrJELuVmYiCO+I+f5e9VJe5GnHZMGufE6+JLpd06tsBCbXBCNuEq4HDBiCCCAT8qt9D1E2lvFLrbiqBZLhW2gm4X2Dy4MD35rMPpQHADAqT3nbu9RIkfKr/RgWrO1XLqLgN8KN7OjDawSfRwp7EQeJNNjbcqApOnFvY1KfFT3LFv8AR/xpH6TvgiFVmf8AGQQNxB3DtPpFV9+0d7bonc0wcc9p7UR03rujQsoVl8Q3AfGtqJ3GUGXMKE3KTEMTWDa61rUtuGFuS2RHMnHvgj8q24OqfTStK0+foYupwLNBfQ2gsU79Hou2PKGwQcj5HOaltWwcYHzrvrPtZyew06oBGnp4sUa9qDFICh3hlhYILFPFmpya6DiYoPKOsLIRZp3g1IrVOyE9hSvLQ6wgvhU9LM9qfsI5onT3l4xSyyvwMsXuDforfumu0cdRSqvvS9huzH3MzruslQ4W3b3su3eLsnJGGUz2n5Yqq1N26UsMBdQB7Zb9aSGUElgVD4EciIx70dqNOWRna4GIRkLSnlUmSNuz/KOPrQei1N6xbt2dyygZZ2K+4rbIBJInkAx9TzXmml6juY5aNq2BP8S9zeGAJQTICiOYB3Dge2J+tD9K+E2e2HR+HyArn9sIMkRGD3nMYrbeZghvy8oDtW2PDMqCCVZWUkS2YmiOl9RS6p09lNm8OocoFhoYk7VVQQCJwOe+aTVSssaUpajzrQjxBue7dwQnAKAlo3Q7AgT3gAc8VZaToWpRJsWt7Mtzz3ka3tyApA2x2J3GRA77pq1CaldU+kbxXtN+qDjcNkrAKniPnPA+R03w301rVpbbXLd027rLcuXHYOLZYbFGckKdo7GBV0Z+xVNJGA0rXjeZWI2Im0sAq7ydrBm2jt5hx70B1N3/AEhTbDGFgmCQF8Rhk7YAMnNbbrmk0tm4xuOLd2625TZa4fEtQTbDuwYCfN+HGfaqXW6BmJa21sWglxXFy+WhiI3GEEFT2q2M0iqWJ5FvsS3bKLafZrAhfcDbVkAAuQr8iPwjHpArNdY+BtZt329PcZDu3bipuSSPNCkGCB/fNWSdJYCwhdGHi2nLLuLFWu7lMkRtJUj3r1fq3UrVi25LLKIWCTBO0YHt2FVvI48FySPBdD01mG9RcYgKSEWeFjgD3NLqumKsjhjLEASAMDI29yAfWtP8M6pH1CJbVrPjkkuvljG6DBwOwFa6+/Tr+nIuS9tbrW2e60OtxZWV3HcM8bRHfiljJqXA0lDw7PINRqmJ3NcZtu3JJMFTjHYSe3qak+HHI1G9R59/lMHAIE/h7Yn8q1Nj4O0ralwl65csFdxZCsqWLkIQAZEgCff86XRPgq9YZrjbSoXxCCJZVIMBgeeDxiZ9Kv1JIpyRtmyTWXtk3DbNxEMFVYyxLEbQc7CoSRySD2iiL3SFa2XBZQlgr4aeVdw2sgECBDSeeSD2qh6tfVVtMLa4uAwIg4wSODxFXei1qtZY7AJkSFXbIlcmeZiqoz33EcSgPwwqGX3K42bxvMBgAQsyeBB5PPrVJqOp2bTi2wLuNhHMd5In1xXpPxZ1G2qKRsYlomQdpgQ2MnMCvJtXZtvJJcEGNyrkyeQpGOPvSzjFOgq2i+/VtbFwypMysBmJUAjJ4gjnHvWY13UNjG2wO1mkMFIILbdyyDG2QefXtFTW2VfEFw3XIMgZCgEAzGZzPeoWvjjwjtnKsFgxGSPeBmKCtPZWC2NOgDMYLMd+0bRPYnsSDFSaTQJcYD9arEAFniIXcMwMgR69qlCG0h23IlY9xKgNBjBjE+hI9qsEsW1S3uY7fMoZVBDFWjzIZAUY4g5FFMmgvips7drbrQWWEQUMxP8ApJk94g1YteMR+dZW7aNx0EvBPl3bjb2EykAAxAJH0q967pbi2rVy1c8oVbbAAGCAYMnMRjJ7V0+gzuUu1L8GPq4aY9yP5DDcOKXimsqbuo/6jfb+tKdR/wBU/X/eu32Pqcz9R9GavxKkF81kCuoP/wAh+p/rXP0e/wB7v3P9aHZXuMs79jW7jTxePrWQXS3O9z6E89u9Q3UvD9v+P9anZXuHvteDaPe96S3h6j61hd5/aufY/wAZqT9LH730Io9kiz/Q25vD1+9drD/pv+dvoK7Q7If1CNrYtW7UW9ygsSQpYSSeYnJzTf0LbzbDbi+8ECD5WAI9yYn86yvxw1oM1zylwgMiCwNvzAE8jsfpHerfVWSt8Xy94bbtsH9Y/h7XhSNvG0bp+deQTrc9AD6/pjWxYvojC/YtQGdgVQ+djImHjcRWm+B9W+pS5du3VuFbgFt0gQpRSeOGktVO3Vz4lwC6FG0G2GC+UiMxEwQeTMT+VEazR6S8VDWtzlfEESoJOPxjBPsTSatcaIvdGp6xrLdlAXvFJZeWOVDDfj/Tu+1ZnTLeuJrPCCwjF1DxDsgFxBk4UOOT6cUP0zp2lW/abcxIRmFlySJIOWfIBznOYFN614yW9SlgsfGPiFgdzbWYBrdsj8OCT6gcc1IxknwNacXuZO7r710WzdVd1qLS7Yi2iK2zb+RA/Ott8OXS9lVuaghWV2eTbEsbjLBlf3YNecixcVdrW2U7mY7sGcjhskSftWn6XqbNrTDUDSNevC0X3FZtEeI6hSwnzxPY/s1eouh1JNIu+oai2AF/SUhbm0edfwIAVjZGZLAV5jqL15i0w0XRBLE/Jcj3FegaTrviqCOnkb23zKqu5Gt25DHON69vWsd1v4bNreFQIYVlTxnuXFg5LAYOFEY7HvFGKflFcvoV/wCmvstHcy4UlwcmE3EiPlNaf4bspqdTas3LUWzuZouXVDFU3KWJYxGeInNY3qZuQUCM8CNyq8EkD8OBI9eOa0P+HeqLay2SSsbwQw4/VOJPsCKtlBxjYmKm6Z6t8M6GzYtpcs2GTxyqsAzvtgMQWLnAHt61X/GmrDsLasAvlDsP2vxEISDJAkmDiTVBoNatrQ21sXLpL6lAXkHdmbxIGEI2sJjkU25dNx9gB9vUkkKo+fFUZOaQ6utx+l6c7FE3SrQSACAiA8fMjv6k+s1owrbTbSFHmRR6YPpnuM+9N6T503fgkKOSSQvpPEnjtmfWj9UiJsIaIcSOcEy8z7En5gfKokJwAaVU3k4JliDAAG0BT85Kk0Rb0dtlIFtS0SxKAt5jxujgeXA9Kr2usqTthlV/TLMOBnncfvV5obQAgifKQSeDEDIPuPtUoBndX0jTudsFGgglCAcmPw8RB+fNZez0Pe+oS3BFtmQs0BiFHYz6mM9iOIrW6rD3TjyoWMe8+3EVlfg7qq/ol2+VJ8W4N8mQu682YJnaQSMeho6LVigLWLqXfBdAWBHfyqNoncVMdxkg1Gt66cLsUSRCj5f38jWx1VtEuNA3XCV3buW/GwBERsgqPTA+VA9Bt29zBiTFqRE4BMD8yQp7UmlrgPJD0jpepLB2uMygQAvAwDLA8cii+q30W2yDBJVm2wAXBYSVBweeOZmtVpb6W1kEbgM7ccz5TVPqwjEsbUTjeAFY4/exu7DmrMMnjmpLwxckFKDi/JkzcNLxD60Jqt6XPD2OTPIQkRgglh+HnvFNu3mQlWEMOQfqK9bjzY8npZ5vJDJj9SYern1ru/3qsXU1Imop69hddch+73pxeq/xR6j+/macLscGo0Ophs57VIqg8gfSgPE9R9jU6XB2n6f1pGPGSCii/ur9BSofxj6falQpllosdX0v9bDgIPEYBpwwAZgCD3EQah6qwIQKzR4iK7FjnILhRwAFBmAMn50b1O6AiAsUJYedgvlQggmR6T37k1Dc6cty8gtA+EqyWwdxYAlgRhvLGfWa8LOVXX0R3ZypbBGn6al1khAXIDNjncS21j7Aj6CiLGotorIreRAyArljv80rJ4A7+00ZqWWzaLbhNwwSMYDHys3C9xGSfSs/qurKijdp7iBiotuXe0cHzPtMKw4PtPfNacOHJOSUUFyUIanwUnU7NzUXwbJvuLS2wxDQSQzeaFxuhsn2xUPTNLeu27guXb6hSAd952QiZ2qBksRJ+QrT68forrp7YuuCg873FRUCYUKzW4JK757wTxVTta4dpuWVtgR+rFtmgCBtNq2Np78x6giuzg6eE8UnKSW23l/2/wDDJn6h45pJfsR9D0nTwdro964TtyOBOzylTMQgGWMDvU2r+K+n20GmLP4asyeGiHarKwBA4LR7zzV/07RobbEhkH4rcght0SWb9rMLg/Ssh/iDqL6m2lgvbViwhcM5hSCSg3Dv6c1zoN3uzVLiy+1D6fdYDWnueLaDI7L+FAiMqsWMjtj1BqXTIpv+CEuKBbLi6Nu2ZgJlT5gDPPEYxWI+HdJ1ZWtMviMlwkbblyQyKdrGHMrGc4yI9qvPi/qmoSdPaUh7kIsNLefA2kGJ9+1PJJbMGp8mnsKWV3fTqVU+bcxHqc+VfMd3YHJFZ3pnSEbVtqUaQSCkAFYdczPOCRHvz6A/CnxJeF82b2ouXbSIVyTcBuoVEpMsRh4znn5bjo9uzcHiNZIG4/8Ax7GBBH4u5kxmq5WlS2GW7Kbqj3He2li2ZtuSVUDbc3KykjgYkkfIzTenXU8O3sEvcukbjIYGQGEdiF8wz+12ir7TdAOnueNZdmLfiV/U5Y2xHlJOI9+arjp00uqtNc3tALDavcqV4HcKtJo0jW2aBbzKy2xtmAwIBiAcYHb0yOKG10qdz53HyqFJlm8pxycCeeO3qOetBDcKWmJ2jbutXWEyCsrt4yePaqrqfXRcKsW23FJlFUoSdp7PEZJPftRS2A2aPVEOEIaPMCZ5lJYRPJJUc9pNGaZrdpBLtgcTPEnucRB+lZ1Os22BUq6gjksAR2kcgYFM1HUVJXajYV1PmJndtyTGePXEmoQudU6B7scFGn0II82a89/w016tpLliTu8S0YA/Y8RTtHYnB5/lV0mveWdRO2ICMHfd+zgNIws5FVWo+IQHa4bZW6xJZlsKjSYGXwScDmeKf+kWtzX37qvc3xtJVcRwMiZGJhSPzFZCxq2K6iXQsl827ZUSFkWwoO0SUPl+RWeaEvfESshLXSjiIV3ZAwBnDKCOYxiaBfrDqSotp5cE73M885zSpfQLaXk1vw31c3k23bgbImF2MGM70OZwTE96g698Q2rZZDdX9Wfw5ksQCqxx6/Qe9ZfS9cvEFQFjjlz9901Q3bJDnxkBUkyRuJzEkbmOYA9OBTqIHJGxTrpW54iK29wrETA24Meb3B7n2onrev8A0hNxQJct542sUPZlPMGY+R9aD6P1PRtpRZuO1oETuQK7M85UkAlU2sJUyZngQKv+oaPTzZ8OZWwLjPk22DgFVUkOwfbtPp5u1XQnKD1R5EnjjNaZcHnulF4EiREtE5wxJ/mKtVb1+2KuL3S7V60b+k3MMqQGUxcUAsWRBi3DKQVnJgnvQtvpbujXFIXaSNjMoJ2gTskgtkxxXV6XPhivZs5XWYM03xaXAItz3IqRbp7GobtoqYYFT6MI4xTePWuipJo5lUGBm/dp6e8/egBcHyFSJd7BvtUsaLDS4/eb7/8A9UqHDH2+n+1KgPZrtTpVFpBcBADBWkDaigEKh/IyR8vapeh9RJJ8MNcdlIQDCKs4JnB4Bzioig1IWy1w+HaeIIwdxYoz5/GRPtMmtNe01m0ptWSsqA1zPYyAS3B4OPoK+fqOudpnpVBt2jN661eti5bS4t2/4S3bH4XAYylwKSNqt5UPGZ7ViuhNrrl4tfV38NIPjhZUhgyH9ZBZQR8pNbbXeMuos3doVSTaUlodvExG32KqfzFJNIPER9gEoVPHmaYlljnJz7VvhJxTX+RmtK38Dm1N8ruuqSwciCqsAAPxe4/rVNrtTcCk7mGMYYQFPuMfPt61e9YtuGRACbYDBzujJUniY9IJ9DUGkyGDSRJIn8QBjuPxGS1DGnOOp+Qp7HOmdSUogz5iYXliZ9VzJMUL8R+Y2WuslpmbbsUg3ERpCs5BhGwBHOe0VxbAtrtuPAdmYyxxughTwfaaD65063su/wDUCNcU5E7fNxPMjI95700vlQsm2rLy11615LNojcLabYXhLWYhTzjgd85p4vWXti5cXBPhjesNLgKdrLJAhjMf5pqiu9U/4WdMALviW0VoBYBipYJ3/CCIwB965da7cZLXhqUtmXZmwWMkwnLwYEwJ81K5OTSQL3otdP0G3aK/o8LaYk5wHbnzOw3uSc5MeXj0PfTsoJ8qqTiWPoZCwTu9P5YrPtrrqQpe2B4k7rfmYjaRLDAA4HIzFWh6g8K9y4pBGBiT7EzMwKudDKy+0F9i07V2ACTMCfMSQIzjbmuK5ZiW2yZhTJxOF5BBwPt6VT3ur2bisg3I0/iDEAD0K9zmI+X5Vz63dZVRb2XRbYhwCfMpEE8HJAmZOCcRQTSI02d+KLly05ZWLTE7mMD5RggGsf1Tql+4x849MZPGBBmj0u3bjAXiCP3YgEzMnvTup2VnEc/KjRTLJ7MrLT6hubrDHY7f/GKNbRXXVQ9zeogDclvcAOB4m3ecDkknFdBAHcZA47+k+tGI+OIop1wVuUnyUmr6ShbMyOMkfcVF00u7OXu3Lm3AD3GYAY43ExxVpqn83HA9aqdM0M2fv2pr2E1bheqtgwI7UCUG4iIwBj2EfyqXUuZyxoVG83egFssOm6cCafrrQINQ6e570r5J71dhx6pbiZMumIDZs7WU9wysD7qZGDg/I1YarX6gMzXHuXkYhoLlWAZSjqAPKVgjEYgR3kY09uO/8K6kukhLcyY+rnHZl30Dr9q1qVVdNesWWDi3AYEypLXASP1jScKIG2QJxU/R9Prb1+3ZCqN1ybu9P1ixDHzCDuKqR5jwojgCqHS6/UWgy23bY6bSu+QMkhlRwQpEkY7GtF0T4/H6Zau6pbqgWVtnY0pvXcTc8okhiQYjB9e3MyQnCXzHUhOM42i01/SNPpATqG1DM7bbc2t6lz/8dw2hm5uBy0Ej1yTSumli4Nt0FYVSHTeGC7mDW2bc/sAqkwRzirkfH9q9bNvUWrZXUgpv8RRtIk2zdb9lw2ZC+/IgZTqC6RHt3tys7Xgl0AtcCwpBLMwjbjg+s9qRdRKHpbI8EZ+pHf0S4QSF3BRJI7DnM8HORyKGLL6f39Kues6u2t5FS/4tpSAVElirkk7WHlIEkcjJ/OqA3bUtG4AMAJgyG+XMGBW/p/iDntNUYs3w3TvBk52+/wBKVRi6P3G/IY/jSrod2Jg7E/Y0lnqm+6bV1ldWO5UQBIcAKGZl5YKuFEgT7CtN07XXCpQtsuCArEZIEGDuH3+9YrpKbrdw3LoNxGXZby0ltpFxGBBWJBPyIo9+oMTKDxG9QYj3Ak47zXj8cYtVw0ehjb4LbqHUbwRt0blYO0qouTbIcCZ48o4H8as+jMLtweVQqjdgftOSTn05as3qVvXU23sXNpKeYEunO0xzjg+xFWfSBct6FmiGZAinv5iV3ScAbcg/Okz3tFedgSttJkWm+I7Ny6zMiwTIBcz+IkeUg+vqANtMfqykMzuwWIChlgNJI2wAT2iZisw122pdXYSG3fs4O1RMmQT2plnqiLKhlOQQxHOBnjGSR+VbVSSRYrTsvP0O26SS4VkDDltgOBLYBaOR+XynHT1aTdLERtDEEP50GSOCIGO+Bk1n36tb2z4pkduQQRH4ef8A3RnQepeIj2x+GbWCAsqhUPjtKE/Q0uT0ku+UWnRbSeHZYgK+xVBILE3NoSQB/lUD5A0upfo6L5gDcwSEJADbc7mBC8xwDxmqy494W/1ABVt4ttydqN+DHB4kHJPPtlruuunuAJwAIAAmI9hOAePypMcJc+RIuMVuajU3g7FggIInkMpLSTggepyc8V3Sh7dtgyzM7GLZUgZCDjIx+Q9axt1WKqSSTuYZ9gv9TSsdzJ8qmM/vY/n9qs0SZO9j8s0NzygMbygQRsVgT5cGRP596h0vVRZaVdisxtHcehg+wx71n10zNwKJ0+iK5IEfz7VO21yRZoeDRXOuIyhArHgbiAOOSWGW74+VCHXWiw3bm2mNshQZAyWMzyR/OoLEfn881NdUNmP4CmUNqKnnjqtoXUNT4jHy7UULtVXnaRG0lsgkQfnRGk3ARuJPfcT9JM9v4UMqwIEfX+Xeoy/qYHpMk/epopUhZ9RqCtRdGe/9+v1quW+RwB/fr9qbfvA8fcf2P/VDTn+gp0jO5BVy6T3/AK1CjU2I7CkQflRUQOYVbcHmfrj6RXSfpQ1tqmBrodPCjLllZKX/ALzXDfphX3+80igrfbM6SO+L/feaSrLAmTH9+lc2eh/v864r5/v+VLJWtx4txfyjXsgtgEL7eh+VRmY2yIkHECY44H2on9IqEsPWqJYIeDQupyIZct57/WnLpmM7cwJMmMfnzUgufKpRqSOPtn+NWqEUtgPPJ8kK2DA4+nfv2pUUusx+AH/tH9K7Rr6/z+wO6vYk05uW7otWkAY3B+Fn3EAxtJPr68Zkc1pNa1kmbjFWkeJBZhugk+Gv4s4OcAT7VUdQ1zJ4jsXcE2yiM2xgRI8pIyo7cj25orpIO83Ecj9SSSP1hUXAWadpxBUgjaBAOBivG5NXqW37naUtL2KzV9TwSCVcEFSCd23JABHbgjPHyo5PikAWzJ2Mot31EKGDBluMAO+0/UD0qo1tpS+GUwVDEeUYgEAQAIIIgRwKg60Vm2EHNtWb3dvxEDsJHFbFijOUWLknpk5Dus9N/R7960TIVoVv3kbzI35rBqu2LJPer3r18MtgsGLrYS2RMf8AKkDdzMBgJ9qp0dSc2wMHhmGQJEyT9orTj3XBTlyNPkaFHyq90OndPMFIWEg7ZybYGQAf3ieOR6iqO0ZmFXA4geo/ez96stg8IGApMrmThSSWMd+F+QPvQyxtULinu2/YuksRpX3K0WkYLIIi49wHAMZgyT7VmmckGBn+/wC/zq813iWLNq2NyOXdmG6CNn6tRzx+I4xVPqbu6CQA3qsDd7lRgN7iOfXNDHUQScpkKW8KCeHM/mvH2qS3ZAs2x+07kn2UeVR9Sx+lM0tokhEGXYKvzOBVovTwb6qjbbdsAu7cBEuOJPuYwBziljN62rKWrog6boS0kQFWC7ZhQf4k8Be/1oq7a34khRwTGBE5A5Jxj29Bha3qSEIqrtsoSVTG52iDcuEcsY/LgVWX9bu9vQAAAT+X+9XVKQ9xighrq7jt47GRJzyf9qlQ+kx9vXsKq1uf3iiku/5vuZ+5ouNFWqyfUziWOTx9u2YoRxHv9PvUogyWnaBJ8xPtE+5xQN25kwB8pn7VKA2NZz6CmTXGf++K5R0i2EoR3mOOf9q4R85/vt9ajHz/AJU41bBIDYgacH96YV/sUh8q1wpFT3Jg59RS3mowR6xXfvVyYKOlj/fFdDe4PsK5vH95rhb8qlkoeQO+BTrFvcwUGdxC/mePvUSnaRGf96nsgKwJ9JBHzIBnt2P5UsppIKiOTTnP/cD7Fc/yp+pC/LPpGOO3uD9RWo12hRl1BQCfD02rWeSt7N2AewDCf9B9apr2kC6SzcjJZzzz52QT8io+tULqY2h3jZVtbUGCcj/T/WlUepPmOfT9kcwJ+9KtSkVUWnU2JW4CZC3bm0HgQIEemAKM+K2IN0gkE2NOxIwSSVkk+p9aVKvKS9S/nsd+PP4/7AOqMQ6wY/4cHHqQ5NP14/4r5acEexGl3SPQzn50qVasfj7FObh/8iq1R8lr/Q3/AJGhu39+ldpVq9zE/UF2ANlz5D/yFE9RYlEkz5R91Q/xJP5mlSpP6i1ektvi0zdB7+ApnvJdyfqSazyn9YvzFKlSQ9L+wX4+4b8LH/ik/wDyfa08fyqxvoP0PSiB5ixb/MQxyfWlSqt//V/df6YkOCp6uoF+8AIAJAA4AGAAOwFVysY5pUq3R9KKZcsIbv8AP+Zp1tjBz/cUqVBiE9wfq/myz74agHGB8/5ClSpfAwxRj8qYhpUqi5Ix7DJpD+VdpVdERiNO/pSpVoiKxxH8KYO1KlTeSIe4x+dRk12lUZETXfwKfb/9mrv7I/0H/wAjSpUmTx9xonpGpQC/owAAD064DjkeHq8H1FZ/W/8A0Vv/AE3PteuRXaVcafqh/PY0vz+TMdQ/5tz/AO4//kaVKlXei9kYnyf/2Q=="
+          data-csiid="NwrTZvuoKIWckdUPje_R8QY_1"
+          data-atf="1"
+        />
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Use a linear gradient as a mask layer:</p>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            .mask1 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; -webkit-mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                linear-gradient(black, transparent)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                linear-gradient(black, transparent)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+        <br />
+      </div>
+      <p>
+        Here, we use a linear-gradient along with text masking as the mask layer
+        for our image:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Use a linear gradient along with text masking as a mask layer:</p>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            .mask1 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; max-width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                600px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; height<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                350px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; overflow-y<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                scroll<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; background<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                url(img_5terre.jpg) no-repeat<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; -webkit-mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                linear-gradient(black, transparent)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                linear-gradient (black, transparent)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+        <br />
+      </div>
+      <h3>Radial Gradient Examples</h3>
+      <p>
+        Here, we use a radial-gradient (shaped as a circle) as the mask layer
+        for our image:
+      </p>
+      <div class="mask2">
+        <img
+          class="VeBrne"
+          alt=""
+          id="dimg_41"
+          src="data:image/jpeg;base64,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"
+          data-csiid="NwrTZvuoKIWckdUPje_R8QY_1"
+          data-atf="1"
+        />
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Use a radial gradient as a mask layer (a circle):</p>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            .mask2 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; -webkit-mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        ><br />
+      </div>
+      <p>
+        Here, we use a radial-gradient (shaped as an ellipse) as the mask layer
+        for our image:
+      </p>
+      <div class="mask3">
+        <img
+          class="VeBrne"
+          alt=""
+          id="dimg_41"
+          src="data:image/jpeg;base64,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"
+          data-csiid="NwrTZvuoKIWckdUPje_R8QY_1"
+          data-atf="1"
+        />
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Use another radial gradient as a mask layer (an ellipse):</p>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            .mask3 <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; -webkit-mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; mask-image<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%)<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <br />
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+        <br /><br />
+      </div>
+      <br />
+      <h2>Use SVG as the Mask Layer</h2>
+      <p>
+        The SVG <code class="w3-codespan">&lt;mask&gt;</code> element can be
+        used inside an SVG graphic to create masking effects.
+      </p>
+      <p>
+        Here, we use the SVG
+        <code class="w3-codespan">&lt;mask&gt;</code> element to create
+        different mask layers for our image:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>An SVG mask layer (formed as a triangle):</p>
+        <div class="s-code-box">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >svg<span class="attributecolor" style="color: red">
+              width<span class="attributevaluecolor" style="color: mediumblue"
+                >="600"</span
+              >
+              height<span class="attributevaluecolor" style="color: mediumblue"
+                >="400"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >mask<span class="attributecolor" style="color: red">
+              id<span class="attributevaluecolor" style="color: mediumblue"
+                >="svgmask1"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><br />&nbsp;&nbsp;&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >polygon<span class="attributecolor" style="color: red">
+              fill<span class="attributevaluecolor" style="color: mediumblue"
+                >="#ffffff"</span
+              >
+              points<span class="attributevaluecolor" style="color: mediumblue"
+                >="200 0, 400 400, 0 400"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/polygon<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/mask<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >image<span class="attributecolor" style="color: red">
+              xmlns:xlink<span
+                class="attributevaluecolor"
+                style="color: mediumblue"
+                >="http://www.w3.org/1999/xlink"</span
+              >
+              xlink:href<span
+                class="attributevaluecolor"
+                style="color: mediumblue"
+                >="img_5terre.jpg"</span
+              >
+              mask<span class="attributevaluecolor" style="color: mediumblue"
+                >="url(#svgmask1)"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/image<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/svg<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >
+        </div>
+        <br />
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+        <br /><br />
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>An SVG mask layer (formed as a star):</p>
+        <div class="s-code-box">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >svg<span class="attributecolor" style="color: red">
+              width<span class="attributevaluecolor" style="color: mediumblue"
+                >="600"</span
+              >
+              height<span class="attributevaluecolor" style="color: mediumblue"
+                >="400"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >mask<span class="attributecolor" style="color: red">
+              id<span class="attributevaluecolor" style="color: mediumblue"
+                >="svgmask2"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><br />&nbsp;&nbsp;&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >polygon<span class="attributecolor" style="color: red">
+              fill<span class="attributevaluecolor" style="color: mediumblue"
+                >="#ffffff"</span
+              >
+              points<span class="attributevaluecolor" style="color: mediumblue"
+                >="100,10 40,198 190,78 10,78 160,198"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/polygon<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/mask<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >image<span class="attributecolor" style="color: red">
+              xmlns:xlink<span
+                class="attributevaluecolor"
+                style="color: mediumblue"
+                >="http://www.w3.org/1999/xlink"</span
+              >
+              xlink:href<span
+                class="attributevaluecolor"
+                style="color: mediumblue"
+                >="img_5terre.jpg"</span
+              >
+              mask<span class="attributevaluecolor" style="color: mediumblue"
+                >="url(#svgmask2)"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/image<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/svg<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+        <br />
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>An SVG mask layer (formed as circles):</p>
+        <div class="s-code-box">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >svg<span class="attributecolor" style="color: red">
+              width<span class="attributevaluecolor" style="color: mediumblue"
+                >="600"</span
+              >
+              height<span class="attributevaluecolor" style="color: mediumblue"
+                >="400"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >mask<span class="attributecolor" style="color: red">
+              id<span class="attributevaluecolor" style="color: mediumblue"
+                >="svgmask3"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><br />&nbsp;&nbsp;&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >circle<span class="attributecolor" style="color: red">
+              fill<span class="attributevaluecolor" style="color: mediumblue"
+                >="#ffffff"</span
+              >
+              cx<span class="attributevaluecolor" style="color: mediumblue"
+                >="75"</span
+              >
+              cy<span class="attributevaluecolor" style="color: mediumblue"
+                >="75"</span
+              >
+              r<span class="attributevaluecolor" style="color: mediumblue"
+                >="75"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/circle<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;&nbsp;&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >circle<span class="attributecolor" style="color: red">
+              fill<span class="attributevaluecolor" style="color: mediumblue"
+                >="#ffffff"</span
+              >
+              cx<span class="attributevaluecolor" style="color: mediumblue"
+                >="80"</span
+              >
+              cy<span class="attributevaluecolor" style="color: mediumblue"
+                >="260"</span
+              >
+              r<span class="attributevaluecolor" style="color: mediumblue"
+                >="75"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/circle<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;&nbsp;&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >circle<span class="attributecolor" style="color: red">
+              fill<span class="attributevaluecolor" style="color: mediumblue"
+                >="#ffffff"</span
+              >
+              cx<span class="attributevaluecolor" style="color: mediumblue"
+                >="270"</span
+              >
+              cy<span class="attributevaluecolor" style="color: mediumblue"
+                >="160"</span
+              >
+              r<span class="attributevaluecolor" style="color: mediumblue"
+                >="75"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/circle<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/mask<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >image<span class="attributecolor" style="color: red">
+              xmlns:xlink<span
+                class="attributevaluecolor"
+                style="color: mediumblue"
+                >="http://www.w3.org/1999/xlink"</span
+              >
+              xlink:href<span
+                class="attributevaluecolor"
+                style="color: mediumblue"
+                >="img_5terre.jpg"</span
+              >
+              mask<span class="attributevaluecolor" style="color: mediumblue"
+                >="url(#svgmask3)"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/image<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/svg<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >
+        </div>
+        <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+          >Try it Yourself »</a
+        >
+        <br />
+      </div>
+      <br />
+      <h2>CSS Masking Properties</h2>
+      <p>The following table lists all the CSS masking properties:</p>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width: 25%">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="">mask-clip</a></td>
+            <td>Specifies which area is affected by a mask image</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">mask-composite</a>
+            </td>
+            <td>
+              Specifies a compositing operation used on the current mask layer
+              with the mask layers below it
+            </td>
+          </tr>
+          <tr>
+            <td><a href="">mask-image</a></td>
+            <td>
+              Specifies an image to be used as a mask layer for an element
+            </td>
+          </tr>
+          <tr>
+            <td><a href="">mask-mode</a></td>
+            <td>
+              Specifies whether the mask layer image is treated as a luminance
+              mask or as an alpha mask
+            </td>
+          </tr>
+          <tr>
+            <td><a href="">mask-origin</a></td>
+            <td>
+              Specifies the origin position (the mask position area) of a mask
+              layer image
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">mask-position</a>
+            </td>
+            <td>
+              Sets the starting position of a mask layer image (relative to the
+              mask position area)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="">mask-repeat</a></td>
+            <td>Specifies how the mask layer image is repeated</td>
+          </tr>
+          <tr>
+            <td><a href="">mask-size</a></td>
+            <td>Specifies the size of a mask layer image</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br />
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

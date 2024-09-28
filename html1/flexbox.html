@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Flexbox</h1>
+      <div class="first_buttons_div">
+        <a href="media.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Pervious
+          </button>
+        </a>
+
+        <a href="grid.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <table>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+      </table>
+
+      <a target="_blank" href="editor.html" class="w3-btn"
+        >Try it Yourself</a
+      >
+      <hr />
+      <h2>CSS Flexbox Layout Module</h2>
+      <p>Before the Flexbox Layout module, there were four layout modes:</p>
+      <ul>
+        <li>Block, for sections in a webpage</li>
+        <li>Inline, for text</li>
+        <li>Table, for two-dimensional table data</li>
+        <li>Positioned, for explicit position of an element</li>
+      </ul>
+      <p>
+        The Flexible Box Layout Module makes it easier to design flexible
+        responsive layout structures without using float or positioning.
+      </p>
+      <h2>Browser Support</h2>
+      <p>The flexbox properties are supported in all modern browsers.</p>
+      <table class="browserref notranslate">
+        <tbody>
+          <tr>
+            <th
+              style="width: 20%; height: 50px"
+              class="bsChrome"
+              title="Chrome"
+            >
+              <img
+                src="https://th.bing.com/th/id/R.069010444f24b31c92223b83289c7ae2?rik=Kio15XaiWvf22A&pid=ImgRaw&r=0"
+                alt="Chrome Logo"
+                class="browser-logo"
+              />
+            </th>
+            <th
+              style="width: 20%"
+              class="bsEdge"
+              title="Internet Explorer / Edge"
+            >
+              <img
+                src="https://th.bing.com/th/id/R.4635660c557c8c5cf94093b21b70b967?rik=bOMgTpfwTGPSSQ&pid=ImgRaw&r=0"
+                alt="Edge Logo"
+                class="browser-logo"
+              />
+            </th>
+            <th style="width: 20%" class="bsFirefox" title="Firefox">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png"
+                alt="Firefox Logo"
+                class="browser-logo"
+              />
+            </th>
+            <th style="width: 20%" class="bsSafari" title="Safari">
+              <img
+                src="https://purepng.com/public/uploads/large/purepng.com-safari-iconsymbolsiconsapple-iosiosios-8-iconsios-8-7215225961106timx.png"
+                alt="Safari Logo"
+                class="browser-logo"
+              />
+            </th>
+            <th style="width: 20%" class="bsOpera" title="Opera">
+              <img
+                src="https://th.bing.com/th/id/OIP.P5niP-JCRs6Lif_jnzE-UQHaID?rs=1&pid=ImgDetMain"
+                alt="Opera Logo"
+                class="browser-logo"
+              />
+            </th>
+          </tr>
+          <tr>
+            <td>29.0</td>
+            <td>11.0</td>
+            <td>22.0</td>
+            <td>10</td>
+            <td>48</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Flexbox Elements</h2>
+      <p>
+        To start using the Flexbox model, you need to first define a flex
+        container.
+      </p>
+      <div class="flex-container2">
+        <div class="flex-item2">
+          <h1>1</h1>
+        </div>
+        <div class="flex-item2">
+          <h1>2</h1>
+        </div>
+        <div class="flex-item2">
+          <h1>3</h1>
+        </div>
+      </div>
+
+      <p>
+        The element above represents a flex container (the pink area) with three
+        flex items.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>A flex container with three flex items:</p>
+        <div class="s-code-box">
+          <span class="tag">&lt;div</span> class="flex-container"&gt;<br />
+          <span class="tag">&lt;div&gt;</span>1<span class="tag"
+            >&lt;/div&gt;</span
+          ><br />
+          <span class="tag">&lt;div&gt;</span>2<span class="tag"
+            >&lt;/div&gt;</span
+          ><br />
+          <span class="tag">&lt;div&gt;</span>3<span class="tag"
+            >&lt;/div&gt;</span
+          ><br />
+          <span class="tag">&lt;/div&gt;</span>
+        </div>
+
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn"
+          >Try it Yourself</a
+        >
+      </div>
+      <div id="notebox">
+        <strong>Note:</strong> You will learn more about flex containers and
+        flex items in the next chapters.
+      </div>
+      <div class="header">
+        <h2>Learn More</h2>
+      </div>
+      <p>
+        To learn more about HTML, visit the
+        <a
+          href=""
+          target="_blank"
+          style="color: #ff66b2"
+          >W3Schools HTML display</a
+        >.
+      </p>
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

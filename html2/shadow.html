@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadow Effects</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Shadow Effects</h1>
+      <div class="first_buttons_div">
+        <a href="gradient.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h1">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <div class="w3-half">
+        <p id="textintro">With CSS you can create shadow effects!</p>
+
+        <div class="bordershadow">Hover over me!</div>
+      </div>
+
+      <hr />
+
+      <h2>CSS Shadow Effects</h2>
+      <p>With CSS you can add shadow to text and to elements.</p>
+      <p>In these chapters you will learn about the following properties:</p>
+      <ul>
+        <li><code class="w3-codespan">text-shadow</code></li>
+        <li><code class="w3-codespan">box-shadow</code></li>
+      </ul>
+      <hr />
+
+      <h2>CSS Text Shadow</h2>
+      <p>
+        The CSS <code class="w3-codespan">text-shadow</code> property applies
+        shadow to text.
+      </p>
+      <p>
+        In its simplest use, you only specify the horizontal shadow (2px) and
+        the vertical shadow (2px):
+      </p>
+      <h2 id="simpleshadow">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          h1 {<br />
+          &nbsp;&nbsp;text-shadow: 2px 2px;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>Next, add a color to the shadow:</p>
+      <h2 id="simpleshadow2">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          h1 {<br />
+          &nbsp;&nbsp;text-shadow: 2px 2px red;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>Then, add a blur effect to the shadow:</p>
+      <h2 id="simpleshadow3">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          h1 {<br />
+          &nbsp;&nbsp;text-shadow: 2px 2px 5px red;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>The following example shows a white text with black shadow:</p>
+      <h2 id="simpleshadow4">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          h1 {<br />
+          &nbsp;&nbsp;color: white;<br />
+          &nbsp;&nbsp;text-shadow: 2px 2px 4px #000000;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>The following example shows a red neon glow shadow:</p>
+      <h2 id="simpleshadow5">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          h1 {<br />
+          &nbsp;&nbsp;text-shadow: 0 0 3px #FF0000;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Multiple Shadows</h2>
+      <p>
+        To add more than one shadow to the text, you can add a comma-separated
+        list of shadows.
+      </p>
+      <p>The following example shows a red and blue neon glow shadow:</p>
+      <h2 id="simpleshadow6">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          h1 {<br />
+          &nbsp;&nbsp;text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>
+        The following example shows a white text with black, blue, and darkblue
+        shadow:
+      </p>
+      <h2 id="simpleshadow7">Text shadow effect!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          h1 {<br />&nbsp;&nbsp;color: white;<br />
+          &nbsp;&nbsp;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px
+          darkblue;<br />}
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>
+        You can also use the text-shadow property to create a plain border
+        around some text (without shadows):
+      </p>
+      <h2 id="simpleshadowborder">Border around text!</h2>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          h1 {<br />&nbsp;&nbsp;color: coral;<br />&nbsp;&nbsp;text-shadow: -1px
+          0 black, 0 1px black, 1px 0 black, 0 -1px black;<br />}
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+      <!-- Box Shadow -->
+      <h1 id="h1">CSS Box Shadow</h1>
+      <div class="first_buttons_div">
+        <a href="shadow.html">
+          <button class="first_buttons"><b>&lt;</b> Previous</button>
+        </a>
+        <a href="t-effact.html">
+          <button class="first_buttons">Next <b>&gt;</b></button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <p>
+        The CSS <code class="w3-codespan">box-shadow</code> property is used to
+        apply one or more shadows to an element.
+      </p>
+      <hr />
+
+      <h2>Specify a Horizontal and a Vertical Shadow</h2>
+      <p>
+        In its simplest use, you only specify a horizontal and a vertical
+        shadow. The default color of the shadow is the current text-color.
+      </p>
+      <div id="boxshadow1">A &lt;div&gt; element with a box-shadow</div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Specify a horizontal and a vertical shadow:</p>
+        <div class="s-code-box">
+          div {<br />
+          &nbsp;&nbsp;box-shadow: 10px 10px;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Specify a Color for the Shadow</h2>
+      <p>
+        The <code class="w3-codespan">color</code> parameter defines the color
+        of the shadow.
+      </p>
+      <div id="boxshadow2">
+        A &lt;div&gt; element with a lightblue box-shadow
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Specify a color for the shadow:</p>
+        <div class="s-code-box">
+          div {<br />
+          &nbsp;&nbsp;box-shadow: 10px 10px lightblue;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Add a Blur Effect to the Shadow</h2>
+      <p>
+        The <code class="w3-codespan">blur</code> parameter defines the blur
+        radius. The higher the number, the more blurred the shadow will be.
+      </p>
+      <div id="boxshadow3">
+        A &lt;div&gt; element with a 5px blurred, lightblue box-shadow
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Add a blur effect to the shadow:</p>
+        <div class="s-code-box">
+          div {<br />
+          &nbsp;&nbsp;box-shadow: 10px 10px 5px lightblue;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Set the Spread Radius of the Shadow</h2>
+      <p>
+        The <code class="w3-codespan">spread</code> parameter defines the spread
+        radius. A positive value increases the size of the shadow, a negative
+        value decreases the size of the shadow.
+      </p>
+      <div id="boxshadow4">
+        A &lt;div&gt; element with a blurred, lightblue box-shadow, with a
+        spread radius of 12px
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Set the spread radius of the shadow:</p>
+        <div class="s-code-box">
+          div {<br />
+          &nbsp;&nbsp;box-shadow: 10px 10px 5px 12px lightblue;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+      <h2>Set the inset Parameter</h2>
+      <p>
+        The <code class="w3-codespan">inset</code> parameter changes the shadow
+        from an outer shadow (outset) to an inner shadow.
+      </p>
+      <div id="boxshadow5">
+        A &lt;div&gt; element with a blurred, lightblue, inset box-shadow
+      </div>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <p>Add the inset parameter:</p>
+        <div class="s-code-box">
+          div {<br />
+          &nbsp;&nbsp;box-shadow: 10px 10px 5px lightblue inset;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Add Multiple Shadows</h2>
+      <p>An element can also have multiple shadows:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate cssHigh">
+          div {<br />
+          &nbsp; box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;<br />
+          }
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Cards</h2>
+      <p>
+        You can also use the
+        <code class="w3-codespan">box-shadow</code> property to create
+        paper-like cards:
+      </p>
+
+      <div class="w3-row">
+        <div class="w3-half">
+          <div class="card">
+            <div class="cardheader">
+              <h1
+                style="
+                  font-size: 91px;
+                  font-family: 'Times New Roman', Times, serif;
+                  font-weight: bold;
+                "
+              >
+                1
+              </h1>
+            </div>
+
+            <div class="cardcontainer">
+              <p>January 1, 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          div.card {<br />
+          &nbsp;&nbsp;width: 250px;<br />&nbsp;&nbsp;box-shadow: 0 4px 8px 0
+          rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);<br />&nbsp;&nbsp;text-align:
+          center;<br />
+          }
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it (Text Card) &raquo;</a
+        >
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it (Image Card) &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <form
+        autocomplete="off"
+        id="w3-exerciseform"
+        action=""
+        method="post"
+        target="_blank"
+      >
+        <h2>Test Yourself With Exercises</h2>
+        <div class="exercisewindow">
+          <h2>Exercise:</h2>
+          <p>
+            Set a "2px" horizontal, and "2px" vertical, text shadow for the
+            &lt;h1&gt; element.
+          </p>
+          <div class="exerciseprecontainer">
+            <pre>
+        &lt;style&gt;
+        h1 {
+          <input name="ex1" maxlength="11" style="width: 116px;">: 2px 2px;
+        }
+        &lt;/style&gt;
+        
+        &lt;body&gt;
+          &lt;h1&gt;This is a heading&lt;/h1&gt;
+          &lt;p&gt;This is a paragraph&lt;/p&gt;
+          &lt;p&gt;This is a paragraph&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+          </div>
+          <br />
+          <button type="submit" class="w3-btn w3-margin-bottom">
+            Submit Answer &raquo;
+          </button>
+          <p>
+            <a
+              target="_blank"
+              href=""
+              >Start the Exercise</a
+            >
+          </p>
+        </div>
+      </form>
+      <hr />
+
+      <h2>CSS Shadow Properties</h2>
+      <p>The following table lists the CSS shadow properties:</p>
+      <table class="ws-table-all notranslate">
+        <tr>
+          <th style="width: 28%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><a href="">box-shadow</a></td>
+          <td>Adds one or more shadows to an element</td>
+        </tr>
+        <tr>
+          <td><a href="">text-shadow</a></td>
+          <td>Adds one or more shadows to a text</td>
+        </tr>
+      </table>
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Dispaly</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Layout - The display Property</h1>
+
+      <div class="first_buttons_div">
+        <a href="tableCSS.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="maxWidth.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <h2 class="header">The Display Property</h2>
+      <p>
+        The display property is used to specify how an element is shown on a web
+        page. Every HTML element has a default display value, depending on what
+        type of element it is. The default display value for most elements is
+        block or inline. The display property is used to change the default
+        display behavior of HTML elements.
+      </p>
+
+      <div class="content-container">
+        <h2 class="header">Block-level Elements</h2>
+        <p>
+          A block-level element ALWAYS starts on a new line and takes up the
+          full width available (stretches out to the left and right as far as it
+          can).
+        </p>
+        <div class="block-element">The element is a block-level element.</div>
+
+        <h2 class="header">Inline Elements</h2>
+        <p>
+          An inline element DOES NOT start on a new line and only takes up as
+          much width as necessary.
+        </p>
+        <p>
+          This is
+          <span class="block-element"
+            >an inline &lt;span&gt; element inside</span
+          >
+          a paragraph.
+        </p>
+        <p>Examples of inline elements:</p>
+        <ul>
+          <li>&lt;span&gt;</li>
+          <li>&lt;a&gt;</li>
+          <li>&lt;img&gt;</li>
+        </ul>
+
+        <h2 class="header">Display Values</h2>
+        <table>
+          <tr
+            style="
+              background-color: var(--link-color);
+              color: #fff;
+              text-align: center;
+            "
+          >
+            <th>Value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>inline</td>
+            <td>Displays an element as an inline element</td>
+          </tr>
+          <tr>
+            <td>block</td>
+            <td>Displays an element as a block element</td>
+          </tr>
+          <tr>
+            <td>contents</td>
+            <td>
+              Makes the container disappear, making the child elements children
+              of the element the next level up in the DOM
+            </td>
+          </tr>
+          <tr>
+            <td>flex</td>
+            <td>Displays an element as a block-level flex container</td>
+          </tr>
+          <tr>
+            <td>grid</td>
+            <td>Displays an element as a block-level grid container</td>
+          </tr>
+          <tr>
+            <td>inline-block</td>
+            <td>
+              Displays an element as an inline-level block container. The
+              element itself is formatted as an inline element, but you can
+              apply height and width values
+            </td>
+          </tr>
+          <tr>
+            <td>inline-flex</td>
+            <td>Displays an element as an inline-level flex container</td>
+          </tr>
+          <tr>
+            <td>inline-grid</td>
+            <td>Displays an element as an inline-level grid container</td>
+          </tr>
+          <tr>
+            <td>inline-table</td>
+            <td>The element is displayed as an inline-level table</td>
+          </tr>
+          <tr>
+            <td>list-item</td>
+            <td>Let the element behave like a &lt;li&gt; element</td>
+          </tr>
+          <tr>
+            <td>run-in</td>
+            <td>
+              Displays an element as either block or inline, depending on
+              context
+            </td>
+          </tr>
+          <tr>
+            <td>table</td>
+            <td>Let the element behave like a &lt;table&gt; element</td>
+          </tr>
+        </table>
+        <hr />
+        <br />
+        <h2 class="header">Display: none;</h2>
+        <p>
+          <code class="w3-codespan">display: none;</code> is commonly used with
+          JavaScript to hide and show elements without deleting and recreating
+          them. Take a look at our last example on this page if you want to know
+          how this can be achieved.
+        </p>
+        <p>
+          The <code class="w3-codespan">&lt;script&gt;</code> element uses
+          <code class="w3-codespan">display: none;</code> as default.
+        </p>
+        <hr />
+        <br />
+        <h2 class="header">Override The Default Display Value</h2>
+        <p>
+          As mentioned, every element has a default display value. However, you
+          can override this.
+        </p>
+        <p>
+          Changing an inline element to a block element, or vice versa, can be
+          useful for making the page look a specific way, and still follow the
+          web standards.
+        </p>
+        <p>
+          A common example is making inline
+          <code class="w3-codespan">&lt;li&gt;</code> elements for horizontal
+          menus:
+        </p>
+        <hr />
+        <br />
+        <div class="w3-example">
+          <h3>Example</h3>
+          <div class="s-code-box">
+            <span class="w3-code" style="color: brown">li</span><span>{</span
+            ><br />
+            <span style="color: red">display</span><span>:</span
+            ><span style="color: mediumblue">inline</span><span>;</span><br />
+            <span>}</span><br />
+          </div>
+          <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+            >Try it Yourself &raquo;</a
+          >
+        </div>
+
+        <h2 class="header">
+          Hide an Element - display:none or visibility:hidden?
+        </h2>
+        <div class="w3-content test" style="max-width: 800px">
+          <div class="w3-row-padding w3-center" style="margin: 0 -16px">
+            <div class="w3-col w3-border" id="imgbox1" style="width: 30%">
+              <p style="word-wrap: break-word">
+                <code class="w3-codespan">display:none</code>
+              </p>
+              <img
+                src="https://www.w3schools.com/css/img_5terre.jpg"
+                style="width: 100%"
+                alt="Italy"
+              />
+              <p>
+                <button class="ws-btn w3-block" onclick="removeElement()">
+                  Remove
+                </button>
+              </p>
+            </div>
+            <div class="w3-col w3-border" style="width: 30%" id="imgbox2">
+              <p style="word-wrap: break-word">
+                <code class="w3-codespan">visibility:hidden</code>
+              </p>
+              <img
+                src="https://www.w3schools.com/css/img_forest.jpg"
+                style="width: 100%"
+                alt="Forest"
+              />
+              <p>
+                <button class="ws-btn w3-block" onclick="changeVisibility()">
+                  Hide
+                </button>
+              </p>
+            </div>
+            <div class="w3-col w3-border" style="width: 30%">
+              <p style="word-wrap: break-word">
+                <code class="w3-codespan">Reset</code>
+              </p>
+              <img
+                src="https://www.w3schools.com/css/img_lights.jpg"
+                style="width: 100%"
+                alt="Lights"
+              />
+              <p>
+                <button class="ws-btn w3-block" onclick="resetElement()">
+                  Reset All
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form
+          autocomplete="off"
+          id="w3-exerciseform"
+          action="exercise.asp?filename=exercise_display_visibility1"
+          method="post"
+          target="_blank"
+        >
+          <h2>Test Yourself With Exercises</h2>
+          <div class="w3-example">
+            <h2>Exercise:</h2>
+            <p>
+              Hide the <code class="w3-codespan">&lt;h1&gt;</code> element. It
+              should still take up the same space as before.
+            </p>
+            <div class="s-code-box">
+              <pre>
+&lt;style&gt;
+    h1 &#123;
+        <input name="ex1" maxlength="10" style="width: 106px;">: <input name="ex2" maxlength="3" style="width: 66px;">;
+    }
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph&lt;/p&gt;
+    &lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/body&gt;
+                    </pre>
+            </div>
+            <button type="submit" class="w3-btn w3-margin-bottom">
+              Submit Answer »
+            </button>
+            <br /><a
+              target="_blank"
+              href=""
+              >Start the Exercise</a
+            >
+          </div>
+        </form>
+
+        <h2 class="header">Learn More</h2>
+        <p>
+          To learn more about HTML, visit the
+          <a
+            href="https://www.w3schools.com/css/css_display_visibility.asp"
+            target="_blank"
+            style="color: #04aa6d"
+            >W3Schools HTML display</a
+          >.
+        </p>
+      </div>
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

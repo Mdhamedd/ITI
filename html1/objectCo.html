@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Constructor Functions</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalJS.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="homeJs.html" class="ga-nav" title="JavaScript Tutorial"
+          >JAVASCRIPT</a
+        >
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>Object Constructor Functions</h1>
+      <div class="first_buttons_div">
+        <a href="objectDisplay.html">
+          <button class="first_buttons"><b>&lt;</b> Previous</button>
+        </a>
+        <a href="event.html">
+          <button class="first_buttons">Next <b>&gt;</b></button>
+        </a>
+      </div>
+      <hr />
+      <!-- Start Main Content -->
+      <p>Sometimes we need to create many objects of the same <b>type</b>.</p>
+      <p>
+        To create an <b>object type</b> we use an
+        <strong>object constructor function</strong>.
+      </p>
+      <p>
+        It is considered good practice to name constructor functions with an
+        upper-case first letter.
+      </p>
+
+      <div class="w3-example">
+        <h3>Object Type Person</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >
+            Person(first, last, age, eye) {<br /><span
+              class="jsnumbercolor"
+              style="color: red"
+            >
+            </span
+            >&nbsp;&nbsp;<span class="jskeywordcolor" style="color: mediumblue"
+              >this</span
+            >.<span class="jspropertycolor" style="color: black"
+              >firstName</span
+            >
+            = first;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >&nbsp;&nbsp;<span class="jskeywordcolor" style="color: mediumblue"
+              >this</span
+            >.<span class="jspropertycolor" style="color: black">lastName</span>
+            = last;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >&nbsp;&nbsp;<span class="jskeywordcolor" style="color: mediumblue"
+              >this</span
+            >.<span class="jspropertycolor" style="color: black">age</span> =
+            age;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >&nbsp;&nbsp;<span class="jskeywordcolor" style="color: mediumblue"
+              >this</span
+            >.<span class="jspropertycolor" style="color: black">eyeColor</span>
+            = eye;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >}<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="editor.html" target="_blank"
+          >Try it yourself »</a
+        >
+      </div>
+
+      <div class="w3-panel note">
+        <h2>Note:</h2>
+        <p>
+          In the constructor function, <code class="w3-codespan">this</code> has
+          no value.
+        </p>
+        <p>
+          The value of <code class="w3-codespan">this</code> will become the new
+          object when a new object is created.
+        </p>
+        <h2>See Also:</h2>
+        <p>
+          <a href="">The JavaScript <b>this</b> Tutorial</a>
+        </p>
+      </div>
+
+      <p>
+        Now we can use <code class="w3-codespan">new Person()</code> to create
+        many new Person objects:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">const</span>
+            myFather =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Person(<span class="jsstringcolor" style="color: brown">"John"</span
+            >, <span class="jsstringcolor" style="color: brown">"Doe"</span>,
+            <span class="jsnumbercolor" style="color: red">50</span>,
+            <span class="jsstringcolor" style="color: brown">"blue"</span
+            >);<br />
+            <span class="jskeywordcolor" style="color: mediumblue">const</span>
+            myMother =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Person(<span class="jsstringcolor" style="color: brown"
+              >"Sally"</span
+            >, <span class="jsstringcolor" style="color: brown">"Rally"</span>,
+            <span class="jsnumbercolor" style="color: red">48</span>,
+            <span class="jsstringcolor" style="color: brown">"green"</span
+            >);<br />
+            <span class="jskeywordcolor" style="color: mediumblue">const</span>
+            mySister =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Person(<span class="jsstringcolor" style="color: brown">"Anna"</span
+            >, <span class="jsstringcolor" style="color: brown">"Rally"</span>,
+            <span class="jsnumbercolor" style="color: red">18</span>,
+            <span class="jsstringcolor" style="color: brown">"green"</span
+            >);<br /><span class="jsnumbercolor" style="color: red"> </span
+            ><br />
+            <span class="jskeywordcolor" style="color: mediumblue">const</span>
+            mySelf =
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Person(<span class="jsstringcolor" style="color: brown"
+              >"Johnny"</span
+            >, <span class="jsstringcolor" style="color: brown">"Rally"</span>,
+            <span class="jsnumbercolor" style="color: red">22</span>,
+            <span class="jsstringcolor" style="color: brown">"green"</span
+            >);<br /><span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          >Try it Yourself »</a
+        >
+      </div>
+      <hr />
+      <h2>Property Default Values</h2>
+      <p>
+        A <b>value</b> given to a property will be a <b>default value</b> for
+        all objects created by the constructor:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >
+            Person(first, last, age, eyecolor) {<br /><span
+              class="jsnumbercolor"
+              style="color: red"
+            >
+            </span>
+            &nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black"
+              >firstName</span
+            >
+            = first;<br /><span class="jsnumbercolor" style="color: red">
+            </span>
+            &nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">lastName</span>
+            = last;<br /><span class="jsnumbercolor" style="color: red"> </span>
+            &nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">age</span> =
+            age;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >&nbsp;&nbsp;<span class="jskeywordcolor" style="color: mediumblue"
+              >this</span
+            >.<span class="jspropertycolor" style="color: black">eyeColor</span>
+            = eyecolor;<br />&nbsp;&nbsp;<span
+              class="jskeywordcolor"
+              style="color: mediumblue"
+              >this</span
+            >.<span class="jspropertycolor" style="color: black"
+              >nationality</span
+            >
+            =
+            <span class="jsstringcolor" style="color: brown">"English"</span
+            >;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >}<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          >Try it Yourself »</a
+        >
+      </div>
+
+      <hr />
+      <h2>Adding a Property to an Object</h2>
+      <p>Adding a property to a created object is easy:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            myFather.<span class="jspropertycolor" style="color: black"
+              >nationality</span
+            >
+            =
+            <span class="jsstringcolor" style="color: brown">"English"</span
+            >;<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          >Try it Yourself »</a
+        >
+      </div>
+
+      <div class="note">
+        <h2>Note:</h2>
+        <p>
+          The new property will be added to <b>myFather</b>. Not to any other
+          <b>Person Objects</b>.
+        </p>
+      </div>
+
+      <hr />
+
+      <h2>Adding a Property to a Constructor</h2>
+
+      <p>You can <b>NOT</b> add a new property to an object constructor:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            Person.<span class="jspropertycolor" style="color: black"
+              >nationality</span
+            >
+            =
+            <span class="jsstringcolor" style="color: brown">"English"</span
+            >;<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          >Try it Yourself »</a
+        >
+      </div>
+
+      <p>
+        To add a new property, you must add it to the constructor function
+        prototype:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            Person.<span class="jspropertycolor" style="color: black"
+              >prototype</span
+            >.<span class="jspropertycolor" style="color: black"
+              >nationality</span
+            >
+            =
+            <span class="jsstringcolor" style="color: brown">"English"</span
+            >;<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          >Try it Yourself »</a
+        >
+      </div>
+
+      <hr />
+      <div
+        id="midcontentadcontainer"
+        style="overflow: auto; text-align: center"
+      >
+        <!-- MidContent -->
+        <!-- <p class="adtext">Advertisement</p> -->
+
+        <div id="adngin-mid_content-0"></div>
+      </div>
+      <hr />
+
+      <h2>Constructor Function Methods</h2>
+      <p>A constructor function can also have <b>methods</b>:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >
+            Person(first, last, age, eyecolor) {<br /><span
+              class="jsnumbercolor"
+              style="color: red"
+            >
+            </span>
+            &nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black"
+              >firstName</span
+            >
+            = first;<br /><span class="jsnumbercolor" style="color: red">
+            </span>
+            &nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">lastName</span>
+            = last;<br /><span class="jsnumbercolor" style="color: red"> </span>
+            &nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">age</span> =
+            age;<br /><span class="jsnumbercolor" style="color: red"> </span>
+            &nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">eyeColor</span>
+            = eyecolor;<br />&nbsp;&nbsp;<span
+              class="jskeywordcolor"
+              style="color: mediumblue"
+              >this</span
+            >.<span class="jspropertycolor" style="color: black">fullName</span>
+            =
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >() {<br /><span class="jsnumbercolor" style="color: red"> </span
+            >&nbsp;&nbsp;&nbsp;&nbsp;<span
+              class="jskeywordcolor"
+              style="color: mediumblue"
+              >return</span
+            >
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black"
+              >firstName</span
+            >
+            + <span class="jsstringcolor" style="color: brown">" "</span> +
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">lastName</span
+            >;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >&nbsp;&nbsp;};<br /><span class="jsnumbercolor" style="color: red">
+            </span
+            >}<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          >Try it Yourself »</a
+        >
+      </div>
+
+      <hr />
+      <h2>Adding a Method to an Object</h2>
+      <p>Adding a method to a created object is easy:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            myMother.<span class="jspropertycolor" style="color: black"
+              >changeName</span
+            >
+            =
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >
+            (name) {<br /><span class="jsnumbercolor" style="color: red"> </span
+            >&nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">lastName</span>
+            = name;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >}<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          >Try it Yourself »</a
+        >
+      </div>
+
+      <div class="w3-note">
+        <h2>Note:</h2>
+        <p>
+          The new method will be added to <b>myMother</b>. Not to any other
+          <b>Person Objects</b>.
+        </p>
+      </div>
+
+      <hr />
+      <h2>Adding a Method to a Constructor</h2>
+      <p>You cannot add a new method to an object constructor function.</p>
+      <p>This code will produce a TypeError:</p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            Person.<span class="jspropertycolor" style="color: black"
+              >changeName</span
+            >
+            =
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >
+            (name) {<br /><span class="jsnumbercolor" style="color: red"> </span
+            >&nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">lastName</span>
+            = name;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >}<br /><span class="jsnumbercolor" style="color: red"> </span
+            ><br />
+            myMother.<span class="jspropertycolor" style="color: black"
+              >changeName</span
+            >(<span class="jsstringcolor" style="color: brown">"Doe"</span
+            >);<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <p>
+          &nbsp;<code class="w3-codespan"
+            >TypeError: myMother.changeName is not a function</code
+          >
+        </p>
+      </div>
+
+      <p>
+        Adding a new method must be done to the constructor function prototype:
+      </p>
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            Person.<span class="jspropertycolor" style="color: black"
+              >prototype</span
+            >.<span class="jspropertycolor" style="color: black"
+              >changeName</span
+            >
+            =
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >
+            (name) {<br /><span class="jsnumbercolor" style="color: red"> </span
+            >&nbsp;
+            <span class="jskeywordcolor" style="color: mediumblue">this</span
+            >.<span class="jspropertycolor" style="color: black">lastName</span>
+            = name;<br /><span class="jsnumbercolor" style="color: red"> </span
+            >}<br /><span class="jsnumbercolor" style="color: red"> </span
+            ><br />
+            myMother.<span class="jspropertycolor" style="color: black"
+              >changeName</span
+            >(<span class="jsstringcolor" style="color: brown">"Doe"</span
+            >);<span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          >Try it Yourself »</a
+        >
+      </div>
+
+      <div class="note">
+        <h2>Note:</h2>
+        <p>
+          The changeName() function assigns the value of
+          <code class="w3-codespan">name</code> to the person's
+          <code class="w3-codespan">lastName</code> property, substituting
+          <code class="w3-codespan">this</code> with
+          <code class="w3-codespan">myMother</code>.
+        </p>
+      </div>
+
+      <hr />
+      <h2>Built-in JavaScript Constructors</h2>
+      <p>JavaScript has built-in constructors for all native objects:</p>
+      <div class="w3-example">
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Object()&nbsp;&nbsp;&nbsp;<span
+              class="commentcolor"
+              style="color: green"
+              >// A new Object object<br
+            /></span>
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Array()&nbsp;&nbsp;&nbsp;&nbsp;<span
+              class="commentcolor"
+              style="color: green"
+              >// A new Array object<br
+            /></span>
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Map()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="commentcolor" style="color: green"
+              >// A new Map object<br
+            /></span>
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Set()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="commentcolor" style="color: green"
+              >// A new Set object<br
+            /></span>
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+              class="commentcolor"
+              style="color: green"
+              >// A new Date object<br
+            /></span>
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            RegExp()&nbsp;&nbsp;&nbsp;<span
+              class="commentcolor"
+              style="color: green"
+              >// A new RegExp object<br
+            /></span>
+            <span class="jskeywordcolor" style="color: mediumblue">new</span>
+            Function()&nbsp;<span class="commentcolor" style="color: green"
+              >// A new Function object<br /></span
+            ><span class="jsnumbercolor" style="color: red"> </span>
+          </span>
+        </div>
+      </div>
+      <div class="note">
+        <h2>Note:</h2>
+        <p>
+          The <code class="w3-codespan">Math()</code> object is not in the list.
+          <code class="w3-codespan">Math</code> is a global object. The
+          <code class="w3-codespan">new</code> keyword cannot be used on
+          <code class="w3-codespan">Math</code>.
+        </p>
+      </div>
+      <hr />
+      <h2>Did You Know?</h2>
+      <p>
+        Use object literals <code class="w3-codespan">{}</code> instead of
+        <code class="w3-codespan">new Object()</code>.
+      </p>
+      <p>
+        Use array literals <code class="w3-codespan">[]</code> instead of
+        <code class="w3-codespan">new Array()</code>.
+      </p>
+      <p>
+        Use pattern literals <code class="w3-codespan">/()/</code> instead of
+        <code class="w3-codespan">new RegExp()</code>.
+      </p>
+      <p>
+        Use function expressions <code class="w3-codespan">() {}</code> instead
+        of <code class="w3-codespan">new Function()</code>.
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="jscolor" style="color: black">
+            <span class="jsstringcolor" style="color: brown">""</span
+            >;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="commentcolor" style="color: green"
+              >// primitive string<br /></span
+            ><span class="jsnumbercolor" style="color: red"> 0</span
+            >;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="commentcolor" style="color: green"
+              >// primitive number<br
+            /></span>
+            <span class="jskeywordcolor" style="color: mediumblue">false</span
+            >;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="commentcolor" style="color: green"
+              >// primitive boolean<br /></span
+            ><span class="jsnumbercolor" style="color: red"> </span><br /><span
+              class="jsnumbercolor"
+              style="color: red"
+            >
+            </span
+            >{};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="commentcolor" style="color: green"
+              >// object object<br /></span
+            ><span class="jsnumbercolor" style="color: red"> </span
+            >[];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="commentcolor" style="color: green"
+              >// array object<br /></span
+            ><span class="jsnumbercolor" style="color: red"> </span
+            ><span class="jsregexpcolor" style="color: #f50">/()/</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="commentcolor" style="color: green"
+              >// regexp object<br
+            /></span>
+            <span class="jskeywordcolor" style="color: mediumblue"
+              >function</span
+            >(){};&nbsp;<span class="commentcolor" style="color: green"
+              >// function
+            </span></span
+          >
+        </div>
+        <a href="editor.html" target="_blank" class="w3-btn"
+          >Try it Yourself »</a
+        >
+        <!-- End Main Content -->
+      </div>
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img src="/images/logo/w3-footer.png" alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

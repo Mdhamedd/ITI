@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W3 School Home | Clone</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/src/css/basic.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Fonts Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- logo title-->
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!--Start Navbar -->
+    <div id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="index.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="homeCSS.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </div>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+
+    <!--End Navbar -->
+    <!-- Start Main Content -->
+    <div class="container">
+      <h1>
+        HTML
+        <span class="color-h1">Basic Examples</span>
+      </h1>
+      <div class="first_buttons_div">
+        <a href="intro.html"
+          ><button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button></a
+        >
+        <a href="elements.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button></a
+        >
+      </div>
+      <hr />
+      <p class="intro">
+        In this chapter we will show some basic HTML examples.
+      </p>
+      <p class="intro">
+        Don't worry if we use tags you have not learned about yet.
+      </p>
+      <hr />
+      <h2>HTML Documents</h2>
+      <p>
+        All HTML documents must start with a document type
+        <code class="doc-code"> &lt;!DOCTYPE html&gt;</code>
+        .
+      </p>
+      <p>
+        The HTML document itself begins with
+        <code class="html"> &lt;html&gt;</code> and ends with
+
+        <code class="html"> &lt;/html&gt;</code>.
+      </p>
+      <p>
+        The visible part of the HTML document is between
+
+        <code class="body"> &lt;body&gt; </code>and
+        <code class="body"> &lt;/body&gt;</code> .
+      </p>
+      <br />
+      <div class="w3-example">
+        <h3 class="mhm">Examples</h3>
+        <div class="code-example">
+          <span class="tag1"
+            ><code><code class="tags">&lt;</code>!DOCTYPE </code>
+            <span class="tag2">html<code class="tags">&gt;</code></span></span
+          >
+          <br />
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">html</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">body</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">h1</code
+            ><code class="tags">&gt;</code></span
+          >
+          <span><code class="paragraph">My First Heading</code></span>
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/h1</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">h2</code
+            ><code class="tags">&gt;</code></span
+          >
+          <span><code class="paragraph">My First paragraph.</code></span>
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/h2</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/body</code
+            ><code class="tags">&gt;</code></span
+          >
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/html</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+        </div>
+        <a href="/src/html/editor.html" target="_blank">
+          <button class="first_buttons" id="Try_button">
+            Try it yourself
+          </button></a
+        >
+      </div>
+      <br />
+      <h2>The &lt;!DOCTYPE &gt; Declaration</h2>
+      <p>
+        The <span class="doc-code">&lt;!DOCTYPE&gt; </span> declaration
+        represents the document type, and helps browsers to display web pages
+        correctly.
+      </p>
+      <p>
+        It must only appear once, at the top of the page (before any HTML tags).
+      </p>
+      <p>
+        The <span class="doc-code">&lt;!DOCTYPE&gt; </span> declaration is not
+        case sensitive.
+      </p>
+      <p>
+        The <span class="doc-code">&lt;!DOCTYPE&gt; </span> declaration for
+        HTML5 is:
+      </p>
+      <div class="example2">
+        <div class="w3-example">
+          <p class="code-example">
+            <code class="tags">&lt;</code>
+            <span><code class="tag1">!DOCTYPE </code></span
+            ><span><code class="tag2">html</code></span
+            ><span><code class="tags">&gt;</code></span>
+            <br />
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="hmm">
+        <h2>HTML Headings</h2>
+
+        <p>
+          HTML headings are defined with the
+          <code class="doc-code">&lt;h1&gt;</code> to
+          <code class="doc-code">&lt;h6&gt;</code> tags.
+        </p>
+        <p>
+          <span class="doc-code">&lt;h1&gt;</span>defines the most important
+          heading. <span class="doc-code">&lt;h6&gt;</span>defines the least
+          important heading:
+        </p>
+      </div>
+      <div class="w3-example">
+        <div class="code-example">
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">h1</code
+            ><code class="tags">&gt;</code></span
+          >
+          <span><code class="paragraph">This is heading 1</code></span>
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/h1</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">h2</code
+            ><code class="tags">&gt;</code></span
+          >
+          <span><code class="paragraph">This is heading 2</code></span>
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/h2</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">h3</code
+            ><code class="tags">&gt;</code></span
+          >
+          <span><code class="paragraph">This is heading 3</code></span>
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/h3</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+        </div>
+      </div>
+      <hr />
+      <pre></pre>
+      <hr />
+      <h2>HTML Paragraphs</h2>
+      <p>
+        HTML paragraphs are defined with the
+        <span><code class="doc-code">&lt;h1&gt;</code></span> tag:
+      </p>
+      <div class="w3-example">
+        <div class="code-example">
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">p</code
+            ><code class="tags">&gt;</code></span
+          >
+          <span><code class="paragraph">This is paragraph.</code></span>
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/p</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">p</code
+            ><code class="tags">&gt;</code></span
+          >
+          <span><code class="paragraph">This is another paragraph.</code></span>
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/p</code
+            ><code class="tags">&gt;</code></span
+          >
+          <br />
+        </div>
+      </div>
+      <hr />
+      <h2>HTML Links</h2>
+      <p>
+        HTML links are defined with the
+        <span><code class="doc-code">&lt;a&gt;</code></span> tag:
+      </p>
+      <div class="w3-example">
+        <div class="code-example">
+          <span
+            ><code class="tags">&lt;</code><code class="tag2">href</code
+            ><code class="tags">="https://www.w3schools.com"&gt;</code></span
+          >
+          <span><code>This is a link</code></span>
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">/a</code
+            ><code class="tags">&gt;</code></span
+          >
+        </div>
+      </div>
+      <p>
+        The link's destination is specified in the
+        <code class="doc-code">href</code> attribute.
+      </p>
+      <p>
+        Attributes are used to provide additional information about HTML
+        elements.
+      </p>
+      <p>You will learn more about attributes in a later chapter.</p>
+      <br />
+      <h2>HTML Images</h2>
+      <p>
+        HTML images are defined with the
+        <code class="doc-code">&lt;img&gt;</code> tag.
+      </p>
+      <p>
+        The source file (<code class="doc-code">src</code>), alternative text
+        (<code class="doc-code">alt</code>),
+        <code class="doc-code">width</code>, and
+        <code class="doc-code">height</code> are provided as attributes:
+      </p>
+      <div class="w3-example">
+        <div class="code-example">
+          <span
+            ><code class="tags">&lt;</code><code class="tag1">img</code
+            ><code class="tag2"> src</code
+            ><code class="tags">="w3schools.jpg"</code
+            ><code class="tag2"> alt</code
+            ><code class="tags">="w3schools.jpg"</code
+            ><code class="tag2"> width</code><code class="tags">="104"</code>
+            <code class="tag2"> height</code><code class="tags">="142"</code
+            ><code class="tags">&gt;</code>
+          </span>
+        </div>
+      </div>
+      <hr />
+      <h2>How to View HTML Source</h2>
+      <p>
+        Have you ever seen a Web page and wondered "Hey! How did they do that?"
+      </p>
+      <h3>View HTML Source Code:</h3>
+      <p>
+        Click CTRL + U in an HTML page, or right-click on the page and select
+        "View Page Source". This will open a new tab containing the HTML source
+        code of the page.
+      </p>
+      <h3>Inspect an HTML Element:</h3>
+      <p>
+        Right-click on an element (or a blank area), and choose "Inspect" to see
+        what elements are made up of (you will see both the HTML and the CSS).
+        You can also edit the HTML or CSS on-the-fly in the Elements or Styles
+        panel that opens.
+      </p>
+      <hr />
+      <h2>HTML Exercises</h2>
+      <div class="w3-exercise">
+        <h2>Test Yourself With Exercises</h2>
+        <div class="code-exersise">
+          <h2>Exercise:</h2>
+          <p>
+            HTML elements are surrounded by a specific type of brackets, which
+            one?
+          </p>
+
+          <div class="w3-example">
+            <br />
+            <span
+              ><input name="ex1" maxlength="3" class="answer" />
+              <code> p </code>
+              <input name="ex1" maxlength="3" class="answer" />
+              <code> This is a paragraph. </code>
+              <input name="ex1" maxlength="3" class="answer" />
+              <code> /p </code>
+              <input name="ex1" maxlength="3" class="answer"
+            /></span>
+            <br />
+            <br />
+            <a href="#">
+              <button class="first_buttons" id="next_button">
+                Submit Answer <b>&gt;&gt;</b>
+              </button></a
+            >
+            <br />
+            <br />
+            <a href="#">Start the Exercise</a>
+            <br />
+            <br />
+          </div>
+          <br />
+        </div>
+      </div>
+
+      <br />
+    </div>
+
+    <!-- <div class="first_buttons_div">
+      <a href="intro.html"
+        ><button class="first_buttons" id="home_button">
+          <b>&lt;</b> Home
+        </button></a
+      >
+      <a href="intro.html">
+        <button class="first_buttons" id="next_button">
+          Next <b>&gt;</b>
+        </button></a
+      >
+    </div> -->
+
+    <!-- End Main Content -->
+    <!-- =========================================Start Footer===================================================== -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#">
+          <img src="/images/logo/w3-footer.png" alt="Our Page Logo" />
+        </a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- =========================================End Footer======================================================= -->
+    <!-- Scripts Files -->
+    <script src="/src/js/home.js"></script>
+    <!-- Bootstrap JS Files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

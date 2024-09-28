@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Vertical Navigation Bar</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Vertical Navigation Bar</h1>
+
+      <div class="first_buttons_div">
+        <a href="opacity.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="#h1">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <h2>Vertical Navigation Bar</h2>
+      <p>Having easy-to-use navigation is important for any web site.</p>
+      <p>
+        With CSS you can transform boring HTML menus into good-looking
+        navigation bars.
+      </p>
+      <br />
+      <h2>Navigation Bar = List of Links</h2>
+      <p>A navigation bar needs standard HTML as a base.</p>
+      <p>
+        In our examples we will build the navigation bar from a standard HTML
+        list.
+      </p>
+      <p>
+        A navigation bar is basically a list of links, so using the &lt;ul&gt;
+        and &lt;li&gt; elements makes perfect sense:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>ul<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+          &nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>li<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>a<span
+              class="attributecolor"
+              style="color: red"
+            >
+              href<span class="attributevaluecolor" style="color: mediumblue"
+                >="default.asp"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >Home<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/a<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/li<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+          &nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>li<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>a<span
+              class="attributecolor"
+              style="color: red"
+            >
+              href<span class="attributevaluecolor" style="color: mediumblue"
+                >="news.asp"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >News<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/a<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/li<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+          &nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>li<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>a<span
+              class="attributecolor"
+              style="color: red"
+            >
+              href<span class="attributevaluecolor" style="color: mediumblue"
+                >="contact.asp"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >Contact<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/a<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/li<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+          &nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>li<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>a<span
+              class="attributecolor"
+              style="color: red"
+            >
+              href<span class="attributevaluecolor" style="color: mediumblue"
+                >="about.asp"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >About<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/a<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/li<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/ul<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>
+        Now let's remove the bullets and the margins and padding from the list:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            ul
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp;&nbsp;list-style-type<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; margin<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>Example explained:</p>
+      <ul>
+        <li>
+          <code class="w3-codespan">list-style-type: none;</code> - Removes the
+          bullets. A navigation bar does not need list markers
+        </li>
+        <li>
+          Set <code class="w3-codespan">margin: 0;</code> and
+          <code class="w3-codespan">padding: 0;</code> to remove browser default
+          settings
+        </li>
+      </ul>
+      <p>
+        The code in the example above is the standard code used in both
+        vertical, and horizontal navigation bars, which you will learn more
+        about in the next chapters.
+      </p>
+      <hr />
+      <br />
+      <h1 id="h1">CSS Vertical Navigation Bar</h1>
+
+      <div class="first_buttons_div">
+        <a href="nav.html">
+          <button class="first_buttons"><b>&lt;</b> Previous</button>
+        </a>
+        <a href="dropdown.html">
+          <button class="first_buttons">Next <b>&gt;</b></button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <p>
+        To build a vertical navigation bar, you can style the &lt;a&gt; elements
+        inside the list, in addition to the code from the previous page:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            li a
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; display<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                block<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                60px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>Example explained:</p>
+      <ul>
+        <li>
+          <code class="w3-codespan">display: block;</code> - Displaying the
+          links as block elements makes the whole link area clickable (not just
+          the text), and it allows us to specify the width (and padding, margin,
+          height, etc. if you want)
+        </li>
+        <li>
+          <code class="w3-codespan">width: 60px;</code> - Block elements take up
+          the full width available by default. We want to specify a 60 pixels
+          width
+        </li>
+      </ul>
+      <p>
+        You can also set the width of &lt;ul&gt;, and remove the width of
+        &lt;a&gt;, as they will take up the full width available when displayed
+        as block elements. This will produce the same result as our previous
+        example:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            ul
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; list-style-type<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; margin<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                60px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+            <br /><br />li a
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; display<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                block<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>Vertical Navigation Bar Examples</h2>
+      <p>
+        Create a basic vertical navigation bar with a gray background color and
+        change the background color of the links when the user moves the mouse
+        over them:
+      </p>
+      <ul class="vertical">
+        <li><a href="javascript:void(0)">Home</a></li>
+        <li><a href="javascript:void(0)">News</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+        <li><a href="javascript:void(0)">About</a></li>
+      </ul>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            ul <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; list-style-type<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; margin<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                200px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #f1f1f1<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />li a
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; display<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                block<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #000<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                8px 16px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; text-decoration<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br /><span class="commentcolor" style="color: green"
+              >/* Change the link color on hover */</span
+            ><br />li a:hover
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #555<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                white<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <h3 style="margin-top: 35px">Active/Current Navigation Link</h3>
+      <p>
+        Add an "active" class to the current link to let the user know which
+        page he/she is on:
+      </p>
+      <ul class="vertical">
+        <li><a class="active" href="javascript:void(0)">Home</a></li>
+        <li><a href="javascript:void(0)">News</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+        <li><a href="javascript:void(0)">About</a></li>
+      </ul>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            .active <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #04AA6D<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                white<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <h3 style="margin-top: 35px">Center Links &amp; Add Borders</h3>
+      <p>
+        Add <code class="w3-codespan">text-align:center</code> to &lt;li&gt; or
+        &lt;a&gt; to center the links.
+      </p>
+      <p>
+        Add the <code class="w3-codespan">border</code> property to &lt;ul&gt;
+        add a border around the navbar. If you also want borders inside the
+        navbar, add a <code class="w3-codespan">border-bottom</code> to all
+        &lt;li&gt; elements, except for the last one:
+      </p>
+      <ul class="vertical border">
+        <li><a class="active" href="javascript:void(0)">Home</a></li>
+        <li><a href="javascript:void(0)">News</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+        <li><a href="javascript:void(0)">About</a></li>
+      </ul>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            ul <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; border<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                1px solid #555<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />li
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; text-align<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                center<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; border-bottom<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                1px solid #555<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />li:last-child
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; border-bottom<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <h3 style="margin-top: 35px">Full-height Fixed Vertical Navbar</h3>
+      <p>Create a full-height, "sticky" side navigation:</p>
+      <iframe
+        src=""
+        style="
+          height: 262px;
+          width: 100%;
+          border: 3px solid #f1f1f1;
+          border-left: none;
+        "
+      ></iframe>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            ul <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; list-style-type<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; margin<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; width<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                25%<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #f1f1f1<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;height<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                100%<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              >
+              <span class="commentcolor" style="color: green"
+                >/* Full height */</span
+              ><br />
+              &nbsp; position<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                fixed<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              >
+              <span class="commentcolor" style="color: green"
+                >/* Make it stick, even on scroll */</span
+              ><br />&nbsp; overflow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                auto<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              >
+              <span class="commentcolor" style="color: green"
+                >/* Enable scrolling if the sidenav has too much content
+                */</span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p class="note">
+        <strong>Note:</strong> This example might not work properly on mobile
+        devices.
+      </p>
+      <br />
+      <hr />
+      <br />
+      <h1>CSS Vertical Navigation Bar</h1>
+
+      <div class="first_buttons_div">
+        <a href="#h1">
+          <button class="first_buttons"><b>&lt;</b> Previous</button>
+        </a>
+        <a href="dropdown.html">
+          <button class="first_buttons">Next <b>&gt;</b></button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <h2>Horizontal Navigation Bar</h2>
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="float: right"><a href="#about">About</a></li>
+      </ul>
+      <p>
+        There are two ways to create a horizontal navigation bar. Using
+        <b> inline</b> or <b>floating</b> list items.
+      </p>
+      <h3>Inline List Items</h3>
+      <p>
+        One way to build a horizontal navigation bar is to specify the
+        &lt;li&gt; elements as inline, in addition to the "standard" code from
+        the previous page:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            li
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; display<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                inline<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <p>Example explained:</p>
+      <ul>
+        <li>
+          <code class="w3-codespan">display: inline;</code> - By default,
+          &lt;li&gt; elements are block elements. Here, we remove the line
+          breaks before and after each list item, to display them on one line
+        </li>
+      </ul>
+      <h3>Floating List Items</h3>
+      <p>
+        Another way of creating a horizontal navigation bar is to float the
+        &lt;li&gt; elements, and specify a layout for the navigation links:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            li
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp;&nbsp;float<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                left<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />
+            a
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp; display<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                block<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                8px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #dddddd<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+        <p>
+          Another way of creating a horizontal navigation bar is to float the
+          &lt;li&gt; elements, and specify a layout for the navigation links:
+        </p>
+      </div>
+      <p>Example explained:</p>
+      <ul>
+        <li>
+          <code class="w3-codespan">float: left;</code> - Use float to get block
+          elements to float next to each other
+        </li>
+        <li>
+          <code class="w3-codespan">display: block;</code> - Allows us to
+          specify padding (and height, width, margins, etc. if you want)
+        </li>
+        <li>
+          <code class="w3-codespan">padding: 8px;</code> - Specify some padding
+          between each &lt;a&gt; element, to make them look good
+        </li>
+        <li>
+          <code class="w3-codespan">background-color: #dddddd;</code> - Add a
+          gray background-color to each &lt;a&gt; element
+        </li>
+      </ul>
+      <p>
+        <strong>Tip:</strong> Add the background-color to &lt;ul&gt; instead of
+        each &lt;a&gt; element if you want a full-width background color:
+      </p>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            ul
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />
+              &nbsp;&nbsp;background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #dddddd<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /> </span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <br />
+      <h2>Horizontal Navigation Bar Examples</h2>
+      <p>
+        Create a basic horizontal navigation bar with a dark background color
+        and change the background color of the links when the user moves the
+        mouse over them:
+      </p>
+      <ul class="horizontal ws-black">
+        <li><a href="javascript:void(0)">Home</a></li>
+        <li><a href="javascript:void(0)">News</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+        <li><a href="javascript:void(0)">About</a></li>
+      </ul>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            ul <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; list-style-type<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp;&nbsp;margin<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />
+              &nbsp; overflow<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                hidden<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #333<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />li
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; float<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                left<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            <br />li a
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; display<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                block<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                white<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; text-align<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                center<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; padding<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                14px 16px<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; text-decoration<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+            <br /><span class="commentcolor" style="color: green"
+              >/* Change the link color to #111 (black) on hover */</span
+            ><br />li a:hover
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #111<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <h3 style="margin-top: 35px">Active/Current Navigation Link</h3>
+      <p>
+        Add an "active" class to the current link to let the user know which
+        page he/she is on:
+      </p>
+      <ul class="horizontal ws-black">
+        <li><a class="active" href="javascript:void(0)">Home</a></li>
+        <li><a href="javascript:void(0)">News</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+        <li><a href="javascript:void(0)">About</a></li>
+      </ul>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            .active <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #04AA6D<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <h3 style="margin-top: 35px">Right-Align Links</h3>
+      <p>
+        Right-align links by floating the list items to the right (<code
+          class="w3-codespan"
+          >float:right;</code
+        >):
+      </p>
+      <ul class="horizontal ws-black">
+        <li><a href="javascript:void(0)">Home</a></li>
+        <li><a href="javascript:void(0)">News</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+        <li style="float: right">
+          <a class="active" href="javascript:void(0)">About</a>
+        </li>
+      </ul>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>ul<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>li<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>a<span
+              class="attributecolor"
+              style="color: red"
+            >
+              href<span class="attributevaluecolor" style="color: mediumblue"
+                >="#home"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >Home<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/a<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/li<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>li<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>a<span
+              class="attributecolor"
+              style="color: red"
+            >
+              href<span class="attributevaluecolor" style="color: mediumblue"
+                >="#news"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >News<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/a<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/li<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />&nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>li<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>a<span
+              class="attributecolor"
+              style="color: red"
+            >
+              href<span class="attributevaluecolor" style="color: mediumblue"
+                >="#contact"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >Contact<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/a<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/li<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br />
+          &nbsp;
+          <span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>li<span
+              class="attributecolor"
+              style="color: red"
+            >
+              style<span class="attributevaluecolor" style="color: mediumblue"
+                >="float:right"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>a<span
+              class="attributecolor"
+              style="color: red"
+            >
+              class<span class="attributevaluecolor" style="color: mediumblue"
+                >="active"</span
+              >
+              href<span class="attributevaluecolor" style="color: mediumblue"
+                >="#about"</span
+              ></span
+            ><span class="tagcolor" style="color: mediumblue">&gt;</span></span
+          >About<span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span>/a<span
+              class="tagcolor"
+              style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/li<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          ><br /><span class="tagnamecolor" style="color: brown"
+            ><span class="tagcolor" style="color: mediumblue">&lt;</span
+            >/ul<span class="tagcolor" style="color: mediumblue"
+              >&gt;</span
+            ></span
+          >
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <h3 style="margin-top: 35px">Border Dividers</h3>
+      <p>
+        Add the <code class="w3-codespan">border-right</code> property to
+        &lt;li&gt; to create link dividers:
+      </p>
+      <ul class="horizontal ws-black divider">
+        <li><a class="active" href="javascript:void(0)">Home</a></li>
+        <li><a href="javascript:void(0)">News</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+        <li style="float: right"><a href="javascript:void(0)">About</a></li>
+      </ul>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            <span class="commentcolor" style="color: green"
+              >/* Add a gray right border to all list items, except the last
+              item (last-child) */</span
+            ><br />li
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; border-right<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                1px solid #bbb<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />
+            li:last-child
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; border-right<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                none<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <h3 style="margin-top: 35px">Fixed Navigation Bar</h3>
+      <p>
+        Make the navigation bar stay at the top or the bottom of the page, even
+        when the user scrolls the page:
+      </p>
+      <br />
+      <h3 style="margin-top: 30px">Gray Horizontal Navbar</h3>
+      <p>
+        An example of a gray horizontal navigation bar with a thin gray border:
+      </p>
+      <ul class="horizontal2">
+        <li><a class="active" href="javascript:void(0)">Home</a></li>
+        <li><a href="javascript:void(0)">News</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+        <li><a href="javascript:void(0)">About</a></li>
+      </ul>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            ul <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; border<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                1px solid #e7e7e7<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; background-color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #f3f3f3<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span
+            ><br /><br />li a
+            <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp;&nbsp;color<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                #666<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span><br />
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+      <h3 style="margin-top: 30px">Sticky Navbar</h3>
+      <p>
+        Add <code class="w3-codespan">position: sticky;</code> to &lt;ul&gt; to
+        create a sticky navbar.
+      </p>
+      <p>
+        A sticky element toggles between relative and fixed, depending on the
+        scroll position. It is positioned relative until a given offset position
+        is met in the viewport - then it "sticks" in place (like
+        position:fixed).
+      </p>
+      <iframe
+        src=""
+        style="
+          width: 100%;
+          border: 3px solid #e9e9e9;
+          height: 400px;
+          padding: 0;
+        "
+      ></iframe>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          <span class="cssselectorcolor" style="color: brown">
+            ul <span class="cssdelimitercolor" style="color: black">{</span
+            ><span class="csspropertycolor" style="color: red"
+              ><br />&nbsp; position<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                -webkit-sticky<span
+                  class="cssdelimitercolor"
+                  style="color: black"
+                  >;</span
+                ></span
+              >
+              <span class="commentcolor" style="color: green">/* Safari */</span
+              ><br />&nbsp; position<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                sticky<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br />&nbsp; top<span
+                class="csspropertyvaluecolor"
+                style="color: mediumblue"
+                ><span class="cssdelimitercolor" style="color: black">:</span>
+                0<span class="cssdelimitercolor" style="color: black"
+                  >;</span
+                ></span
+              ><br /></span
+            ><span class="cssdelimitercolor" style="color: black">}</span>
+          </span>
+        </div>
+        <a
+          target="_blank"
+          class="w3-btn w3-margin-bottom"
+          href="editor.html"
+          >Try it Yourself »</a
+        >
+      </div>
+
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

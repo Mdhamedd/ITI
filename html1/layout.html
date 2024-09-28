@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Layout</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="index.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="homeCSS.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>HTML Layout Elements&Techniques</h1>
+      <div class="first_buttons_div">
+        <a href="id.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="entities.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <p>
+        Websites often display content in multiple columns (like a magazine or a
+        newspaper).
+      </p>
+      <hr />
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+          <img
+            src="/images/Screenshot 2024-09-01 211052.png"
+            width="100%"
+            height="500px"
+          />
+        </div>
+      </div>
+      <h2>HTML Layout Elements</h2>
+      <p>
+        HTML has several semantic elements that can be nested that define the
+        different parts of the webpage
+      </p>
+      <div style="width: 100%">
+        <img
+          src="/images/img_sem_elements (1).png"
+          width="30%"
+          height="300px"
+        />
+        <ul>
+          <li>&lt;header&gt; - Defines a header for a document or a section</li>
+          <li>&lt;nav&gt; - Defines a set of navigation links</li>
+          <li>
+            &lt;article&gt; - Defines an independent, self-contained content
+          </li>
+          <li>
+            &lt;section&gt; - Defines a header for a document or a section
+          </li>
+          <li>
+            &lt;aside&gt; - Defines content aside from the content (like a
+            sidebar)
+          </li>
+          <li>&lt;footer&gt; - Defines a footer for a document or a section</li>
+          <li>
+            &lt;details&gt; -Defines additional details that the user can open
+            and close on demand
+          </li>
+          <li>
+            &lt;summary&gt; - Defines a heading for the &lt;details&gt; element
+          </li>
+        </ul>
+      </div>
+      <h3 class="header">HTML Layout Techniques</h3>
+      <br />
+      <ul>
+        There are four different techniques to create multicolumn layouts. Each
+        technique has its pros and cons:
+        <li>CSS Framework</li>
+        <li>CSS Flexbox</li>
+        <li>CSS Grid</li>
+        <li>CSS Float</li>
+      </ul>
+      <h3 class="header">1&rpar; CSS Frameworks</h3>
+      <p>
+        If you want to create your layout fast, you can use a CSS , like
+        <a href="https://www.w3schools.com/w3css/default.asp">W3.CSS</a> or
+        <a href="https://www.w3schools.com/bootstrap/default.asp">Bootstrap</a>.
+      </p>
+      <h3 class="header">2&rpar; CSS Float Layout</h3>
+      <p>
+        It is common to do entire web layouts using the CSS float property.
+        Float is easy to learn - you just need to remember how the float and
+        clear properties work.<br />
+        Disadvantages: Floating elements are tied to the document flow, which
+        may harm the flexibility. Learn more about float in our CSS Float and
+        Clear chapter.
+      </p>
+      <h3 class="header">3&rpar; CSS Flexbox</h3>
+      <p>
+        Use of flexbox ensures that elements behave predictably when the page
+        layout must accommodate different screen sizes and different display
+        devices.
+      </p>
+      <h3 class="header">4&rpar; CSS Grid Layout</h3>
+      <p>
+        The CSS Grid Layout Module offers a grid-based layout system, with rows
+        and columns, making it easier to design web pages without having to use
+        floats and positioning.
+      </p>
+
+      <h3>Learn More</h3>
+      <p>
+        To learn more about HTML, visit the
+        <a
+          href="https://www.w3schools.com/html/html_elements.asp"
+          target="_blank"
+          style="color: #04aa6d"
+          >W3Schools HTML loyout</a
+        >.
+      </p>
+      <!-- End Main Content -->
+    </div>
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img src="/images/logo/w3-footer.png" alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
+

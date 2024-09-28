@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Introduction</title>
+    <!-- Css Style -->
+    <link rel="stylesheet" href="/src/css/intro.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Fonts Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- logo title-->
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!--Start Navbar -->
+    <div id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="index.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="homeCSS.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </div>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+
+    <!--End Navbar -->
+    <!-- Start Main -->
+    <div class="container">
+      <h1>HTML Introduction</h1>
+      <div class="first_buttons_div">
+        <a href="home.html"
+          ><button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button></a
+        >
+        <a href="basic.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button></a
+        >
+      </div>
+      <p>
+        HTML is the standard markup language for creating Web pages. HTML stands
+        for Hyper Text Markup Language.
+      </p>
+      <p>
+        HTML describes the structure of a Web page. HTML consists of a series of
+        elements. HTML elements tell the browser how to display the content.
+        HTML elements label pieces of content such as "this is a heading", "this
+        is a paragraph", "this is a link", etc.
+      </p>
+
+      <h2>What is HTML?</h2>
+      <ul>
+        <li>HTML stands for Hyper Text Markup Language</li>
+        <li>HTML is the standard markup language for creating Web pages</li>
+        <li>HTML elements tell the browser how to display the content</li>
+        <li>
+          HTML elements label pieces of content such as "this is a heading",
+          "this is a paragraph", "this is a link", etc.
+        </li>
+      </ul>
+
+      <p>
+        HTML is the language you can use to create a website. Here's a simple
+        example of HTML mark:
+      </p>
+
+      <h2>A simple HTML Document</h2>
+      <div class="example">
+        <h3>Example:</h3>
+
+        &lt;!DOCTYPE html&gt;<br />
+        &lt;html&gt;<br />
+        &lt;head&gt;<br />
+        &lt;title&gt;<mark>Page Title</mark>&lt;/title&gt;<br />
+        &lt;/head&gt;<br />
+        &lt;body&gt;<br /><br />
+        &lt;h1&gt;<mark>This is a Heading</mark>&lt;/h1&gt;<br />
+        &lt;p&gt;<mark>This is a paragraph.</mark>&lt;/p&gt;<br /><br />
+        &lt;/body&gt;<br />
+        &lt;/html&gt;
+      </div>
+
+      <a href="editor.html" target="_blank">
+        <button class="first_buttons" id="Try_button">
+          Try it yourself
+        </button></a
+      >
+
+      <h3>Example Explained</h3>
+      <ul>
+        <li>
+          The <mark>&lt;!DOCTYPE html&gt;</mark> declaration defines that this
+          document is an HTML5 document.
+        </li>
+        <li>
+          The <mark>&lt;html&gt;</mark> element is the root element of an HTML
+          page.
+        </li>
+        <li>
+          The <mark>&lt;head&gt;</mark> element contains meta information about
+          the HTML page.
+        </li>
+        <li>
+          The <mark>&lt;title&gt;</mark> element specifies a title for the HTML
+          page (which is shown in the browser's title bar or in the page's tab).
+        </li>
+        <li>
+          The <mark>&lt;body&gt;</mark> element defines the document's body, and
+          is a container for all the visible contents, such as headings,
+          paragraphs, images, hyperlinks, tables, lists, etc.
+        </li>
+        <li>The <mark>&lt;h1&gt;</mark> element defines a large heading.</li>
+        <li>The <mark>&lt;p&gt;</mark> element defines a paragraph.</li>
+      </ul>
+
+      <h2><b>What is an HTML Element?</b></h2>
+      <p>
+        An HTML element is defined by a start tag, some content, and an end tag:
+      </p>
+      <div class="mark-block">
+        <span class="spes_tagname">
+          <span class="spes_tag">&lt;</span>tagname<span class="spes_tag"
+            >&gt;</span
+          >
+        </span>
+        Content goes here...
+        <span class="spes_tagname">
+          <span class="spes_tag">&lt;/</span>tagname<span class="spes_tag"
+            >&gt;</span
+          >
+        </span>
+      </div>
+
+      <p>
+        The HTML <strong>element</strong> is everything from the start tag to
+        the end tag:
+      </p>
+      <div class="mark-block">
+        <span class="spes_tagname">
+          <span class="spes_tag">&lt;</span>h1<span class="spes_tag">&gt;</span>
+        </span>
+        My First Heading
+        <span class="spes_tagname">
+          <span class="spes_tag">&lt;/</span>h1<span class="spes_tag"
+            >&gt;</span
+          >
+        </span>
+
+        <div style="font-size: 20px; padding: 10px; margin-bottom: 10px">
+          <span class="spes_tagname">
+            <span class="spes_tag">&lt;</span>p<span class="spes_tag"
+              >&gt;</span
+            >
+          </span>
+          My first paragraph.
+          <span class="spes_tagname">
+            <span class="spes_tag">&lt;/</span>p<span class="spes_tag"
+              >&gt;</span
+            >
+          </span>
+        </div>
+      </div>
+
+      <table class="ws-table-all notranslate">
+        <thead>
+          <tr>
+            <th>Start Tag</th>
+            <th>Element Content</th>
+            <th>End Tag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;h1&gt;</td>
+            <td>My First Heading</td>
+            <td>&lt;/h1&gt;</td>
+          </tr>
+          <tr>
+            <td>&lt;p&gt;</td>
+            <td>My first paragraph.</td>
+            <td>&lt;/p&gt;</td>
+          </tr>
+          <tr>
+            <td>&lt;br&gt;</td>
+            <td><em>none</em></td>
+            <td><em>none</em></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Web Browsers</h2>
+      <p>
+        The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read
+        HTML documents and display them correctly.
+      </p>
+      <p>
+        A browser does not display the HTML tags, but uses them to determine how
+        to display the document:
+      </p>
+      <p>
+        <img
+          class="w3-image"
+          alt="Screenshot of HTML in a web browser"
+          src="https://www.w3schools.com/html/img_chrome.png"
+        />
+      </p>
+      <hr />
+
+      <h2>HTML Page Structure</h2>
+      <p>Below is a visualization of an HTML page structure:</p>
+      <div
+        class="ws-grey"
+        style="width: 99%; border: 1px solid grey; padding: 3px; margin: 0"
+      >
+        <html>
+          <div
+            style="
+              width: 98%;
+              border: 1px solid grey;
+              padding: 3px;
+              margin: 20px;
+            "
+          >
+            <head>
+              <div
+                style="
+                  width: 98%;
+                  border: 1px solid grey;
+                  padding: 5px;
+                  margin: 20px;
+                "
+              >
+                <title>Page title</title>
+              </div>
+            </head>
+          </div>
+          <div
+            class="ws-grey"
+            style="
+              width: 98%;
+              border: 1px solid grey;
+              padding: 3px;
+              margin: 20px;
+            "
+          >
+            <body>
+              <div
+                class="w3-white"
+                style="
+                  width: 90%;
+                  border: 1px solid grey;
+                  padding: 3px;
+                  margin: 20px;
+                "
+              >
+                <div
+                  style="
+                    width: 90%;
+                    border: 1px solid grey;
+                    padding: 5px;
+                    margin: 20px;
+                  "
+                >
+                  <h1>This is a heading</h1>
+                </div>
+                <div
+                  style="
+                    width: 90%;
+                    border: 1px solid grey;
+                    padding: 5px;
+                    margin: 20px;
+                  "
+                >
+                  <p>This is a paragraph.</p>
+                </div>
+                <div
+                  style="
+                    width: 90%;
+                    border: 1px solid grey;
+                    padding: 5px;
+                    margin: 20px;
+                  "
+                >
+                  <p>This is another paragraph.</p>
+                </div>
+              </div>
+            </body>
+          </div>
+        </html>
+      </div>
+      <hr />
+      <div class="w3-panel w3-note">
+        <p>
+          <strong>Note:</strong>
+          Some HTML elements have no content (like the
+          <mark>&lt;br&gt;</mark> element). These elements are called empty
+          elements. Empty elements do not have an end tag!
+        </p>
+      </div>
+
+      <h1>Video: HTML Introduction</h1>
+      <iframe
+        src="https://www.youtube.com/embed/it1rTvBcfRg?si=V2RaxXPSsHFwF6XF"
+        allowfullscreen
+      ></iframe>
+      <!-- End Main -->
+      <div class="table-responsive text-center">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1989</td>
+              <td>Tim Berners-Lee invented www.</td>
+            </tr>
+            <tr>
+              <td>1991</td>
+              <td>Tim Berners-Lee invented HTML.</td>
+            </tr>
+            <tr>
+              <td>1993</td>
+              <td>Dave Raggett drafted HTML+.</td>
+            </tr>
+            <tr>
+              <td>1995</td>
+              <td>HTML Working Group defined HTML 2.0.</td>
+            </tr>
+            <tr>
+              <td>1997</td>
+              <td>W3C Recommendation: HTML 3.2.</td>
+            </tr>
+            <tr>
+              <td>1999</td>
+              <td>W3C Recommendation: HTML 4.01.</td>
+            </tr>
+            <tr>
+              <td>2000</td>
+              <td>W3C Recommendation: XHTML 1.0.</td>
+            </tr>
+            <tr>
+              <td>2008</td>
+              <td>WHATWG HTML5 First Public Draft.</td>
+            </tr>
+            <tr>
+              <td>2012</td>
+              <td>
+                <a href="#" target="_blank">WHATWG HTML5 Living Standard</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2014</td>
+              <td>
+                <a href="#" target="_blank">W3C Recommendation: HTML5</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2016</td>
+              <td>W3C Candidate Recommendation: HTML 5.1.</td>
+            </tr>
+            <tr>
+              <td>2017</td>
+              <td>
+                <a href="#" target="_blank"
+                  >W3C Recommendation: HTML5.1 2nd Edition</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>2017</td>
+              <td>
+                <a href="#" target="_blank">W3C Recommendation: HTML5.2</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center">
+        <strong>Note:</strong> This tutorial follows the latest HTML5 standard.
+      </p>
+    </div>
+    <!-- =========================================Start Footer===================================================== -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#">
+          <img src="/images/logo/w3-footer.png" alt="Our Page Logo" />
+        </a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="h3">Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="h3">Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="h3">Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="h3">Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+    <!-- =========================================End Footer======================================================= -->
+    <script src="/src/js/home.js"></script>
+    <!-- Bootstrap JS Files -->
+    <script src="https://mark.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

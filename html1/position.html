@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Position</title>
+  <link rel="stylesheet" href="/src/css/block.css" />
+  <link rel="stylesheet" href="/src/css/globalcss.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+</head>
+<body>
+  <nav id="subtopnav">
+    <div class="toggle-container">
+      <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+        &#9776;
+      </button>
+    </div>
+    <div id="nav-links">
+      <a
+        href="home.html"
+        class="ga-nav subtopnav_firstitem"
+        title="HTML Tutorial"
+        >HTML</a
+      >
+      <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+      <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+      <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+      <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+      <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+      <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+      <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+      <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+      <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+    </div>
+  </nav>
+  <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+  <div class="container">
+    <h1>CSS Layout - The position Property</h1>
+
+    <div class="first_buttons_div">
+      <a href="maxWidth.html">
+        <button class="first_buttons" id="home_button">
+          <b>&lt;</b> Previous
+        </button>
+      </a>
+      <a href="z-index.html">
+        <button class="first_buttons" id="next_button">
+          Next <b>&gt;</b>
+        </button>
+      </a>
+    </div>
+    <hr />
+    <br />
+    <!-- Start Main Content -->
+    <p class="intro">
+      The <code class="w3-codespan">position</code> property specifies the
+      type of positioning method used for an element (static, relative, fixed,
+      absolute or sticky).
+    </p>
+    <hr />
+
+    <h2>The position Property</h2>
+    <p>
+      The <code class="w3-codespan">position</code> property specifies the
+      type of positioning method used for an element.
+    </p>
+    <p>There are five different position values:</p>
+    <ul>
+      <li><code class="w3-codespan">static</code></li>
+      <li><code class="w3-codespan">relative</code></li>
+      <li><code class="w3-codespan">fixed</code></li>
+      <li><code class="w3-codespan">absolute</code></li>
+      <li><code class="w3-codespan">sticky</code></li>
+    </ul>
+    <p>
+      Elements are then positioned using the top, bottom, left, and right
+      properties. However, these properties will not work unless the
+      <code class="w3-codespan">position</code> property is set first. They
+      also work differently depending on the position value.
+    </p>
+    <hr />
+
+    <h2>position: static;</h2>
+    <p>HTML elements are positioned static by default.</p>
+    <p>
+      Static positioned elements are not affected by the top, bottom, left,
+      and right properties.
+    </p>
+    <p>
+      An element with <code class="w3-codespan">position: static;</code> is
+      not positioned in any special way; it is always positioned according to
+      the normal flow of the page:
+    </p>
+    <div
+      class="w3-theme-border w3-margin-bottom"
+      style="border-width: 3px; border-style: solid; position: static"
+    >
+      This &lt;div&gt; element has position: static;
+    </div>
+    <p>Here is the CSS that is used:</p>
+    <div class="w3-example">
+      <h3>Example</h3>
+      <div class="s-code-box">
+        div.static {<br />&nbsp;&nbsp;position: static;<br />&nbsp;&nbsp;border:
+        3px solid #73AD21;<br />}
+      </div>
+      <a
+        target="_blank"
+        href="tryit.asp?filename=trycss_position_static"
+        class="w3-btn w3-margin-bottom"
+        >Try it Yourself &raquo;</a
+      >
+    </div>
+    <hr />
+
+    <h2>position: relative;</h2>
+    <p>
+      An element with <code class="w3-codespan">position: relative;</code> is
+      positioned relative to its normal position.
+    </p>
+    <p>
+      Setting the top, right, bottom, and left properties of a
+      relatively-positioned element will cause it to be adjusted away from its
+      normal position. Other content will not be adjusted to fit into any gap
+      left by the element.
+    </p>
+    <div
+      class="w3-theme-border w3-margin-bottom"
+      style="
+        border-width: 3px;
+        border-style: solid;
+        position: relative;
+        left: 30px;
+      "
+    >
+      This &lt;div&gt; element has position: relative;
+    </div>
+    <p>Here is the CSS that is used:</p>
+    <div class="w3-example">
+      <h3>Example</h3>
+      <div class="s-code-box">
+        div.relative {<br />&nbsp; position: relative;<br />&nbsp; left:
+        30px;<br />&nbsp; border: 3px solid #73AD21;<br />}
+      </div>
+      <a
+        target="_blank"
+        href="tryit.asp?filename=trycss_position_relative"
+        class="w3-btn w3-margin-bottom"
+        >Try it Yourself &raquo;</a
+      >
+    </div>
+    <hr />
+    <div
+      id="midcontentadcontainer"
+      style="overflow: auto; text-align: center"
+    >
+      <!-- MidContent -->
+      <!-- <p class="adtext">Advertisement</p> -->
+
+      <div id="adngin-mid_content-0"></div>
+    </div>
+    <hr />
+
+    <h2>position: fixed;</h2>
+    <p>
+      An element with <code class="w3-codespan">position: fixed;</code> is
+      positioned relative to the viewport, which means it always stays in the
+      same place even if the page is scrolled. The top, right, bottom, and
+      left properties are used to position the element.
+    </p>
+    <p>
+      A fixed element does not leave a gap in the page where it would normally
+      have been located.
+    </p>
+    <p>
+      Notice the fixed element in the lower-right corner of the page. Here is
+      the CSS that is used:
+    </p>
+    <div class="w3-example">
+      <h3>Example</h3>
+      <div class="s-code-box">
+        div.fixed {<br />&nbsp; position: fixed;<br />&nbsp; bottom: 0;<br />&nbsp;
+        right: 0;<br />&nbsp; width: 300px;<br />&nbsp; border: 3px solid
+        #73AD21;<br />}
+      </div>
+      <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+        >Try it Yourself &raquo;</a
+      >
+    </div>
+    <div
+      class="w3-theme-border"
+      style="
+        border-width: 3px;
+        background-color: #cae8ca;
+        border-style: solid;
+        position: fixed;
+        padding: 7px;
+        bottom: 0;
+        right: 0;
+        max-width: 450px;
+        z-index: 999;
+      "
+    >
+      This &lt;div&gt; element has
+      <code class="w3-codespan">position: fixed;</code>
+    </div>
+    <hr />
+
+    <h2>position: absolute;</h2>
+    <p>
+      An element with <code class="w3-codespan">position: absolute;</code> is
+      positioned relative to the nearest positioned ancestor (instead of
+      positioned relative to the viewport, like fixed).
+    </p>
+    <p>
+      However; if an absolute positioned element has no positioned ancestors,
+      it uses the document body, and moves along with page scrolling.
+    </p>
+    <p>
+      <b>Note:</b> Absolute positioned elements are removed from the normal
+      flow, and can overlap elements.
+    </p>
+
+    <p>Here is a simple example:</p>
+
+    <div
+      class="w3-theme-border"
+      style="
+        border-width: 3px;
+        border-style: solid;
+        position: relative;
+        width: 400px;
+        height: 200px;
+      "
+    >
+      This &lt;div&gt; element has position: relative;
+
+      <div
+        class="w3-theme-border w3-margin-bottom"
+        style="
+          border-width: 3px;
+          border-style: solid;
+          position: absolute;
+          top: 80px;
+          right: 0;
+          width: 200px;
+          height: 100px;
+        "
+      >
+        This &lt;div&gt; element has position: absolute;
+      </div>
+    </div>
+
+    <p>Here is the CSS that is used:</p>
+    <div class="w3-example">
+      <h3>Example</h3>
+      <div class="s-code-box">
+        div.relative {<br />&nbsp;&nbsp;position: relative;<br />&nbsp; width:
+        400px;<br />&nbsp; height: 200px;<br />&nbsp; border: 3px solid
+        #73AD21;<br />} <br /><br />
+        div.absolute {<br />&nbsp;&nbsp;position: absolute;<br />&nbsp; top:
+        80px;<br />&nbsp; right: 0;<br />&nbsp; width: 200px;<br />&nbsp;
+        height: 100px;<br />&nbsp; border: 3px solid #73AD21;<br />}
+      </div>
+      <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+        >Try it Yourself &raquo;</a
+      >
+    </div>
+    <hr />
+
+    <h2>position: sticky;</h2>
+    <p>
+      An element with <code class="w3-codespan">position: sticky;</code> is
+      positioned based on the user's scroll position.
+    </p>
+    <p>
+      A sticky element toggles between
+      <code class="w3-codespan">relative</code> and
+      <code class="w3-codespan">fixed</code>, depending on the scroll
+      position. It is positioned relative until a given offset position is met
+      in the viewport - then it "sticks" in place (like position:fixed).
+    </p>
+    <iframe
+      src="trycss_position_sticky_ifr.htm"
+      style="width: 100%; border: 4px solid #e5e5e5"
+      cclass="w3-padding"
+    ></iframe>
+    <div class="note w3-panel">
+      <p>
+        <strong>Note: </strong>You must specify at least one of
+        <code class="w3-codespan">top</code>,
+        <code class="w3-codespan">right</code>,
+        <code class="w3-codespan">bottom</code> or
+        <code class="w3-codespan">left</code> for sticky positioning to work.
+      </p>
+    </div>
+    <p>
+      In this example, the sticky element sticks to the top of the page (<code
+        class="w3-codespan"
+        >top: 0</code
+      >), when you reach its scroll position.
+    </p>
+    <div class="w3-example">
+      <h3>Example</h3>
+      <div class="s-code-box">
+        div.sticky {<br />&nbsp; position: sticky;<br />&nbsp; top: 0;<br />&nbsp;
+        background-color: green;<br />&nbsp; border: 2px solid #4CAF50;<br />}
+      </div>
+      <a target="_blank" href="editor.html" class="w3-btn w3-margin-bottom"
+        >Try it Yourself &raquo;</a
+      >
+    </div>
+    <hr />
+
+    <h2>Positioning Text In an Image</h2>
+    <p>How to position text over an image:</p>
+    <div class="w3-example">
+      <h3>Example</h3>
+      <div class="notranslate">
+        <div style="position: relative; text-align: center">
+          <img
+            src="img_5terre_wide.jpg"
+            alt="Cinque Terre"
+            style="width: 100%; height: auto; opacity: 0.3"
+          />
+          <div
+            style="
+              position: absolute;
+              bottom: 8px;
+              left: 16px;
+              font-size: 18px;
+            "
+          >
+            Bottom Left
+          </div>
+          <div
+            style="position: absolute; top: 8px; left: 16px; font-size: 18px"
+          >
+            Top Left
+          </div>
+          <div
+            style="position: absolute; top: 8px; right: 16px; font-size: 18px"
+          >
+            Top Right
+          </div>
+          <div
+            style="
+              position: absolute;
+              bottom: 8px;
+              right: 16px;
+              font-size: 18px;
+            "
+          >
+            Bottom Right
+          </div>
+          <div
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 18px;
+            "
+          >
+            Centered
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 17px">Try it Yourself:</p>
+      <a target="_blank" href="" class="w3-btn w3-margin-bottom"
+        >Top Left &raquo;</a
+      >
+      <a target="_blank" href="" class="w3-btn w3-margin-bottom"
+        >Top Right &raquo;</a
+      >
+      <a target="_blank" href="" class="w3-btn w3-margin-bottom"
+        >Bottom Left &raquo;</a
+      >
+      <a target="_blank" href="" class="w3-btn w3-margin-bottom"
+        >Bottom Right &raquo;</a
+      >
+      <a target="_blank" href="" class="w3-btn w3-margin-bottom"
+        >Centered &raquo;</a
+      >
+    </div>
+    <hr />
+
+    <h2>More Examples</h2>
+
+    <p>
+      <a target="_blank" href="">Set the shape of an element</a><br />
+      This example demonstrates how to set the shape of an element. The
+      element is clipped into this shape, and displayed.
+    </p>
+    <hr />
+
+    <form
+      autocomplete="off"
+      id="w3-exerciseform"
+      action=""
+      method="post"
+      target="_blank"
+    >
+      <h2>Test Yourself With Exercises</h2>
+      <div class="exercisewindow">
+        <h2>Exercise:</h2>
+        <p>
+          Position the &lt;h1&gt; element to always be 50px from the top, and
+          10px from the right, relative to the window/frame edges.
+        </p>
+        <div class="exerciseprecontainer">
+          <pre>
+&lt;style&gt;
+h1 {
+<input name="ex1" maxlength="8" style="width: 86px;">: <input name="ex2" maxlength="5" style="width: 56px;">;
+<input name="ex3" maxlength="3" style="width: 36px;">: 50px;
+<input name="ex4" maxlength="5" style="width: 56px;">: 10px;
+}
+&lt;/style&gt;
+
+&lt;body&gt;
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/body&gt;
+</pre>
+        </div>
+        <br />
+        <button type="submit" class="w3-btn w3-margin-bottom">
+          Submit Answer &raquo;
+        </button>
+        <p>
+          <a target="_blank" href="">Start the Exercise</a>
+        </p>
+      </div>
+    </form>
+
+    <hr />
+
+    <h2>All CSS Positioning Properties</h2>
+    <table class="ws-table-all notranslate">
+      <tr
+        style="
+          background-color: var(--link-color);
+          color: #fff;
+          text-align: center;
+        "
+      >
+        <th style="width: 20%">Property</th>
+        <th style="width: 55%">Description</th>
+      </tr>
+      <tr>
+        <td><a href="">bottom</a></td>
+        <td>Sets the bottom margin edge for a positioned box</td>
+      </tr>
+      <tr>
+        <td><a href="">clip</a></td>
+        <td>Clips an absolutely positioned element</td>
+      </tr>
+      <tr>
+        <td><a href="">left</a></td>
+        <td>Sets the left margin edge for a positioned box</td>
+      </tr>
+      <tr>
+        <td><a href="">position</a></td>
+        <td>Specifies the type of positioning for an element</td>
+      </tr>
+      <tr>
+        <td><a href="">right</a></td>
+        <td>Sets the right margin edge for a positioned box</td>
+      </tr>
+      <tr>
+        <td><a href="">top</a></td>
+        <td>Sets the top margin edge for a positioned box</td>
+      </tr>
+    </table>
+    <br />
+    <!-- End Main Content -->
+  </div>
+  <!-- Start Footer -->
+  <footer>
+    <div class="footer-logo">
+      <a href="#"
+        ><img
+          src="/images/logo/w3-footer.png"
+          loading="lazy"
+          alt="Our Page Logo"
+      /></a>
+    </div>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Top Tutorials</h3>
+        <ul>
+          <li><a href="#">HTML Tutorial</a></li>
+          <li><a href="#">CSS Tutorial</a></li>
+          <li><a href="#">JavaScript Tutorial</a></li>
+          <li><a href="#">HOW TO Tutorial</a></li>
+          <li><a href="#">SQL Tutorial</a></li>
+          <li><a href="#">Python Tutorial</a></li>
+          <li><a href="#">W3.CSS Tutorial</a></li>
+          <li><a href="#">Bootstrap Tutorial</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Top References</h3>
+        <ul>
+          <li><a href="#">HTML References</a></li>
+          <li><a href="#">CSS Reference</a></li>
+          <li><a href="#">JavaScript Reference</a></li>
+          <li><a href="#">HOW TO Reference</a></li>
+          <li><a href="#">SQL Reference</a></li>
+          <li><a href="#">Python References</a></li>
+          <li><a href="#">W3.CSS References</a></li>
+          <li><a href="#">Bootstrap References</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Top Examples</h3>
+        <ul>
+          <li><a href="#">HTML Examples</a></li>
+          <li><a href="#">CSS Examples</a></li>
+          <li><a href="#">JavaScript Examples</a></li>
+          <li><a href="#">HOW TO Examples</a></li>
+          <li><a href="#">SQL Examples</a></li>
+          <li><a href="#">Python Examples</a></li>
+          <li><a href="#">W3.CSS Examples</a></li>
+          <li><a href="#">Bootstrap Examples</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Get Certified</h3>
+        <ul>
+          <li><a href="#">HTML Certified</a></li>
+          <li><a href="#">CSS Certified</a></li>
+          <li><a href="#">JavaScript Certified</a></li>
+          <li><a href="#">HOW TO Certified</a></li>
+          <li><a href="#">SQL Certified</a></li>
+          <li><a href="#">Python Certified</a></li>
+          <li><a href="#">W3.CSS Certified</a></li>
+          <li><a href="#">Bootstrap Certified</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-images">
+      <img
+        src="/images/astronaut1.png"
+        alt="Astronaut Illustration"
+        class="astronaut-image"
+        loading="lazy"
+      />
+      <img
+        src="/images/plant-footer.png"
+        alt="Plant Illustration"
+        class="plant-image"
+        loading="lazy"
+      />
+    </div>
+    <div class="footer-bottom">
+      <p>
+        &copy; All Right Reserved | This Designed by
+        <span class="std">ITI students</span> under supervise
+        <span class="eng">Eng: Seham</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/src/js/home.js" type="text/javascript"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    type="text/javascript"
+  ></script>
+</body>
+</html>

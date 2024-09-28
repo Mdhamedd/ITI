@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Forms</title>
+    <link rel="stylesheet" href="/src/css/block.css" />
+    <link rel="stylesheet" href="/src/css/globalcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo/w3.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="subtopnav">
+      <div class="toggle-container">
+        <button id="nav-toggle" class="toggle-button" onclick="toggleNav()">
+          &#9776;
+        </button>
+      </div>
+      <div id="nav-links">
+        <a
+          href="home.html"
+          class="ga-nav subtopnav_firstitem"
+          title="HTML Tutorial"
+          >HTML</a
+        >
+        <a href="index.html" class="ga-nav" title="CSS Tutorial">CSS</a>
+        <a href="#" class="ga-nav" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a href="#" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a href="#" class="ga-nav" title="Python Tutorial">PYTHON</a>
+        <a href="#" class="ga-nav" title="SQL Tutorial">SQL</a>
+        <a href="#" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+        <a href="#" class="ga-nav" title="React Tutorial">REACT</a>
+        <a href="#" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+        <a href="#" class="ga-nav" title="Django Tutorial">DJANGO</a>
+      </div>
+    </nav>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#8593;</button>
+    <div class="container">
+      <h1>CSS Froms</h1>
+
+      <div class="first_buttons_div">
+        <a href="attr-selectors.html">
+          <button class="first_buttons" id="home_button">
+            <b>&lt;</b> Previous
+          </button>
+        </a>
+        <a href="weblayout.html">
+          <button class="first_buttons" id="next_button">
+            Next <b>&gt;</b>
+          </button>
+        </a>
+      </div>
+      <hr />
+      <br />
+      <!-- Start Main Content -->
+      <p>The look of an HTML form can be greatly improved with CSS:</p>
+
+      <div style="border-radius: 5px; background-color: #f2f2f2; padding: 40px">
+        <div class="w3-example">
+          <form action="/action_page.php" class="test">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="usa">Australia</option>
+              <option value="usa">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+
+            <a
+              target="_blank"
+              href="editor.html"
+              class="w3-btn w3-block w3-margin-top d-block w-25"
+              >Try it Yourself &raquo;</a
+            >
+          </form>
+        </div>
+      </div>
+      <hr />
+
+      <h2>Styling Input Fields</h2>
+      <p>
+        Use the <code class="w3-codespan">width</code> property to determine the
+        width of the input field:
+      </p>
+      <label for="fname2">First Name</label>
+      <input type="text" id="fname2" name="firstname" style="width: 100%" />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          input {<br />
+          &nbsp;&nbsp;width: 100%;<br />
+          }
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>
+        The example above applies to all &lt;input&gt; elements. If you only
+        want to style a specific input type, you can use attribute selectors:
+      </p>
+      <ul>
+        <li>
+          <code class="w3-codespan">input[type=text]</code> - will only select
+          text fields
+        </li>
+        <li>
+          <code class="w3-codespan">input[type=password]</code> - will only
+          select password fields
+        </li>
+        <li>
+          <code class="w3-codespan">input[type=number]</code> - will only select
+          number fields
+        </li>
+        <li>etc..</li>
+      </ul>
+      <hr />
+
+      <h2>Padded Inputs</h2>
+      <p>
+        Use the <code class="w3-codespan">padding</code> property to add space
+        inside the text field.
+      </p>
+      <p class="note>
+        <strong>Tip:</strong> When you have many inputs after each other, you
+        might also want to add some <code class="w3-codespan">margin</code>, to
+        add more space outside of them:
+      </p>
+      <label for="fname3">First Name</label>
+      <input type="text" id="fname3" name="firstname" class="input1" />
+      <label for="lname3">Last Name</label>
+      <input type="text" id="lname3" name="lastname" class="input1" />
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          input[type=text] {<br />
+          &nbsp; width: 100%;<br />&nbsp; padding: 12px 20px;<br />&nbsp;
+          margin: 8px 0;<br />&nbsp; box-sizing: border-box;<br />
+          }
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <div class="w3-panel w3-note">
+        <p>
+          Note that we have set the
+          <code class="w3-codespan">box-sizing</code> property to
+          <code class="w3-codespan">border-box</code>. This makes sure that the
+          padding and eventually borders are included in the total width and
+          height of the elements. <br />Read more about the
+          <code class="w3-codespan">box-sizing</code> property in our
+          <a href="">CSS Box Sizing</a> chapter.
+        </p>
+      </div>
+
+      <hr />
+
+      <h2>Bordered Inputs</h2>
+      <p>
+        Use the <code class="w3-codespan">border</code> property to change the
+        border size and color, and use the
+        <code class="w3-codespan">border-radius</code> property to add rounded
+        corners:
+      </p>
+
+      <label for="fname4">First Name</label>
+      <input type="text" id="fname4" name="firstname" class="inputborder" />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          input[type=text] {<br />&nbsp;&nbsp;border: 2px solid red;<br />&nbsp;
+          border-radius: 4px;<br />
+          }
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+
+      <p>
+        If you only want a bottom border, use the
+        <code class="w3-codespan">border-bottom</code> property:
+      </p>
+      <label for="fname7">First Name</label>
+      <input type="text" id="fname7" name="firstname" class="inputborder2" />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          input[type=text] {<br />&nbsp;&nbsp;border: none;<br />&nbsp;
+          border-bottom: 2px solid red;<br />
+          }
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Colored Inputs</h2>
+      <p>
+        Use the <code class="w3-codespan">background-color</code> property to
+        add a background color to the input, and the
+        <code class="w3-codespan">color</code> property to change the text
+        color:
+      </p>
+
+      <input type="text" value="John" name="firstname" class="inputcolor" />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          input[type=text] {<br />&nbsp;&nbsp;background-color: #3CBC8D;<br />&nbsp;
+          color: white;<br />
+          }
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Focused Inputs</h2>
+      <p>
+        By default, some browsers will add a blue outline around the input when
+        it gets focus (clicked on). You can remove this behavior by adding
+        <code class="w3-codespan">outline: none;</code> to the input.
+      </p>
+      <p>
+        Use the <code class="w3-codespan">:focus</code> selector to do something
+        with the input field when it gets focus:
+      </p>
+
+      <div
+        class="w3-row-padding"
+        style="margin-left: -16px; margin-right: -16px"
+      >
+        <div class="w3-half">
+          <input class="focus1" type="text" name="firstname" />
+          <div class="w3-example">
+            <h3>Example</h3>
+            <div class="s-code-box">
+              input[type=text]:focus {<br />
+              &nbsp;&nbsp;background-color: lightblue;<br />
+              }
+            </div>
+            <a
+              target="_blank"
+              href="editor.html"
+              class="w3-btn w3-margin-bottom"
+              >Try it Yourself &raquo;</a
+            >
+          </div>
+        </div>
+        <div class="w3-half">
+          <input class="focus2" type="text" name="firstname" />
+          <div class="w3-example">
+            <h3>Example</h3>
+            <div class="s-code-box">
+              input[type=text]:focus {<br />
+              &nbsp;&nbsp;border: 3px solid #555;<br />
+              }
+            </div>
+            <a
+              target="_blank"
+              href="editor.html"
+              class="w3-btn w3-margin-bottom"
+              >Try it Yourself &raquo;</a
+            >
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <h2>Input with icon/image</h2>
+      <p>
+        If you want an icon inside the input, use the
+        <code class="w3-codespan">background-image</code> property and position
+        it with the
+        <code class="w3-codespan">background-position</code> property. Also
+        notice that we add a large left padding to reserve the space of the
+        icon:
+      </p>
+
+      <input type="text" name="search" placeholder="Search.." class="icon" />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          input[type=text] {<br />&nbsp; background-color: white;<br />&nbsp;
+          background-image: url('searchicon.png');<br />&nbsp;
+          background-position: 10px 10px; <br />&nbsp; background-repeat:
+          no-repeat;<br />&nbsp; padding-left: 40px;<br />
+          }
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Animated Search Input</h2>
+      <p>
+        In this example we use the CSS
+        <code class="w3-codespan">transition</code> property to animate the
+        width of the search input when it gets focus. You will learn more about
+        the <code class="w3-codespan"> transition</code> property later, in our
+        <a href="">CSS Transitions</a> chapter.
+      </p>
+
+      <input id="myInp" type="text" name="search" placeholder="Search.." />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          input[type=text] {<br />&nbsp; transition: width 0.4s ease-in-out;<br />}<br /><br />input[type=text]:focus
+          {<br />
+          &nbsp; width: 100%;<br />}
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Styling Textareas</h2>
+      <p>
+        <strong>Tip:</strong> Use the
+        <code class="w3-codespan">resize</code> property to prevent textareas
+        from being resized (disable the "grabber" in the bottom right corner):
+      </p>
+      <textarea
+        name="firstname"
+        style="
+          background-color: #f8f8f8;
+          width: 100%;
+          padding: 12px 20px;
+          resize: none;
+          height: 150px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+        "
+      >
+Some text...
+</textarea
+      >
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          textarea {<br />&nbsp; width: 100%;<br />&nbsp; height: 150px;<br />&nbsp;
+          padding: 12px 20px;<br />&nbsp; box-sizing: border-box;<br />&nbsp;
+          border: 2px solid #ccc;<br />&nbsp; border-radius: 4px;<br />&nbsp;
+          background-color: #f8f8f8;<br />&nbsp; resize: none;<br />
+          }
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Styling Select Menus</h2>
+      <form class="test">
+        <select
+          id="country"
+          name="country"
+          style="background-color: #f1f1f1; border: none"
+        >
+          <option value="usa">Australia</option>
+          <option value="usa">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </form>
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          select {<br />&nbsp; width: 100%;<br />&nbsp; padding: 16px 20px;<br />&nbsp;
+          border: none;<br />&nbsp; border-radius: 4px;<br />&nbsp;&nbsp;background-color:
+          #f1f1f1;<br />
+          }
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <hr />
+
+      <h2>Styling Input Buttons</h2>
+
+      <input
+        type="button"
+        value="Button"
+        class="button"
+        style="cursor: pointer"
+      />
+      <input
+        type="button"
+        value="Button"
+        class="button"
+        style="width: 100%; cursor: pointer"
+      />
+
+      <div class="w3-example">
+        <h3>Example</h3>
+        <div class="s-code-box">
+          input[type=button], input[type=submit], input[type=reset] {<br />&nbsp;
+          background-color: #04AA6D;<br />&nbsp; border: none;<br />&nbsp;
+          color: white;<br />&nbsp; padding: 16px 32px;<br />&nbsp;
+          text-decoration: none;<br />&nbsp; margin: 4px 2px;<br />&nbsp;
+          cursor: pointer;<br />
+          }<br /><br />/* Tip: use <strong>width: 100%</strong> for full-width
+          buttons */
+        </div>
+        <a
+          target="_blank"
+          href="editor.html"
+          class="w3-btn w3-margin-bottom"
+          >Try it Yourself &raquo;</a
+        >
+      </div>
+      <p>
+        For more information about how to style buttons with CSS, read our
+        <a href="">CSS Buttons Tutorial</a>.
+      </p>
+      <hr />
+
+      <h2>Responsive Form</h2>
+      <p>
+        Resize the browser window to see the effect. When the screen is less
+        than 600px wide, make the two columns stack on top of each other instead
+        of next to each other.
+      </p>
+      <div class="note">
+        <p>
+          <strong>Advanced:</strong> The following example uses
+          <a href="">media queries</a> to create a
+          responsive form. You will learn more about this in a later chapter.
+        </p>
+      </div>
+      <!-- End Main Content -->
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="#"
+          ><img
+            src="/images/logo/w3-footer.png"
+            loading="lazy"
+            alt="Our Page Logo"
+        /></a>
+      </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Top Tutorials</h3>
+          <ul>
+            <li><a href="#">HTML Tutorial</a></li>
+            <li><a href="#">CSS Tutorial</a></li>
+            <li><a href="#">JavaScript Tutorial</a></li>
+            <li><a href="#">HOW TO Tutorial</a></li>
+            <li><a href="#">SQL Tutorial</a></li>
+            <li><a href="#">Python Tutorial</a></li>
+            <li><a href="#">W3.CSS Tutorial</a></li>
+            <li><a href="#">Bootstrap Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top References</h3>
+          <ul>
+            <li><a href="#">HTML References</a></li>
+            <li><a href="#">CSS Reference</a></li>
+            <li><a href="#">JavaScript Reference</a></li>
+            <li><a href="#">HOW TO Reference</a></li>
+            <li><a href="#">SQL Reference</a></li>
+            <li><a href="#">Python References</a></li>
+            <li><a href="#">W3.CSS References</a></li>
+            <li><a href="#">Bootstrap References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Top Examples</h3>
+          <ul>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">CSS Examples</a></li>
+            <li><a href="#">JavaScript Examples</a></li>
+            <li><a href="#">HOW TO Examples</a></li>
+            <li><a href="#">SQL Examples</a></li>
+            <li><a href="#">Python Examples</a></li>
+            <li><a href="#">W3.CSS Examples</a></li>
+            <li><a href="#">Bootstrap Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Get Certified</h3>
+          <ul>
+            <li><a href="#">HTML Certified</a></li>
+            <li><a href="#">CSS Certified</a></li>
+            <li><a href="#">JavaScript Certified</a></li>
+            <li><a href="#">HOW TO Certified</a></li>
+            <li><a href="#">SQL Certified</a></li>
+            <li><a href="#">Python Certified</a></li>
+            <li><a href="#">W3.CSS Certified</a></li>
+            <li><a href="#">Bootstrap Certified</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-images">
+        <img
+          src="/images/astronaut1.png"
+          alt="Astronaut Illustration"
+          class="astronaut-image"
+          loading="lazy"
+        />
+        <img
+          src="/images/plant-footer.png"
+          alt="Plant Illustration"
+          class="plant-image"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; All Right Reserved | This Designed by
+          <span class="std">ITI students</span> under supervise
+          <span class="eng">Eng: Seham</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/js/home.js" type="text/javascript"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
