@@ -1,0 +1,144 @@
+
+.w3-container {
+  padding: 20px;
+}
+.main-content {
+  margin: 20px;
+  display: inline;
+}
+.content-container {
+  padding: 20px;
+}
+.code-example {
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  border-radius: 5px;
+  color: #000000;
+}
+.code-example pre {
+  margin: 0;
+}
+.header {
+  margin-top: 10px;
+  padding: 10px;
+  border-bottom: 2px solid #cccccc;
+}
+.w3-example {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--active-color);
+}
+#Try_button {
+  margin-top: 10px;
+}
+.w3-code {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 10px;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+}
+.htmlHigh {
+  color: #000;
+}
+.htmlHigh .tag {
+  color: rgb(75, 11, 0);
+}
+.htmlHigh .attribute {
+  color: #ff0000;
+}
+.htmlHigh .value {
+  color: #008000;
+}
+.content1 {
+  margin-left: 20px;
+  color: #a52a2a;
+}
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+  padding: 6px;
+  border-collapse: collapse;
+}
+table {
+  width: 100%;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.button-container .button {
+  margin: 0 10px;
+}
+.table-round table,
+.table-round th,
+.table-round td {
+  border: 1px solid black;
+  border-collapse: separate;
+  border-radius: 10px;
+}
+#notebox {
+  background-color: #5c6370;
+  color: white;
+  border: solid 2px black;
+  text-align: left;
+  margin-left: 25%;
+  padding: 5px;
+  border-radius: 2px;
+  width: 50%;
+  font-size: large;
+}
+.keyword {
+  color: #8d3341;
+  font-weight: bold;
+}
+
+.string {
+  color: #98c379;
+}
+
+.comment {
+  color: #5c6370;
+  font-style: italic;
+}
+caption {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*main content container responsive */
+.main-content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* table responsive */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-content {
+    max-width: 100%;
+  }
+  .responsive-table {
+    font-size: 14px;
+  }
+  .button-container {
+    flex-direction: column;
+  }
+  .button {
+    margin-bottom: 10px;
+  }
+}

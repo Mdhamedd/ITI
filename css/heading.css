@@ -1,0 +1,106 @@
+/* Start Main Content */
+.w3-example {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 5px solid var(--main-color);
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.w3-white {
+  background-color: white;
+}
+
+.w3-padding {
+  padding: 10px;
+}
+
+.w3-btn,
+button {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -ms-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+}
+.w3-btn:hover {
+  background-color: var(--active-hover-color);
+  text-decoration: none;
+  color: var(--background-color);
+}
+button {
+  border: none;
+}
+button:hover {
+  background-color: var(--active-hover-color);
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+.w3-panel {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 5px solid var(--active-hover-color);
+}
+
+.w3-note {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.w3-code {
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* End Main Content */
+/* Start Responsive */
+
+@media (min-width: 776px) {
+  .w3-code .mark {
+    font-size: 60px;
+  }
+}
+
+/* End Responsive */

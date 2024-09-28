@@ -1,0 +1,35 @@
+.def_of_html p {
+  margin: 10px 0;
+}
+
+.w3-example {
+  background-color: var(--background-color);
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.w3-code {
+  background-color: #f4f4f4;
+  border-left: 5px solid var(--active-color);
+  padding: 10px;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.htmlHigh {
+  color: #000;
+}
+
+.htmlHigh .tag {
+  color: rgb(204, 51, 24);
+}
+
+.htmlHigh .attribute {
+  color: #ff0000;
+}
+
+.htmlHigh .value {
+  color: #008000;
+}
+/* End Main Content */

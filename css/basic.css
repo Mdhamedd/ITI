@@ -1,0 +1,85 @@
+.mhm {
+  padding: 0;
+}
+
+.tag1 {
+  color: brown;
+}
+
+.tag2 {
+  color: tomato;
+}
+
+.tags {
+  color: blue;
+}
+.intro {
+  margin: 20px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.first_buttons{
+  margin-bottom: 10px;
+}
+.doc-code,
+.html,
+.body {
+  color: crimson;
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: #eee;
+  font-size: 110%;
+}
+
+.w3-example,
+.w3-exercise {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  background-color: #eee;
+  border-left: 15px #eee;
+  font-weight: 700;
+font-size: 20px;
+  border-radius: 5px;
+  padding: 0.01em 16px;
+  margin: 20px 0;
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.code-example,
+.code-exersise {
+  border-left: 4px solid var(--active-color);
+  height: auto;
+  width: auto;
+  background-color: #fff;
+  color: #000;
+  padding: 8px 12px;
+  word-wrap: break-word;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.w3-exercise {
+  background-color: #000;
+  color: white;
+  border-radius: 5px;
+}
+
+.code-exersise {
+  border: 0;
+  padding: 0 20px;
+}
+
+.answer {
+  width: 20px;
+  padding: 0;
+  height: 25px;
+}
+/* End Main Content */

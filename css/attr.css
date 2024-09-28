@@ -1,0 +1,108 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+ul marker {
+  list-style-type: circle;
+  color: black;
+}
+
+.crimson-p {
+  color: crimson;
+  background-color: #eee;
+}
+
+.b-code-box {
+  background-color: #eee;
+  width: auto;
+  height: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  margin-bottom: 0%;
+}
+
+.s-code-box {
+  background-color: white;
+  width: auto;
+  height: max-content;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+.blue {
+  color: blue;
+}
+
+.brown {
+  color: brown;
+}
+
+.tomato {
+  color: tomato;
+}
+
+.boldy {
+  font-weight: bold;
+}
+
+.nopad {
+  padding-bottom: 0;
+}
+
+.deco {
+  text-decoration: underline;
+}
+/*...........................................................................*/
+
+#html {
+  color: red;
+  background: #eae8e8;
+}
+
+.w3-example {
+  background-color: #cecece;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.w3-code {
+  background-color: #f4f4f4;
+  border: 1px solid #c6c6c6;
+  padding: 5px;
+  overflow-x: auto;
+}
+.htmlHigh {
+  border-left: 5px solid #04aa6d;
+  color: #000;
+}
+.htmlHigh .tag {
+  color: rgb(204, 51, 24);
+}
+.htmlHigh .attribute {
+  color: #ff0000;
+}
+.htmlHigh .value {
+  color: #008000;
+}
+main {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+#note {
+  background-color: rgb(255, 247, 198);
+  padding: 10px;
+  margin: 10px;
+}
+
+/* End Main Content */
